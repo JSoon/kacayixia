@@ -1,0 +1,11 @@
+# 指定忽略不需要上传的文件
+
+# git
+#.gitignore
+
+# bower
+www/bower_components
+www/bower.json
+
+# WebStorm
+www/.idea
