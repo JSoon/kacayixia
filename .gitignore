@@ -3,9 +3,17 @@
 # git
 #.gitignore
 
+# npm
+package.json
+node_modules
+npm-debug.log
+
 # bower
 www/bower_components
 www/bower.json
 
 # WebStorm
 www/.idea
+
+# Grunt
+Gruntfile.js
