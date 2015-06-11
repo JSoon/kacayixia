@@ -22,6 +22,11 @@ body:before {
   content: "";
 }
 
+// a link
+a {
+  transition: all .3s;
+}
+
 // logo
 @font-face {
   font-family: 'logo';
@@ -30,4 +35,16 @@ body:before {
   url('fonts/logo.woff') format('woff'),
   url('fonts/logo.ttf') format('truetype'),
   url('fonts/logo.svg#logo') format('svg');
+}
+
+// footer
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
 }

@@ -16,8 +16,24 @@ body:before {
   background: url("color_bar.png") center 0 no-repeat transparent;
   content: "";
 }
+/* line 26, html/app/common/common.less */
+a {
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
 @font-face {
   font-family: 'logo';
   src: url('fonts/logo.eot');
   src: url('fonts/logo.eot?#iefix') format('embedded-opentype'), url('fonts/logo.woff') format('woff'), url('fonts/logo.ttf') format('truetype'), url('fonts/logo.svg#logo') format('svg');
+}
+/* line 41, html/app/common/common.less */
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
 }
