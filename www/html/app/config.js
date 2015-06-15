@@ -1,7 +1,7 @@
 /**
  * requirejs 配置文件
  */
-define(function() {
+define(function () {
   return require.config({
     baseUrl: './',
     paths: {
