@@ -50,3 +50,19 @@
                                        ,5&HMHr,;,. ...   5@#1                        3@@8:          
                                            r@Mi:;:.       iB@8.                    ,&@#5,           
                                             S@&,,::.        3@H;                  iB@Ai..           
+
+----------
+
+## 前端目录结构
+
+    www
+     ├ html
+     |  ├ app (业务模块)
+     |     ├ foo
+     |     |  └ files
+     |     └ config.js (requirejs 配置文件)
+     |  └ lib (基础模块)
+     |     └ foo
+     |        └ version
+     |             └ files
+     └ html_dist
