@@ -6,48 +6,48 @@ body:after {
   left: 0;
   right: 0;
   display: block;
-  z-index: -1;
+  z-index: 0;
   background: -webkit-linear-gradient(rgba(90, 85, 78, 0.45) 0%, rgba(100, 94, 85, 0.45) 20%, rgba(36, 43, 39, 0.55) 100%);
   background: linear-gradient(rgba(90, 85, 78, 0.45) 0%, rgba(100, 94, 85, 0.45) 20%, rgba(36, 43, 39, 0.55) 100%);
   content: "";
 }
-/* line 23, html/app/index/index.less */
-img.pic-of-today {
+/* line 24, html/app/index/index.less */
+img.photo-of-today {
   position: fixed;
-  top: 0;
-  left: -50%;
-  bottom: 0;
-  right: -50%;
-  z-index: -1;
+  top: -100%;
+  left: -100%;
+  bottom: -100%;
+  right: -100%;
+  z-index: 0;
   margin: auto;
-  -webkit-animation: picOfToday 8s ease-in-out;
-          animation: picOfToday 8s ease-in-out;
+  -webkit-animation: photoOfToday 8s ease-in-out;
+          animation: photoOfToday 8s ease-in-out;
 }
-@-webkit-keyframes picOfToday {
-  /* line 35, html/app/index/index.less */
+@-webkit-keyframes photoOfToday {
+  /* line 36, html/app/index/index.less */
   from {
     -webkit-transform: scale(1.8);
             transform: scale(1.8);
   }
-  /* line 38, html/app/index/index.less */
+  /* line 39, html/app/index/index.less */
   to {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
-@keyframes picOfToday {
-  /* line 35, html/app/index/index.less */
+@keyframes photoOfToday {
+  /* line 36, html/app/index/index.less */
   from {
     -webkit-transform: scale(1.8);
             transform: scale(1.8);
   }
-  /* line 38, html/app/index/index.less */
+  /* line 39, html/app/index/index.less */
   to {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
-/* line 44, html/app/index/index.less */
+/* line 45, html/app/index/index.less */
 section.upper {
   position: absolute;
   top: 15%;
@@ -56,36 +56,23 @@ section.upper {
   width: 100%;
   text-align: center;
 }
-/* line 51, html/app/index/index.less */
-section.upper .logo {
-  font-family: "logo" !important;
+/* line 52, html/app/index/index.less */
+section.upper .sj-logo {
   font-size: 160px;
-  font-style: normal;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
 }
-/* line 59, html/app/index/index.less */
-section.upper .logo:before {
-  content: "\e600";
-}
-/* line 63, html/app/index/index.less */
+/* line 56, html/app/index/index.less */
 section.upper .slogan {
   margin: 10px 0 30px;
   color: rgba(255, 255, 255, 0.95);
   font-size: 14px;
+  line-height: 14px;
   font-weight: normal;
 }
-/* line 69, html/app/index/index.less */
+/* line 63, html/app/index/index.less */
 section.upper .browse {
-  display: block;
-  width: 240px;
-  height: 42px;
-  margin: 0 auto;
-  text-align: center;
-  text-decoration: none;
-  line-height: 42px;
+  display: inline-block;
+  padding: 13px 88px;
   color: rgba(255, 255, 255, 0.95);
   font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -93,13 +80,13 @@ section.upper .browse {
   -webkit-transition: background 0.3s, border-color 0.3s;
           transition: background 0.3s, border-color 0.3s;
 }
-/* line 82, html/app/index/index.less */
+/* line 71, html/app/index/index.less */
 section.upper .browse:hover,
 section.upper .browse:focus {
   border-color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 90, html/app/index/index.less */
+/* line 79, html/app/index/index.less */
 section.lower {
   position: absolute;
   bottom: 10%;
@@ -108,16 +95,15 @@ section.lower {
   width: 100%;
   text-align: center;
 }
-/* line 97, html/app/index/index.less */
+/* line 86, html/app/index/index.less */
 section.lower .caption {
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
   font-weight: normal;
 }
-/* line 104, html/app/index/index.less */
+/* line 93, html/app/index/index.less */
 section.lower .avatar img {
-  box-sizing: border-box;
   width: 96px;
   height: 96px;
   margin: 10px 0;
@@ -127,21 +113,33 @@ section.lower .avatar img {
   -webkit-transition: opacity .3s;
           transition: opacity .3s;
 }
-/* line 114, html/app/index/index.less */
+/* line 102, html/app/index/index.less */
 section.lower .avatar:hover img,
 section.lower .avatar:focus img {
   opacity: 1;
 }
-/* line 119, html/app/index/index.less */
+/* line 107, html/app/index/index.less */
 section.lower .username {
-  display: block;
+  margin: 0;
+}
+/* line 109, html/app/index/index.less */
+section.lower .username a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
-  text-decoration: none;
+  font-weight: normal;
 }
-/* line 124, html/app/index/index.less */
-section.lower .username:hover,
-section.lower .username:focus {
-  color: #fff;
+/* line 113, html/app/index/index.less */
+section.lower .username a:hover,
+section.lower .username a:focus {
+  color: #ffffff;
   text-decoration: underline;
+}
+/* line 122, html/app/index/index.less */
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
 }

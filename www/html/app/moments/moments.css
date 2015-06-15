@@ -1,0 +1,77 @@
+/* line 8, html/app/moments/moments.less */
+.moments-list figure {
+  margin: 0 0 20px;
+}
+/* line 10, html/app/moments/moments.less */
+.moments-list figure img {
+  display: block;
+}
+/* line 13, html/app/moments/moments.less */
+.moments-list figure .photo {
+  position: relative;
+}
+/* line 15, html/app/moments/moments.less */
+.moments-list figure .photo .photo-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
+/* line 27, html/app/moments/moments.less */
+.moments-list figure .photo:hover .photo-over,
+.moments-list figure .photo:focus .photo-over {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 33, html/app/moments/moments.less */
+.moments-list figcaption {
+  height: 42px;
+  margin-top: 8px;
+  line-height: 42px;
+}
+/* line 37, html/app/moments/moments.less */
+.moments-list figcaption .avatar {
+  float: left;
+  margin-right: 10px;
+}
+/* line 40, html/app/moments/moments.less */
+.moments-list figcaption .avatar img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+/* line 46, html/app/moments/moments.less */
+.moments-list figcaption .name {
+  float: left;
+  font-size: 14px;
+}
+/* line 49, html/app/moments/moments.less */
+.moments-list figcaption .name:hover,
+.moments-list figcaption .name:focus {
+  text-decoration: underline;
+}
+/* line 54, html/app/moments/moments.less */
+.moments-list figcaption .like {
+  float: right;
+}
+/* line 56, html/app/moments/moments.less */
+.moments-list figcaption .like .sj {
+  font-size: 16px;
+}
+/* line 59, html/app/moments/moments.less */
+.moments-list figcaption .like .sj-heart-empty {
+  color: #bbbbbb;
+}
+/* line 61, html/app/moments/moments.less */
+.moments-list figcaption .like .sj-heart-empty:hover,
+.moments-list figcaption .like .sj-heart-empty:focus {
+  color: #ff5736;
+}
+/* line 66, html/app/moments/moments.less */
+.moments-list figcaption .like .sj-heart-full {
+  color: #ff5736;
+}
