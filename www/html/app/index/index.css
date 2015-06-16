@@ -75,7 +75,7 @@ section.upper .browse {
   padding: 13px 88px;
   color: rgba(255, 255, 255, 0.95);
   font-size: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 40px;
   -webkit-transition: background 0.3s, border-color 0.3s;
           transition: background 0.3s, border-color 0.3s;

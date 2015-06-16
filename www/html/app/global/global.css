@@ -33,14 +33,14 @@
   clear: both;
 }
 @font-face {
-  font-family: "kacayixia";
-  src: url('fonts/iconfont.eot');
-  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('fonts/iconfont.woff') format('woff'), url('fonts/iconfont.ttf') format('truetype'), url('fonts/iconfont.svg#kacayixia') format('svg');
+  font-family: "logo";
+  src: url('logo/iconfont.eot');
+  src: url('logo/iconfont.eot?#iefix') format('embedded-opentype'), url('logo/iconfont.woff') format('woff'), url('logo/iconfont.ttf') format('truetype'), url('logo/iconfont.svg#kacayixia') format('svg');
 }
 /* line 49, html/app/global/global.less */
-.sj {
+.sj-logo {
   display: inline-block;
-  font-family: "kacayixia" !important;
+  font-family: "logo" !important;
   font-size: inherit;
   font-style: normal;
   font-weight: normal;
@@ -51,42 +51,27 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+/* line 61, html/app/global/global.less */
+.sj-logo:before {
+  content: "\e600";
+}
+/* line 67, html/app/global/global.less */
+[class^="fi-"],
+[class*=" fi-"] {
+  display: inline-block;
+  line-height: 1;
+  font-weight: normal;
   -webkit-transition: all .2s;
           transition: all .2s;
 }
-/* line 64, html/app/global/global.less */
-.sj-heart-empty:before {
-  content: "\e600";
-}
-/* line 68, html/app/global/global.less */
-.sj-heart-full:before {
-  content: "\e601";
-}
-/* line 72, html/app/global/global.less */
-.sj-logo:before {
-  content: "\e602";
-}
-/* line 76, html/app/global/global.less */
-.sj-arrow-left:before {
-  content: "\e603";
+/* line 73, html/app/global/global.less */
+[class^="fi-"]:before,
+[class*=" fi-"]:before {
+  margin: 0;
+  font-weight: inherit;
 }
 /* line 80, html/app/global/global.less */
-.sj-arrow-right:before {
-  content: "\e604";
-}
-/* line 84, html/app/global/global.less */
-.sj-end-status:before {
-  content: "\e605";
-}
-/* line 88, html/app/global/global.less */
-.sj-search-plus:before {
-  content: "\e606";
-}
-/* line 92, html/app/global/global.less */
-.sj-search:before {
-  content: "\e607";
-}
-/* line 97, html/app/global/global.less */
 html,
 body {
   height: 100%;
@@ -94,7 +79,7 @@ body {
   color: #000000;
   background-color: #F8F9F7;
 }
-/* line 105, html/app/global/global.less */
+/* line 88, html/app/global/global.less */
 body,
 button,
 input,
@@ -102,11 +87,11 @@ select,
 textarea {
   font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', sans-serif;
 }
-/* line 113, html/app/global/global.less */
+/* line 96, html/app/global/global.less */
 body {
   padding-top: 3px;
 }
-/* line 118, html/app/global/global.less */
+/* line 101, html/app/global/global.less */
 body:before {
   position: fixed;
   top: 0;
@@ -120,18 +105,18 @@ body:before {
   content: "";
   opacity: .9;
 }
-/* line 133, html/app/global/global.less */
+/* line 116, html/app/global/global.less */
 a {
   color: #000000;
   text-decoration: none;
   -webkit-transition: all .2s;
           transition: all .2s;
 }
-/* line 140, html/app/global/global.less */
+/* line 123, html/app/global/global.less */
 img.img-response {
   max-width: 100%;
 }
-/* line 145, html/app/global/global.less */
+/* line 128, html/app/global/global.less */
 .btn {
   color: #000000;
   border: 1px solid #ddd;
@@ -139,38 +124,38 @@ img.img-response {
   -webkit-transition: background 0.3s, border-color 0.3s;
           transition: background 0.3s, border-color 0.3s;
 }
-/* line 150, html/app/global/global.less */
+/* line 133, html/app/global/global.less */
 .btn:hover,
 .btn:focus {
   color: #ffffff;
   border-color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 159, html/app/global/global.less */
+/* line 142, html/app/global/global.less */
 header.header {
   position: relative;
   height: 100px;
   margin-bottom: 20px;
 }
-/* line 163, html/app/global/global.less */
+/* line 146, html/app/global/global.less */
 header.header .logo {
   height: 82px;
   margin: 0;
   text-align: center;
 }
-/* line 167, html/app/global/global.less */
+/* line 150, html/app/global/global.less */
 header.header .logo .sj-logo {
   font-size: 60px;
   line-height: 82px;
 }
-/* line 172, html/app/global/global.less */
+/* line 155, html/app/global/global.less */
 header.header .slogan {
   margin: 0;
   text-align: center;
   font-weight: normal;
   font-size: 10px;
 }
-/* line 178, html/app/global/global.less */
+/* line 161, html/app/global/global.less */
 header.header .user-nav-l,
 header.header .user-nav-r {
   position: relative;
@@ -179,73 +164,74 @@ header.header .user-nav-r {
   line-height: 100px;
   list-style: none;
 }
-/* line 185, html/app/global/global.less */
+/* line 168, html/app/global/global.less */
 header.header .user-nav-l li,
 header.header .user-nav-r li {
   float: left;
 }
-/* line 189, html/app/global/global.less */
+/* line 172, html/app/global/global.less */
 header.header .user-nav-l {
   float: left;
 }
-/* line 191, html/app/global/global.less */
+/* line 174, html/app/global/global.less */
 header.header .user-nav-l a {
   color: #bbbbbb;
 }
-/* line 193, html/app/global/global.less */
+/* line 176, html/app/global/global.less */
 header.header .user-nav-l a:hover,
 header.header .user-nav-l a:focus {
   color: #000000;
 }
-/* line 198, html/app/global/global.less */
+/* line 181, html/app/global/global.less */
 header.header .user-nav-l li {
   margin-right: 10px;
 }
-/* line 200, html/app/global/global.less */
+/* line 183, html/app/global/global.less */
 header.header .user-nav-l li.avatar img {
   -webkit-transition: -webkit-transform .3s;
           transition: transform .3s;
   vertical-align: middle;
 }
-/* line 204, html/app/global/global.less */
+/* line 187, html/app/global/global.less */
 header.header .user-nav-l li.name a {
   color: #000000;
 }
-/* line 206, html/app/global/global.less */
+/* line 189, html/app/global/global.less */
 header.header .user-nav-l li.name a:hover,
 header.header .user-nav-l li.name a:focus {
   text-decoration: underline;
 }
-/* line 213, html/app/global/global.less */
+/* line 196, html/app/global/global.less */
 header.header .user-nav-r {
   float: right;
 }
-/* line 215, html/app/global/global.less */
+/* line 198, html/app/global/global.less */
 header.header .user-nav-r li {
   margin-left: 10px;
 }
-/* line 218, html/app/global/global.less */
+/* line 201, html/app/global/global.less */
 header.header .user-nav-r a {
   padding: 1em 3em;
 }
-/* line 225, html/app/global/global.less */
+/* line 208, html/app/global/global.less */
 footer.footer {
   margin: 40px 0 20px;
   text-align: center;
   color: #000000;
 }
-/* line 232, html/app/global/global.less */
+/* line 215, html/app/global/global.less */
 .pagination {
   margin-top: 10px;
   text-align: center;
 }
-/* line 235, html/app/global/global.less */
+/* line 218, html/app/global/global.less */
 .pagination a {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 239, html/app/global/global.less */
-.pagination .sj {
+/* line 222, html/app/global/global.less */
+.pagination [class^="fi-"] {
   padding: 15px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }

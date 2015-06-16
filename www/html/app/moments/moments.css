@@ -26,7 +26,7 @@
           transition: all .2s;
 }
 /* line 27, html/app/moments/moments.less */
-.moments-list figure .photo .photo-over .sj {
+.moments-list figure .photo .photo-over [class^="fi-"] {
   position: absolute;
   top: 50%;
   margin-top: -0.5em;
@@ -72,19 +72,19 @@
   float: right;
 }
 /* line 68, html/app/moments/moments.less */
-.moments-list figcaption .like .sj {
-  font-size: 16px;
+.moments-list figcaption .like [class^="fi-"] {
+  font-size: 18px;
 }
 /* line 71, html/app/moments/moments.less */
-.moments-list figcaption .like .sj-heart-empty {
+.moments-list figcaption .like .fi-heart-empty-1 {
   color: #bbbbbb;
 }
 /* line 73, html/app/moments/moments.less */
-.moments-list figcaption .like .sj-heart-empty:hover,
-.moments-list figcaption .like .sj-heart-empty:focus {
+.moments-list figcaption .like .fi-heart-empty-1:hover,
+.moments-list figcaption .like .fi-heart-empty-1:focus {
   color: #ff5736;
 }
 /* line 78, html/app/moments/moments.less */
-.moments-list figcaption .like .sj-heart-full {
+.moments-list figcaption .like .fi-heart-1 {
   color: #ff5736;
 }
