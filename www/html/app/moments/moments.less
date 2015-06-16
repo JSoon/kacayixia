@@ -1,9 +1,8 @@
 @import "../global/variables";
 
-// moments
+// moments list
 // ========================================================================
 
-// moments list
 .moments-list {
   figure {
     margin: 0 0 20px;
@@ -30,7 +29,7 @@
           margin-top: -.5em;
           margin-left: -.5em;
           color: @white;
-          font-size: 52px;
+          font-size: 36px;
         }
       }
       &:hover,
@@ -68,15 +67,35 @@
       [class^="fi-"] {
         font-size: 18px;
       }
-      .fi-heart-empty-1 {
+      .fi-heart-empty {
         color: @grey-light;
         &:hover,
         &:focus {
           color: @red;
         }
       }
-      .fi-heart-1 {
+      .fi-heart-full {
         color: @red;
+      }
+    }
+  }
+}
+
+// moment details
+// ========================================================================
+
+.moment-details {
+  .breadcrumb {
+    line-height: 2;
+    margin-bottom: 20px;
+    i {
+      margin-right: 5px;
+    }
+    a {
+      display: inline-block;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
       }
     }
   }

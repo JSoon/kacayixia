@@ -2,9 +2,9 @@
 .fi-download:before { content: '\e800'; } /* '' */
 .fi-angle-left:before { content: '\e801'; } /* '' */
 .fi-angle-right:before { content: '\e802'; } /* '' */
-.fi-left-big:before { content: '\e803'; } /* '' */
-.fi-heart-1:before { content: '\e804'; } /* '' */
-.fi-heart-empty-1:before { content: '\e805'; } /* '' */
+.fi-arrow-bold-right:before { content: '\e803'; } /* '' */
+.fi-heart-full:before { content: '\e804'; } /* '' */
+.fi-heart-empty:before { content: '\e805'; } /* '' */
 .fi-search:before { content: '\e806'; } /* '' */
 .fi-zoom-in:before { content: '\e807'; } /* '' */
 .fi-info:before { content: '\e808'; } /* '' */

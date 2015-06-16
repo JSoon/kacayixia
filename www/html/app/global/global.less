@@ -66,13 +66,20 @@
 // fontello icons
 [class^="fi-"],
 [class*=" fi-"] {
+  position: relative;
+  top: -1px; // 修正图标垂直对齐位置，使之与文本垂直对齐
   display: inline-block;
-  line-height: 1;
-  font-weight: normal;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: all .2s;
   &:before {
+    display: inline-block;
+    width: 1em;
     margin: 0;
-    font-weight: inherit;
   }
 }
 

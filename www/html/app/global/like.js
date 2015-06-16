@@ -9,12 +9,12 @@ define(['jquery'], function ($) {
     e.preventDefault();
     var heart = $(this).children('i');
     // 若未点赞，则加赞
-    if (heart.hasClass('fi-heart-empty-1')) {
-      heart.attr('class', 'fi-heart-1');
+    if (heart.hasClass('fi-heart-empty')) {
+      heart.attr('class', 'fi-heart-full');
     }
     // 若已点赞，则取消赞
-    else if (heart.hasClass('fi-heart-1')) {
-      heart.attr('class', 'fi-heart-empty-1');
+    else if (heart.hasClass('fi-heart-full')) {
+      heart.attr('class', 'fi-heart-empty');
     }
   });
 

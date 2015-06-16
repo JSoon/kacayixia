@@ -59,19 +59,26 @@
 /* line 67, html/app/global/global.less */
 [class^="fi-"],
 [class*=" fi-"] {
+  position: relative;
+  top: -1px;
   display: inline-block;
-  line-height: 1;
-  font-weight: normal;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-transition: all .2s;
           transition: all .2s;
 }
-/* line 73, html/app/global/global.less */
+/* line 79, html/app/global/global.less */
 [class^="fi-"]:before,
 [class*=" fi-"]:before {
+  display: inline-block;
+  width: 1em;
   margin: 0;
-  font-weight: inherit;
 }
-/* line 80, html/app/global/global.less */
+/* line 87, html/app/global/global.less */
 html,
 body {
   height: 100%;
@@ -79,7 +86,7 @@ body {
   color: #000000;
   background-color: #F8F9F7;
 }
-/* line 88, html/app/global/global.less */
+/* line 95, html/app/global/global.less */
 body,
 button,
 input,
@@ -87,11 +94,11 @@ select,
 textarea {
   font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', sans-serif;
 }
-/* line 96, html/app/global/global.less */
+/* line 103, html/app/global/global.less */
 body {
   padding-top: 3px;
 }
-/* line 101, html/app/global/global.less */
+/* line 108, html/app/global/global.less */
 body:before {
   position: fixed;
   top: 0;
@@ -105,18 +112,18 @@ body:before {
   content: "";
   opacity: .9;
 }
-/* line 116, html/app/global/global.less */
+/* line 123, html/app/global/global.less */
 a {
   color: #000000;
   text-decoration: none;
   -webkit-transition: all .2s;
           transition: all .2s;
 }
-/* line 123, html/app/global/global.less */
+/* line 130, html/app/global/global.less */
 img.img-response {
   max-width: 100%;
 }
-/* line 128, html/app/global/global.less */
+/* line 135, html/app/global/global.less */
 .btn {
   color: #000000;
   border: 1px solid #ddd;
@@ -124,38 +131,38 @@ img.img-response {
   -webkit-transition: background 0.3s, border-color 0.3s;
           transition: background 0.3s, border-color 0.3s;
 }
-/* line 133, html/app/global/global.less */
+/* line 140, html/app/global/global.less */
 .btn:hover,
 .btn:focus {
   color: #ffffff;
   border-color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 142, html/app/global/global.less */
+/* line 149, html/app/global/global.less */
 header.header {
   position: relative;
   height: 100px;
   margin-bottom: 20px;
 }
-/* line 146, html/app/global/global.less */
+/* line 153, html/app/global/global.less */
 header.header .logo {
   height: 82px;
   margin: 0;
   text-align: center;
 }
-/* line 150, html/app/global/global.less */
+/* line 157, html/app/global/global.less */
 header.header .logo .sj-logo {
   font-size: 60px;
   line-height: 82px;
 }
-/* line 155, html/app/global/global.less */
+/* line 162, html/app/global/global.less */
 header.header .slogan {
   margin: 0;
   text-align: center;
   font-weight: normal;
   font-size: 10px;
 }
-/* line 161, html/app/global/global.less */
+/* line 168, html/app/global/global.less */
 header.header .user-nav-l,
 header.header .user-nav-r {
   position: relative;
@@ -164,72 +171,72 @@ header.header .user-nav-r {
   line-height: 100px;
   list-style: none;
 }
-/* line 168, html/app/global/global.less */
+/* line 175, html/app/global/global.less */
 header.header .user-nav-l li,
 header.header .user-nav-r li {
   float: left;
 }
-/* line 172, html/app/global/global.less */
+/* line 179, html/app/global/global.less */
 header.header .user-nav-l {
   float: left;
 }
-/* line 174, html/app/global/global.less */
+/* line 181, html/app/global/global.less */
 header.header .user-nav-l a {
   color: #bbbbbb;
 }
-/* line 176, html/app/global/global.less */
+/* line 183, html/app/global/global.less */
 header.header .user-nav-l a:hover,
 header.header .user-nav-l a:focus {
   color: #000000;
 }
-/* line 181, html/app/global/global.less */
+/* line 188, html/app/global/global.less */
 header.header .user-nav-l li {
   margin-right: 10px;
 }
-/* line 183, html/app/global/global.less */
+/* line 190, html/app/global/global.less */
 header.header .user-nav-l li.avatar img {
   -webkit-transition: -webkit-transform .3s;
           transition: transform .3s;
   vertical-align: middle;
 }
-/* line 187, html/app/global/global.less */
+/* line 194, html/app/global/global.less */
 header.header .user-nav-l li.name a {
   color: #000000;
 }
-/* line 189, html/app/global/global.less */
+/* line 196, html/app/global/global.less */
 header.header .user-nav-l li.name a:hover,
 header.header .user-nav-l li.name a:focus {
   text-decoration: underline;
 }
-/* line 196, html/app/global/global.less */
+/* line 203, html/app/global/global.less */
 header.header .user-nav-r {
   float: right;
 }
-/* line 198, html/app/global/global.less */
+/* line 205, html/app/global/global.less */
 header.header .user-nav-r li {
   margin-left: 10px;
 }
-/* line 201, html/app/global/global.less */
+/* line 208, html/app/global/global.less */
 header.header .user-nav-r a {
   padding: 1em 3em;
 }
-/* line 208, html/app/global/global.less */
+/* line 215, html/app/global/global.less */
 footer.footer {
   margin: 40px 0 20px;
   text-align: center;
   color: #000000;
 }
-/* line 215, html/app/global/global.less */
+/* line 222, html/app/global/global.less */
 .pagination {
   margin-top: 10px;
   text-align: center;
 }
-/* line 218, html/app/global/global.less */
+/* line 225, html/app/global/global.less */
 .pagination a {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 222, html/app/global/global.less */
+/* line 229, html/app/global/global.less */
 .pagination [class^="fi-"] {
   padding: 15px;
   font-size: 24px;
