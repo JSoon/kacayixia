@@ -62,7 +62,7 @@
      |     |  └ files
      |     └ config.js (requirejs 配置文件)
      |  └ lib (基础模块)
-     |     └ foo
+     |     └ bar
      |        └ version
      |             └ files
      └ html_dist
