@@ -134,7 +134,7 @@ img.img-response {
 /* line 145, html/app/global/global.less */
 .btn {
   color: #000000;
-  border: 1px solid #000000;
+  border: 1px solid #ddd;
   border-radius: 40px;
   -webkit-transition: background 0.3s, border-color 0.3s;
           transition: background 0.3s, border-color 0.3s;
@@ -173,62 +173,78 @@ header.header .slogan {
 /* line 178, html/app/global/global.less */
 header.header .user-nav-l,
 header.header .user-nav-r {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  position: relative;
+  margin: -100px 0;
   padding: 0;
   line-height: 100px;
   list-style: none;
 }
-/* line 187, html/app/global/global.less */
+/* line 185, html/app/global/global.less */
 header.header .user-nav-l li,
 header.header .user-nav-r li {
   float: left;
 }
 /* line 189, html/app/global/global.less */
-header.header .user-nav-l li:first-child,
-header.header .user-nav-r li:first-child {
-  margin-right: 10px;
-}
-/* line 194, html/app/global/global.less */
 header.header .user-nav-l {
-  left: 15px;
+  float: left;
 }
-/* line 196, html/app/global/global.less */
+/* line 191, html/app/global/global.less */
 header.header .user-nav-l a {
-  color: #999999;
+  color: #bbbbbb;
 }
-/* line 198, html/app/global/global.less */
+/* line 193, html/app/global/global.less */
 header.header .user-nav-l a:hover,
 header.header .user-nav-l a:focus {
   color: #000000;
 }
+/* line 198, html/app/global/global.less */
+header.header .user-nav-l li {
+  margin-right: 10px;
+}
+/* line 200, html/app/global/global.less */
+header.header .user-nav-l li.avatar img {
+  -webkit-transition: -webkit-transform .3s;
+          transition: transform .3s;
+  vertical-align: middle;
+}
 /* line 204, html/app/global/global.less */
-header.header .user-nav-r {
-  right: 15px;
+header.header .user-nav-l li.name a {
+  color: #000000;
 }
 /* line 206, html/app/global/global.less */
+header.header .user-nav-l li.name a:hover,
+header.header .user-nav-l li.name a:focus {
+  text-decoration: underline;
+}
+/* line 213, html/app/global/global.less */
+header.header .user-nav-r {
+  float: right;
+}
+/* line 215, html/app/global/global.less */
+header.header .user-nav-r li {
+  margin-left: 10px;
+}
+/* line 218, html/app/global/global.less */
 header.header .user-nav-r a {
   padding: 1em 3em;
 }
-/* line 213, html/app/global/global.less */
+/* line 225, html/app/global/global.less */
 footer.footer {
   margin: 40px 0 20px;
   text-align: center;
   color: #000000;
 }
-/* line 220, html/app/global/global.less */
+/* line 232, html/app/global/global.less */
 .pagination {
   margin-top: 10px;
   text-align: center;
 }
-/* line 223, html/app/global/global.less */
+/* line 235, html/app/global/global.less */
 .pagination a {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 227, html/app/global/global.less */
+/* line 239, html/app/global/global.less */
 .pagination .sj {
   padding: 15px;
   font-size: 20px;
