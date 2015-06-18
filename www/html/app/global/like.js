@@ -3,7 +3,7 @@
  * 用于照片的点赞功能
  */
 
-define(['jquery'], function ($) {
+define(function () {
 
   $('.JS_like').on('click', function (e) {
     e.preventDefault();

@@ -67,7 +67,7 @@
 [class^="fi-"],
 [class*=" fi-"] {
   position: relative;
-  top: -1px; // 修正图标垂直对齐位置，使之与文本垂直对齐
+//  top: -1px; // 修正图标垂直对齐位置，使之与文本垂直对齐
   display: inline-block;
   font-family: 'fontello';
   font-style: normal;
@@ -163,7 +163,6 @@ img.img-response {
   display: inline-block;
   padding: 1em 3em;
   color: @black;
-  line-height: normal;
   border: 1px solid #ddd;
   border-radius: 40px;
   transition: all .3s;
@@ -295,6 +294,9 @@ header.header {
     float: right;
     li {
       margin-left: 10px;
+    }
+    .btn {
+      line-height: 1.5;
     }
   }
 }

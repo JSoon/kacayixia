@@ -111,9 +111,10 @@
 .moment-details figure.photo-preview {
   margin-bottom: 40px;
 }
-/* line 93, html/app/moments/moments.less */
-.moment-details [class^="fi-"] {
-  margin-right: 5px;
+/* line 92, html/app/moments/moments.less */
+.moment-details figure.photo-preview .photo-over {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 /* line 97, html/app/moments/moments.less */
 .moment-details .breadcrumb {
@@ -121,59 +122,67 @@
   margin-bottom: 10px;
 }
 /* line 100, html/app/moments/moments.less */
+.moment-details .breadcrumb [class^="fi-"] {
+  margin-right: 5px;
+}
+/* line 103, html/app/moments/moments.less */
 .moment-details .breadcrumb a {
   display: inline-block;
 }
-/* line 102, html/app/moments/moments.less */
+/* line 105, html/app/moments/moments.less */
 .moment-details .breadcrumb a:hover,
 .moment-details .breadcrumb a:focus {
   text-decoration: underline;
 }
-/* line 110, html/app/moments/moments.less */
+/* line 113, html/app/moments/moments.less */
+.moment-details .photo-info [class^="fi-"] {
+  margin-right: 5px;
+}
+/* line 116, html/app/moments/moments.less */
 .moment-details .photo-info .title {
   margin: 0;
 }
-/* line 112, html/app/moments/moments.less */
+/* line 118, html/app/moments/moments.less */
 .moment-details .photo-info .title [class^="fi-"] {
   color: #bbbbbb;
 }
-/* line 116, html/app/moments/moments.less */
+/* line 122, html/app/moments/moments.less */
 .moment-details .photo-info ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 121, html/app/moments/moments.less */
+/* line 127, html/app/moments/moments.less */
 .moment-details .photo-info ul.info {
   margin-bottom: 15px;
   padding: 15px 0;
   line-height: 2.5;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 126, html/app/moments/moments.less */
+/* line 132, html/app/moments/moments.less */
 .moment-details .photo-info ul.info span.k {
   display: inline-block;
   width: 3em;
   margin-right: 1em;
   color: #bbbbbb;
 }
-/* line 134, html/app/moments/moments.less */
+/* line 140, html/app/moments/moments.less */
 .moment-details .photo-info ul.price li {
   margin-bottom: 15px;
   overflow: hidden;
 }
-/* line 139, html/app/moments/moments.less */
+/* line 145, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn {
   display: inline-block;
   float: left;
 }
-/* line 142, html/app/moments/moments.less */
+/* line 148, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn [class^="fi-"],
 .moment-details .photo-info .dl-btn [class*=" fi-"] {
   -webkit-transition: none;
           transition: none;
 }
-/* line 146, html/app/moments/moments.less */
+/* line 152, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn span {
   float: left;
   display: inline-block;
@@ -181,20 +190,20 @@
   -webkit-transition: all .3s;
           transition: all .3s;
 }
-/* line 154, html/app/moments/moments.less */
+/* line 160, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn:hover span,
 .moment-details .photo-info .dl-btn:focus span {
   color: #ffffff;
   border-color: transparent;
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 160, html/app/moments/moments.less */
+/* line 166, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn .k {
   padding: 1em 2em 1em 2.5em;
   border-right: none;
   border-radius: 40px 0 0 40px;
 }
-/* line 165, html/app/moments/moments.less */
+/* line 171, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn .v {
   padding: 1em 2.5em 1em 2em;
   color: #ffffff;
@@ -202,22 +211,34 @@
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0 40px 40px 0;
 }
-/* line 172, html/app/moments/moments.less */
+/* line 178, html/app/moments/moments.less */
 .moment-details .photo-info .dl-btn em {
   color: #bbbbbb;
   font-style: normal;
 }
-/* line 180, html/app/moments/moments.less */
+/* line 186, html/app/moments/moments.less */
 .moment-details .comments .title {
   padding-bottom: 15px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 183, html/app/moments/moments.less */
+/* line 189, html/app/moments/moments.less */
 .moment-details .comments .title span {
   margin: 0 5px;
   color: #bbbbbb;
 }
-/* line 188, html/app/moments/moments.less */
+/* line 194, html/app/moments/moments.less */
 .moment-details .comments .media-object {
   border-radius: 50%;
+}
+/* line 197, html/app/moments/moments.less */
+.moment-details .comments .comment-reply {
+  display: none;
+}
+/* line 200, html/app/moments/moments.less */
+.moment-details .comments .comment-reply .form-group input[type="text"] {
+  padding: .5em .7em;
+}
+/* line 203, html/app/moments/moments.less */
+.moment-details .comments .comment-reply .form-group .btn {
+  padding: .5em;
 }

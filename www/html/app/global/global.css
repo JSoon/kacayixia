@@ -60,7 +60,6 @@
 [class^="fi-"],
 [class*=" fi-"] {
   position: relative;
-  top: -1px;
   display: inline-block;
   font-family: 'fontello';
   font-style: normal;
@@ -160,39 +159,38 @@ img.img-response {
   display: inline-block;
   padding: 1em 3em;
   color: #000000;
-  line-height: normal;
   border: 1px solid #ddd;
   border-radius: 40px;
   -webkit-transition: all .3s;
           transition: all .3s;
 }
-/* line 170, html/app/global/global.less */
+/* line 169, html/app/global/global.less */
 .btn:hover,
 .btn:focus {
   color: #ffffff;
   border-color: rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 176, html/app/global/global.less */
+/* line 175, html/app/global/global.less */
 .btn [class^="fi-"],
 .btn [class*=" fi-"] {
   -webkit-transition: none;
           transition: none;
 }
-/* line 182, html/app/global/global.less */
+/* line 181, html/app/global/global.less */
 .btn-block {
   display: block;
   text-align: center;
 }
-/* line 188, html/app/global/global.less */
+/* line 187, html/app/global/global.less */
 .form-group {
   margin-bottom: 15px;
 }
-/* line 190, html/app/global/global.less */
+/* line 189, html/app/global/global.less */
 .form-group .input-text {
   position: relative;
 }
-/* line 193, html/app/global/global.less */
+/* line 192, html/app/global/global.less */
 .form-group input[type="text"] {
   display: block;
   width: 100%;
@@ -200,7 +198,7 @@ img.img-response {
   border: none;
   background: none;
 }
-/* line 199, html/app/global/global.less */
+/* line 198, html/app/global/global.less */
 .form-group input[type="text"] + .input-border {
   position: absolute;
   bottom: 0;
@@ -210,61 +208,61 @@ img.img-response {
   border: 1px solid #bbbbbb;
   border-top: none;
 }
-/* line 208, html/app/global/global.less */
+/* line 207, html/app/global/global.less */
 .form-group input[type="text"]:focus + .input-border {
   border-color: #000000;
 }
-/* line 215, html/app/global/global.less */
+/* line 214, html/app/global/global.less */
 .media {
   border-bottom: 1px solid #eeeeee;
 }
-/* line 217, html/app/global/global.less */
+/* line 216, html/app/global/global.less */
 .media .media {
   border-bottom: none;
 }
-/* line 222, html/app/global/global.less */
+/* line 221, html/app/global/global.less */
 .media-heading {
   margin-bottom: 0;
 }
-/* line 224, html/app/global/global.less */
+/* line 223, html/app/global/global.less */
 .media-heading a:hover,
 .media-heading a:focus {
   text-decoration: underline;
 }
-/* line 230, html/app/global/global.less */
+/* line 229, html/app/global/global.less */
 .media-content p:first-child {
   margin: 0;
 }
-/* line 234, html/app/global/global.less */
+/* line 233, html/app/global/global.less */
 .media-meta {
   margin-top: 10px;
   color: #bbbbbb;
 }
-/* line 240, html/app/global/global.less */
+/* line 239, html/app/global/global.less */
 header.header {
   position: relative;
   height: 100px;
   margin-bottom: 20px;
 }
-/* line 244, html/app/global/global.less */
+/* line 243, html/app/global/global.less */
 header.header .logo {
   height: 82px;
   margin: 0;
   text-align: center;
 }
-/* line 248, html/app/global/global.less */
+/* line 247, html/app/global/global.less */
 header.header .logo .sj-logo {
   font-size: 1.667em;
   line-height: 82px;
 }
-/* line 253, html/app/global/global.less */
+/* line 252, html/app/global/global.less */
 header.header .slogan {
   margin: 0;
   text-align: center;
   font-weight: normal;
   font-size: 0.71428571em;
 }
-/* line 259, html/app/global/global.less */
+/* line 258, html/app/global/global.less */
 header.header .user-nav-l,
 header.header .user-nav-r {
   position: relative;
@@ -273,69 +271,73 @@ header.header .user-nav-r {
   line-height: 100px;
   list-style: none;
 }
-/* line 266, html/app/global/global.less */
+/* line 265, html/app/global/global.less */
 header.header .user-nav-l li,
 header.header .user-nav-r li {
   float: left;
 }
-/* line 270, html/app/global/global.less */
+/* line 269, html/app/global/global.less */
 header.header .user-nav-l {
   float: left;
 }
-/* line 272, html/app/global/global.less */
+/* line 271, html/app/global/global.less */
 header.header .user-nav-l a {
   color: #bbbbbb;
 }
-/* line 274, html/app/global/global.less */
+/* line 273, html/app/global/global.less */
 header.header .user-nav-l a:hover,
 header.header .user-nav-l a:focus {
   color: #000000;
 }
-/* line 279, html/app/global/global.less */
+/* line 278, html/app/global/global.less */
 header.header .user-nav-l li {
   margin-right: 10px;
 }
-/* line 281, html/app/global/global.less */
+/* line 280, html/app/global/global.less */
 header.header .user-nav-l li.avatar img {
   -webkit-transition: -webkit-transform .3s;
           transition: transform .3s;
   vertical-align: middle;
 }
-/* line 285, html/app/global/global.less */
+/* line 284, html/app/global/global.less */
 header.header .user-nav-l li.name a {
   color: #000000;
 }
-/* line 287, html/app/global/global.less */
+/* line 286, html/app/global/global.less */
 header.header .user-nav-l li.name a:hover,
 header.header .user-nav-l li.name a:focus {
   text-decoration: underline;
 }
-/* line 294, html/app/global/global.less */
+/* line 293, html/app/global/global.less */
 header.header .user-nav-r {
   float: right;
 }
-/* line 296, html/app/global/global.less */
+/* line 295, html/app/global/global.less */
 header.header .user-nav-r li {
   margin-left: 10px;
 }
-/* line 303, html/app/global/global.less */
+/* line 298, html/app/global/global.less */
+header.header .user-nav-r .btn {
+  line-height: 1.5;
+}
+/* line 305, html/app/global/global.less */
 footer.footer {
   margin: 40px 0 20px;
   text-align: center;
   color: #000000;
 }
-/* line 310, html/app/global/global.less */
+/* line 312, html/app/global/global.less */
 .pagination {
   margin-top: 10px;
   text-align: center;
 }
-/* line 313, html/app/global/global.less */
+/* line 315, html/app/global/global.less */
 .pagination a {
   display: inline-block;
   margin: 0 10px;
   padding: 15px;
 }
-/* line 318, html/app/global/global.less */
+/* line 320, html/app/global/global.less */
 .pagination [class^="fi-"] {
   font-size: 1.714em;
   font-weight: bold;

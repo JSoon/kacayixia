@@ -89,14 +89,17 @@
 .moment-details {
   figure.photo-preview {
     margin-bottom: 40px;
-  }
-  [class^="fi-"] {
-    margin-right: 5px;
+    .photo-over {
+      cursor: zoom-in;
+    }
   }
   // 面包屑导航
   .breadcrumb {
     line-height: 2;
     margin-bottom: 10px;
+    [class^="fi-"] {
+      margin-right: 5px;
+    }
     a {
       display: inline-block;
       &:hover,
@@ -107,6 +110,9 @@
   }
   // 照片信息
   .photo-info {
+    [class^="fi-"] {
+      margin-right: 5px;
+    }
     .title {
       margin: 0;
       [class^="fi-"] {
@@ -187,6 +193,17 @@
     }
     .media-object {
       border-radius: 50%;
+    }
+    .comment-reply {
+      display: none;
+      .form-group {
+        input[type="text"] {
+          padding: .5em .7em;
+        }
+        .btn {
+          padding: .5em;
+        }
+      }
     }
   }
 }

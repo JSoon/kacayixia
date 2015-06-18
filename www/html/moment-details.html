@@ -9,12 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!--TP CSS-->
   <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
+  <link href="lib/magnific-popup/1.0.0/magnific-popup.css" rel="stylesheet">
   <!--custom CSS-->
   <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
   <link href="app/global/global.css?v0.0.0" rel="stylesheet">
   <link href="app/moments/moments.css?v0.0.0" rel="stylesheet">
   <!--TP JS-->
   <script src="lib/requirejs/2.1.18/require.js"></script>
+  <script src="lib/jquery/2.1.4/jquery.js"></script>
 </head>
 <body>
 <!--header-->
@@ -56,10 +58,12 @@
         <!--照片预览-->
         <figure class="photo-preview">
           <div class="photo">
-            <a class="photo-link" href="#">
+            <a class="photo-link" href="http://placekitten.com/g/850/700">
               <img class="img-response" src="http://placekitten.com/g/850/700">
             </a>
-            <a class="photo-over" href="#"><i class="fi-zoom-in"></i></a>
+            <a class="photo-over JS_photo_preview" href="http://placekitten.com/g/850/700" title="Place Kitten">
+              <i class="fi-zoom-in"></i>
+            </a>
           </div>
           <figcaption>
             <a class="avatar" href="#">
@@ -104,7 +108,24 @@
 
                   <p class="media-meta">
                     2015/05/18, 11:40
+                    <a class="fi-reply JS_reply" href="#" title="回复"></a>
                   </p>
+
+                  <div class="comment-reply row">
+                    <div class="col-lg-9">
+                      <div class="form-group">
+                        <div class="input-text">
+                          <input type="text" placeholder="回复 Judith Hernandez">
+                          <i class="input-border"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <a class="btn btn-block" href="#">回复</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -122,6 +143,7 @@
 
                   <p class="media-meta">
                     2015/05/21, 17:33
+                    <a class="fi-reply JS_reply" href="#" title="回复"></a>
                   </p>
                 </div>
                 <div class="media">
@@ -138,6 +160,7 @@
 
                       <p class="media-meta">
                         2015/05/23, 12:16
+                        <a class="fi-reply JS_reply" href="#" title="回复"></a>
                       </p>
                     </div>
                   </div>
@@ -228,7 +251,7 @@
    * 页面入口
    */
   require(['app/config'], function (require) {
-    require(['app/global/like']);
+    require(['app/moments/moment']);
   });
 </script>
 </body>

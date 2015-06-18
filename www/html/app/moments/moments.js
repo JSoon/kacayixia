@@ -3,9 +3,8 @@
  */
 
 define([
-  'jquery',
   'app/global/like'
-], function ($) {
+], function () {
 
 
 });

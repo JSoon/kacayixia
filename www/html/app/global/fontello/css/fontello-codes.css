@@ -9,3 +9,4 @@
 .fi-zoom-in:before { content: '\e807'; } /* '' */
 .fi-info:before { content: '\e808'; } /* '' */
 .fi-trash:before { content: '\e809'; } /* '' */
+.fi-reply:before { content: '\e80a'; } /* '' */

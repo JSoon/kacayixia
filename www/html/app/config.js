@@ -5,7 +5,7 @@ define(function () {
   return require.config({
     baseUrl: './',
     paths: {
-      jquery: 'lib/jquery/2.1.4/jquery'
+      magnific: 'lib/magnific-popup/1.0.0/jquery.magnific-popup'
     }
   });
 });
