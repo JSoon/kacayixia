@@ -2,7 +2,7 @@
 // ========================================================================
 
 // Media queries breakpoints
-
+// ========================================================================
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
 // Extra small screen / phone
@@ -40,9 +40,32 @@
 @screen-md-max: (@screen-lg-min - 1);
 
 // Colors
+// ========================================================================
+
 @black: #000;
 @grey: lighten(@black, 60%); // #999
 @grey-light: lighten(@black, 73.5%); // #bbb
 @grey-lighter: lighten(@black, 93.5%); // #eee
 @white: #fff;
 @red: #FF5736;
+
+// Font size
+// ========================================================================
+
+// normal text
+@font-browser: 16px;
+@font-base: @font-browser*.875; // 14px
+@font-x-sm: 10em/@font-base; // ~10px
+@font-sm: 12em/@font-base; // ~12px
+@font-md: 14em/@font-base; // ~14px
+@font-lg: 16em/@font-base; // ~16px
+@font-x-lg: 18em/@font-base; // ~18px
+@font-xx-lg: 20em/@font-base; // ~20px
+
+// h1 - h6
+@font-size-h1: 36em/@font-base; // ~36px
+@font-size-h2: 30em/@font-base; // ~30px
+@font-size-h3: 24em/@font-base; // ~24px
+@font-size-h4: 18em/@font-base; // ~18px
+@font-size-h5: 14em/@font-base; // ~14px
+@font-size-h6: 12em/@font-base; // ~12px

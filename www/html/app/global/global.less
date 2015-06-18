@@ -97,11 +97,38 @@ button,
 input,
 select,
 textarea {
-  font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', sans-serif;
+  font-family: tahoma, arial, 'Hiragino Sans GB', sans-serif;
+  font-size: @font-base;
+  line-height: 1.5;
 }
 
 body {
   padding-top: 3px;
+}
+
+// h1 - h6
+h1, .h1 {
+  font-size: @font-size-h1;
+}
+
+h2, .h2 {
+  font-size: @font-size-h2;
+}
+
+h3, .h3 {
+  font-size: @font-size-h3;
+}
+
+h4, .h4 {
+  font-size: @font-size-h4;
+}
+
+h5, .h5 {
+  font-size: @font-size-h5;
+}
+
+h6, .h6 {
+  font-size: @font-size-h6;
 }
 
 // color bar
@@ -192,11 +219,20 @@ img.img-response {
   }
 }
 
+.media-heading {
+  margin-bottom: 0;
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
 .media-content p:first-child {
-  margin-top: 0;
+  margin: 0;
 }
 
 .media-meta {
+  margin-top: 10px;
   color: @grey-light;
 }
 
@@ -210,7 +246,7 @@ header.header {
     margin: 0;
     text-align: center;
     .sj-logo {
-      font-size: 60px;
+      font-size: 1.667em;
       line-height: 82px;
     }
   }
@@ -218,7 +254,7 @@ header.header {
     margin: 0;
     text-align: center;
     font-weight: normal;
-    font-size: 10px;
+    font-size: @font-x-sm;
   }
   .user-nav-l,
   .user-nav-r {
@@ -280,7 +316,7 @@ footer.footer {
     padding: 15px;
   }
   [class^="fi-"] {
-    font-size: 2em;
+    font-size: 1.714em;
     font-weight: bold;
   }
 }

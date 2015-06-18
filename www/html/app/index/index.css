@@ -58,14 +58,14 @@ section.upper {
 }
 /* line 52, html/app/index/index.less */
 section.upper .sj-logo {
-  font-size: 160px;
+  font-size: 10em;
   color: #ffffff;
 }
 /* line 56, html/app/index/index.less */
 section.upper .slogan {
   margin: 10px 0 30px;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 14px;
+  font-size: 1em;
   line-height: 14px;
   font-weight: normal;
 }
@@ -74,7 +74,7 @@ section.upper .browse {
   display: inline-block;
   padding: 13px 88px;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 16px;
+  font-size: 1.14285714em;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 40px;
   -webkit-transition: background 0.3s, border-color 0.3s;
@@ -99,7 +99,7 @@ section.lower {
 section.lower .caption {
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
+  font-size: 0.85714286em;
   font-weight: normal;
 }
 /* line 93, html/app/index/index.less */
@@ -125,16 +125,15 @@ section.lower .username {
 /* line 109, html/app/index/index.less */
 section.lower .username a {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
   font-weight: normal;
 }
-/* line 113, html/app/index/index.less */
+/* line 112, html/app/index/index.less */
 section.lower .username a:hover,
 section.lower .username a:focus {
   color: #ffffff;
   text-decoration: underline;
 }
-/* line 122, html/app/index/index.less */
+/* line 121, html/app/index/index.less */
 footer.footer {
   position: fixed;
   bottom: 0;
