@@ -1,17 +1,21 @@
-/* line 7, html/app/moments/moments.less */
-.moments-list figure {
+/* line 6, html/app/moments/moments.less */
+.moments-list figure,
+.moment-details figure.photo-preview {
   margin: 0 0 20px;
 }
 /* line 9, html/app/moments/moments.less */
-.moments-list figure img {
+.moments-list figure img,
+.moment-details figure.photo-preview img {
   display: block;
 }
 /* line 12, html/app/moments/moments.less */
-.moments-list figure .photo {
+.moments-list figure .photo,
+.moment-details figure.photo-preview .photo {
   position: relative;
 }
 /* line 14, html/app/moments/moments.less */
-.moments-list figure .photo .photo-over {
+.moments-list figure .photo .photo-over,
+.moment-details figure.photo-preview .photo .photo-over {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,83 +30,195 @@
           transition: all .2s;
 }
 /* line 26, html/app/moments/moments.less */
-.moments-list figure .photo .photo-over [class^="fi-"] {
+.moments-list figure .photo .photo-over [class^="fi-"],
+.moment-details figure.photo-preview .photo .photo-over [class^="fi-"] {
   position: absolute;
   top: 50%;
   margin-top: -0.5em;
   margin-left: -0.5em;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 3em;
 }
 /* line 37, html/app/moments/moments.less */
 .moments-list figure .photo:hover .photo-over,
-.moments-list figure .photo:focus .photo-over {
+.moment-details figure.photo-preview .photo:hover .photo-over,
+.moments-list figure .photo:focus .photo-over,
+.moment-details figure.photo-preview .photo:focus .photo-over {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 44, html/app/moments/moments.less */
-.moments-list figcaption {
+/* line 43, html/app/moments/moments.less */
+.moments-list figure figcaption,
+.moment-details figure.photo-preview figcaption {
   height: 42px;
   margin-top: 8px;
   line-height: 42px;
 }
-/* line 48, html/app/moments/moments.less */
-.moments-list figcaption .avatar {
+/* line 47, html/app/moments/moments.less */
+.moments-list figure figcaption .avatar,
+.moment-details figure.photo-preview figcaption .avatar {
   float: left;
   margin-right: 10px;
 }
-/* line 51, html/app/moments/moments.less */
-.moments-list figcaption .avatar img {
+/* line 50, html/app/moments/moments.less */
+.moments-list figure figcaption .avatar img,
+.moment-details figure.photo-preview figcaption .avatar img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
 }
-/* line 57, html/app/moments/moments.less */
-.moments-list figcaption .name {
+/* line 56, html/app/moments/moments.less */
+.moments-list figure figcaption .name,
+.moment-details figure.photo-preview figcaption .name {
   float: left;
-  font-size: 14px;
+  font-size: 1.1667em;
 }
-/* line 60, html/app/moments/moments.less */
-.moments-list figcaption .name:hover,
-.moments-list figcaption .name:focus {
+/* line 59, html/app/moments/moments.less */
+.moments-list figure figcaption .name:hover,
+.moment-details figure.photo-preview figcaption .name:hover,
+.moments-list figure figcaption .name:focus,
+.moment-details figure.photo-preview figcaption .name:focus {
   text-decoration: underline;
 }
-/* line 65, html/app/moments/moments.less */
-.moments-list figcaption .like {
+/* line 64, html/app/moments/moments.less */
+.moments-list figure figcaption .like,
+.moment-details figure.photo-preview figcaption .like {
   float: right;
 }
-/* line 67, html/app/moments/moments.less */
-.moments-list figcaption .like [class^="fi-"] {
-  font-size: 18px;
+/* line 66, html/app/moments/moments.less */
+.moments-list figure figcaption .like [class^="fi-"],
+.moment-details figure.photo-preview figcaption .like [class^="fi-"] {
+  font-size: 1.5em;
 }
-/* line 70, html/app/moments/moments.less */
-.moments-list figcaption .like .fi-heart-empty {
+/* line 69, html/app/moments/moments.less */
+.moments-list figure figcaption .like .fi-heart-empty,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty {
   color: #bbbbbb;
 }
-/* line 72, html/app/moments/moments.less */
-.moments-list figcaption .like .fi-heart-empty:hover,
-.moments-list figcaption .like .fi-heart-empty:focus {
+/* line 71, html/app/moments/moments.less */
+.moments-list figure figcaption .like .fi-heart-empty:hover,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty:hover,
+.moments-list figure figcaption .like .fi-heart-empty:focus,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty:focus {
   color: #ff5736;
 }
-/* line 77, html/app/moments/moments.less */
-.moments-list figcaption .like .fi-heart-full {
+/* line 76, html/app/moments/moments.less */
+.moments-list figure figcaption .like .fi-heart-full,
+.moment-details figure.photo-preview figcaption .like .fi-heart-full {
   color: #ff5736;
 }
-/* line 88, html/app/moments/moments.less */
-.moment-details .breadcrumb {
-  line-height: 2;
-  margin-bottom: 20px;
+/* line 90, html/app/moments/moments.less */
+.moment-details figure.photo-preview {
+  margin-bottom: 40px;
 }
-/* line 91, html/app/moments/moments.less */
-.moment-details .breadcrumb i {
+/* line 93, html/app/moments/moments.less */
+.moment-details [class^="fi-"] {
   margin-right: 5px;
 }
-/* line 94, html/app/moments/moments.less */
+/* line 97, html/app/moments/moments.less */
+.moment-details .breadcrumb {
+  line-height: 2;
+  margin-bottom: 10px;
+}
+/* line 100, html/app/moments/moments.less */
 .moment-details .breadcrumb a {
   display: inline-block;
 }
-/* line 96, html/app/moments/moments.less */
+/* line 102, html/app/moments/moments.less */
 .moment-details .breadcrumb a:hover,
 .moment-details .breadcrumb a:focus {
   text-decoration: underline;
+}
+/* line 110, html/app/moments/moments.less */
+.moment-details .photo-info .title {
+  margin: 0;
+}
+/* line 112, html/app/moments/moments.less */
+.moment-details .photo-info .title [class^="fi-"] {
+  color: #bbbbbb;
+}
+/* line 116, html/app/moments/moments.less */
+.moment-details .photo-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1667em;
+}
+/* line 122, html/app/moments/moments.less */
+.moment-details .photo-info ul.info {
+  margin-bottom: 15px;
+  padding: 15px 0;
+  line-height: 2.5;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 127, html/app/moments/moments.less */
+.moment-details .photo-info ul.info span.k {
+  display: inline-block;
+  width: 3em;
+  margin-right: 1em;
+  color: #bbbbbb;
+}
+/* line 135, html/app/moments/moments.less */
+.moment-details .photo-info ul.price li {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+/* line 140, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn {
+  display: inline-block;
+  float: left;
+}
+/* line 143, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn [class^="fi-"],
+.moment-details .photo-info .dl-btn [class*=" fi-"] {
+  -webkit-transition: none;
+          transition: none;
+}
+/* line 147, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn span {
+  float: left;
+  display: inline-block;
+  border: 1px solid #ddd;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+/* line 155, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn:hover span,
+.moment-details .photo-info .dl-btn:focus span {
+  color: #ffffff;
+  border-color: transparent;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 161, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn .k {
+  padding: 1em 2em 1em 2.5em;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+}
+/* line 166, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn .v {
+  padding: 1em 2.5em 1em 2em;
+  color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 40px 40px 0;
+}
+/* line 173, html/app/moments/moments.less */
+.moment-details .photo-info .dl-btn em {
+  color: #bbbbbb;
+  font-style: normal;
+}
+/* line 181, html/app/moments/moments.less */
+.moment-details .comments .title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 184, html/app/moments/moments.less */
+.moment-details .comments .title span {
+  margin: 0 5px;
+  color: #bbbbbb;
+}
+/* line 189, html/app/moments/moments.less */
+.moment-details .comments .media-object {
+  border-radius: 50%;
 }

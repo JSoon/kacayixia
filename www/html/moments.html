@@ -8,11 +8,10 @@
   <meta name="description" content="咔擦一下，就是瞬间。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!--TP CSS-->
-  <link href="lib/normalize.css/3.0.3/normalize.css" rel="stylesheet">
+  <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
   <!--custom CSS-->
   <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
   <link href="app/global/global.css?v0.0.0" rel="stylesheet">
-  <link href="app/global/grid.css?bs3.3.4" rel="stylesheet">
   <link href="app/moments/moments.css?v0.0.0" rel="stylesheet">
   <!--TP JS-->
   <script src="lib/requirejs/2.1.18/require.js"></script>
@@ -54,10 +53,10 @@
       <div class="col-lg-8">
         <figure>
           <div class="photo">
-            <a class="photo-link" href="#">
+            <a class="photo-link" href="moment-details.html">
               <img class="img-response" src="http://placekitten.com/g/850/700">
             </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
+            <a class="photo-over" href="moment-details.html"><i class="fi-search"></i></a>
           </div>
           <figcaption>
             <a class="avatar" href="#">
@@ -157,7 +156,7 @@
   </div>
   <div class="pagination">
     <a class="prev btn" href="#" title="上一页">
-    <i class="fi-angle-left"></i>
+      <i class="fi-angle-left"></i>
     </a>
     <a class="next btn" href="#" title="下一页">
       <i class="fi-angle-right"></i>
@@ -175,8 +174,9 @@
    * 页面入口
    */
   require(['app/config'], function (require) {
-    require(['app/moments/main']);
-  })
+    require(['app/global/like']);
+//    require(['app/moments/main']);
+  });
 </script>
 </body>
 </html>
