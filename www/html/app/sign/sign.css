@@ -66,20 +66,85 @@
 .sign-in form .avatar-upload a.upload-link:focus {
   color: #000000;
 }
-/* line 54, html/app/sign/sign.less */
-.sign-up form .sign-switch span,
-.sign-in form .sign-switch span {
-  color: #999999;
-}
-/* line 57, html/app/sign/sign.less */
-.sign-up form .sign-switch a:hover,
-.sign-in form .sign-switch a:hover,
-.sign-up form .sign-switch a:focus,
-.sign-in form .sign-switch a:focus {
-  text-decoration: underline;
-}
-/* line 62, html/app/sign/sign.less */
+/* line 53, html/app/sign/sign.less */
 .sign-up form .btn,
 .sign-in form .btn {
   font-size: 1.14285714em;
+}
+/* line 57, html/app/sign/sign.less */
+.sign-up .sign-switch,
+.sign-in .sign-switch {
+  margin-bottom: 15px;
+  text-align: center;
+}
+/* line 60, html/app/sign/sign.less */
+.sign-up .sign-switch span,
+.sign-in .sign-switch span {
+  color: #999999;
+}
+/* line 63, html/app/sign/sign.less */
+.sign-up .sign-switch a:hover,
+.sign-in .sign-switch a:hover,
+.sign-up .sign-switch a:focus,
+.sign-in .sign-switch a:focus {
+  text-decoration: underline;
+}
+/* line 68, html/app/sign/sign.less */
+.sign-up section.sign-in-animation,
+.sign-in section.sign-in-animation {
+  position: relative;
+  height: 201px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* line 73, html/app/sign/sign.less */
+.sign-up section.sign-in-animation .sign-in-form,
+.sign-in section.sign-in-animation .sign-in-form,
+.sign-up section.sign-in-animation .sign-in-loading,
+.sign-in section.sign-in-animation .sign-in-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 81, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading,
+.sign-in section.sign-in-animation ul.sign-in-loading {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 87, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading li,
+.sign-in section.sign-in-animation ul.sign-in-loading li {
+  margin-bottom: 10px;
+}
+/* line 90, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading .avatar,
+.sign-in section.sign-in-animation ul.sign-in-loading .avatar {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+/* line 92, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading .avatar img,
+.sign-in section.sign-in-animation ul.sign-in-loading .avatar img {
+  display: block;
+  margin: auto;
+}
+/* line 97, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading .loading,
+.sign-in section.sign-in-animation ul.sign-in-loading .loading {
+  color: #999999;
+}
+/* line 99, html/app/sign/sign.less */
+.sign-up section.sign-in-animation ul.sign-in-loading .loading [class^="fi-"],
+.sign-in section.sign-in-animation ul.sign-in-loading .loading [class^="fi-"],
+.sign-up section.sign-in-animation ul.sign-in-loading .loading [class*=" fi-"],
+.sign-in section.sign-in-animation ul.sign-in-loading .loading [class*=" fi-"] {
+  margin-right: 5px;
+  font-size: 1.42857143em;
+  color: #000000;
 }

@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!--TP CSS-->
   <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
+  <link href="lib/animate-css/3.3.0/animate.css" rel="stylesheet">
   <!--custom CSS-->
   <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
   <link href="app/global/global.css?v0.0.0" rel="stylesheet">
@@ -35,28 +36,41 @@
       <h1>登录</h1>
       <h4>即刻开启专属于您的瞬间。</h4>
     </div>
-    <form class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-        <div class="form-group">
-          <div class="input-text">
-            <input type="email" placeholder="电子邮箱">
-            <i class="input-border"></i>
+    <section class="sign-in-animation">
+      <form class="sign-in-form">
+        <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+            <div class="form-group">
+              <div class="input-text">
+                <input type="email" placeholder="电子邮箱">
+                <i class="input-border"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-text">
+                <input type="password" placeholder="密码">
+                <i class="input-border"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <a class="btn btn-block JS_submit" href="#">登 录</a>
+            </div>
           </div>
         </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="password" placeholder="密码">
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <a class="btn btn-block" href="#">登 录</a>
-        </div>
-        <div class="form-group sign-switch">
-          <span>还没有账号？</span><a href="sign-up.html">去注册</a>
-        </div>
-      </div>
-    </form>
+      </form>
+      <ul class="sign-in-loading">
+        <li class="avatar">
+          <img src="app/sign/avatar.png" alt="avatar">
+        </li>
+        <li class="name">Lori Foster</li>
+        <li class="loading">
+          <i class="fi-spin6 animate-spin"></i>登录中...
+        </li>
+      </ul>
+    </section>
+    <div class="sign-switch">
+      <span>还没有账号？</span><a href="sign-up.html">去注册</a>
+    </div>
   </div>
 </main>
 
@@ -70,7 +84,7 @@
    * 页面入口
    */
   require(['app/config'], function (require) {
-
+    require(['app/sign/sign-in']);
   });
 </script>
 </body>

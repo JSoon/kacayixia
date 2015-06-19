@@ -50,17 +50,59 @@
         }
       }
     }
-    .sign-switch {
-      span {
-        color: @grey;
-      }
-      a:hover,
-      a:focus {
-        text-decoration: underline;
-      }
-    }
     .btn {
       font-size: @font-lg;
+    }
+  }
+  .sign-switch {
+    margin-bottom: 15px;
+    text-align: center;
+    span {
+      color: @grey;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+  }
+  section.sign-in-animation {
+    position: relative;
+    height: 201px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    .sign-in-form,
+    .sign-in-loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    ul.sign-in-loading {
+      display: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+      }
+      .avatar {
+        animation-duration: .5s;
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+      .loading {
+        color: @grey;
+        [class^="fi-"],
+        [class*=" fi-"] {
+          margin-right: 5px;
+          font-size: @font-xx-lg;
+          color: @black;
+        }
+      }
     }
   }
 }

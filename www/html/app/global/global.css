@@ -323,42 +323,72 @@ footer.footer {
   width: 1em;
   margin: 0;
 }
-/* line 311, html/app/global/global.less */
+/* line 310, html/app/global/global.less */
+.animate-spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-webkit-keyframes spin {
+  /* line 319, html/app/global/global.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 326, html/app/global/global.less */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  /* line 319, html/app/global/global.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 326, html/app/global/global.less */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 335, html/app/global/global.less */
 .media {
   border-bottom: 1px solid #eeeeee;
 }
-/* line 313, html/app/global/global.less */
+/* line 337, html/app/global/global.less */
 .media .media {
   border-bottom: none;
 }
-/* line 318, html/app/global/global.less */
+/* line 342, html/app/global/global.less */
 .media-heading {
   margin-bottom: 0;
 }
-/* line 320, html/app/global/global.less */
+/* line 344, html/app/global/global.less */
 .media-heading a:hover,
 .media-heading a:focus {
   text-decoration: underline;
 }
-/* line 326, html/app/global/global.less */
+/* line 350, html/app/global/global.less */
 .media-content p:first-child {
   margin: 0;
 }
-/* line 330, html/app/global/global.less */
+/* line 354, html/app/global/global.less */
 .media-meta {
   margin-top: 10px;
   color: #bbbbbb;
 }
-/* line 336, html/app/global/global.less */
+/* line 360, html/app/global/global.less */
 .mfp-bg {
   background: #ffffff;
   opacity: .9;
 }
-/* line 341, html/app/global/global.less */
+/* line 365, html/app/global/global.less */
 .mfp-figure:after {
   box-shadow: none;
 }
-/* line 345, html/app/global/global.less */
+/* line 369, html/app/global/global.less */
 .mfp-title,
 .mfp-close {
   color: #000000;
