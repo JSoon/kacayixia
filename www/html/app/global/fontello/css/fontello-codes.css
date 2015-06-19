@@ -2,7 +2,7 @@
 .fi-download:before { content: '\e800'; } /* '' */
 .fi-angle-left:before { content: '\e801'; } /* '' */
 .fi-angle-right:before { content: '\e802'; } /* '' */
-.fi-arrow-bold-right:before { content: '\e803'; } /* '' */
+.fi-arrow-bold-left:before { content: '\e803'; } /* '' */
 .fi-heart-full:before { content: '\e804'; } /* '' */
 .fi-heart-empty:before { content: '\e805'; } /* '' */
 .fi-search:before { content: '\e806'; } /* '' */
@@ -10,3 +10,4 @@
 .fi-info:before { content: '\e808'; } /* '' */
 .fi-trash:before { content: '\e809'; } /* '' */
 .fi-reply:before { content: '\e80a'; } /* '' */
+.fi-emo-sunglasses:before { content: '\e80b'; } /* '' */

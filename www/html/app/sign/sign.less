@@ -1,0 +1,66 @@
+@import "../global/variables";
+
+// Sign up
+// ========================================================================
+
+.sign-up,
+.sign-in {
+  .title {
+    text-align: center;
+    margin: 30px 0 40px;
+    h1, h4 {
+      margin: 0;
+      font-weight: normal;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    h4 {
+      color: @grey-light;
+    }
+  }
+  form {
+    text-align: center;
+    .avatar-upload {
+      position: relative;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      border: 5px solid @grey-lightest;
+      border-radius: 50%;
+      [class^="fi-"],
+      [class*=" fi-"] {
+        font-size: 8em;
+        color: @grey-lighter;
+      }
+      a.upload-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 3em;
+        margin: auto;
+        font-size: @font-lg;
+        color: @grey-light;
+        &:hover,
+        &:focus {
+          color: @black;
+        }
+      }
+    }
+    .sign-switch {
+      span {
+        color: @grey;
+      }
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+    }
+    .btn {
+      font-size: @font-lg;
+    }
+  }
+}

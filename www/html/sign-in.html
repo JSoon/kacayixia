@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+  <title>瞬间</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="jsoon, lonso">
+  <meta name="keywords" content="瞬间">
+  <meta name="description" content="咔擦一下，就是瞬间。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!--TP CSS-->
+  <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
+  <!--custom CSS-->
+  <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
+  <link href="app/global/global.css?v0.0.0" rel="stylesheet">
+  <link href="app/sign/sign.css?v0.0.0" rel="stylesheet">
+  <!--TP JS-->
+  <script src="lib/requirejs/2.1.18/require.js"></script>
+  <script src="lib/jquery/2.1.4/jquery.js"></script>
+</head>
+<body>
+<!--header-->
+<header class="header container">
+  <h1 class="logo">
+    <a href="index.html" title="首页">
+      <i class="sj-logo"></i>
+    </a>
+  </h1>
+  <h6 class="slogan">一瞬间，便是永恒。</h6>
+</header>
+
+<!--main-->
+<main class="container">
+  <div class="sign-in">
+    <div class="title">
+      <h1>登录</h1>
+      <h4>即刻开启专属于您的瞬间。</h4>
+    </div>
+    <form class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <div class="form-group">
+          <div class="input-text">
+            <input type="email" placeholder="电子邮箱">
+            <i class="input-border"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-text">
+            <input type="password" placeholder="密码">
+            <i class="input-border"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <a class="btn btn-block" href="#">登 录</a>
+        </div>
+        <div class="form-group sign-switch">
+          <span>还没有账号？</span><a href="sign-up.html">去注册</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!--footer-->
+<footer class="footer">
+  2015
+</footer>
+
+<script>
+  /**
+   * 页面入口
+   */
+  require(['app/config'], function (require) {
+
+  });
+</script>
+</body>
+</html>

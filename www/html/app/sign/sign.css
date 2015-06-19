@@ -1,0 +1,85 @@
+/* line 8, html/app/sign/sign.less */
+.sign-up .title,
+.sign-in .title {
+  text-align: center;
+  margin: 30px 0 40px;
+}
+/* line 11, html/app/sign/sign.less */
+.sign-up .title h1,
+.sign-in .title h1,
+.sign-up .title h4,
+.sign-in .title h4 {
+  margin: 0;
+  font-weight: normal;
+}
+/* line 15, html/app/sign/sign.less */
+.sign-up .title h1,
+.sign-in .title h1 {
+  margin-bottom: 10px;
+}
+/* line 18, html/app/sign/sign.less */
+.sign-up .title h4,
+.sign-in .title h4 {
+  color: #bbbbbb;
+}
+/* line 22, html/app/sign/sign.less */
+.sign-up form,
+.sign-in form {
+  text-align: center;
+}
+/* line 24, html/app/sign/sign.less */
+.sign-up form .avatar-upload,
+.sign-in form .avatar-upload {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  border: 5px solid #eeeeee;
+  border-radius: 50%;
+}
+/* line 31, html/app/sign/sign.less */
+.sign-up form .avatar-upload [class^="fi-"],
+.sign-in form .avatar-upload [class^="fi-"],
+.sign-up form .avatar-upload [class*=" fi-"],
+.sign-in form .avatar-upload [class*=" fi-"] {
+  font-size: 8em;
+  color: #dddddd;
+}
+/* line 36, html/app/sign/sign.less */
+.sign-up form .avatar-upload a.upload-link,
+.sign-in form .avatar-upload a.upload-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 3em;
+  margin: auto;
+  font-size: 1.14285714em;
+  color: #bbbbbb;
+}
+/* line 47, html/app/sign/sign.less */
+.sign-up form .avatar-upload a.upload-link:hover,
+.sign-in form .avatar-upload a.upload-link:hover,
+.sign-up form .avatar-upload a.upload-link:focus,
+.sign-in form .avatar-upload a.upload-link:focus {
+  color: #000000;
+}
+/* line 54, html/app/sign/sign.less */
+.sign-up form .sign-switch span,
+.sign-in form .sign-switch span {
+  color: #999999;
+}
+/* line 57, html/app/sign/sign.less */
+.sign-up form .sign-switch a:hover,
+.sign-in form .sign-switch a:hover,
+.sign-up form .sign-switch a:focus,
+.sign-in form .sign-switch a:focus {
+  text-decoration: underline;
+}
+/* line 62, html/app/sign/sign.less */
+.sign-up form .btn,
+.sign-in form .btn {
+  font-size: 1.14285714em;
+}

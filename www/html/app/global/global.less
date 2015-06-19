@@ -1,6 +1,6 @@
 @import "variables";
 
-// global
+// Typography
 // ========================================================================
 
 // box sizing
@@ -14,6 +14,81 @@
 ::selection {
   color: @white;
   background: fade(@black, 80);
+}
+
+// html, body
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  color: @black;
+  background-color: #F8F9F7;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, 'Hiragino Sans GB', sans-serif;
+  font-size: @font-base;
+  line-height: 1.5;
+}
+
+body {
+  padding-top: 3px;
+}
+
+// color bar
+body:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background: url("color_bar.png") center 0 no-repeat transparent;
+  content: "";
+  opacity: .9;
+}
+
+// h1 - h6
+h1, .h1 {
+  font-size: @font-size-h1;
+}
+
+h2, .h2 {
+  font-size: @font-size-h2;
+}
+
+h3, .h3 {
+  font-size: @font-size-h3;
+}
+
+h4, .h4 {
+  font-size: @font-size-h4;
+}
+
+h5, .h5 {
+  font-size: @font-size-h5;
+}
+
+h6, .h6 {
+  font-size: @font-size-h6;
+}
+
+// a link
+a {
+  color: @black;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+// img
+img.img-response {
+  max-width: 100%;
 }
 
 // clearfix
@@ -35,6 +110,9 @@
 .row:after {
   clear: both;
 }
+
+// 公用样式
+// ========================================================================
 
 // logo font
 @font-face {
@@ -63,178 +141,6 @@
   }
 }
 
-// fontello icons
-[class^="fi-"],
-[class*=" fi-"] {
-  position: relative;
-//  top: -1px; // 修正图标垂直对齐位置，使之与文本垂直对齐
-  display: inline-block;
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: all .2s;
-  &:before {
-    display: inline-block;
-    width: 1em;
-    margin: 0;
-  }
-}
-
-// html, body
-html,
-body {
-  height: 100%;
-  min-height: 100%;
-  color: @black;
-  background-color: #F8F9F7;
-}
-
-body,
-button,
-input,
-select,
-textarea {
-  font-family: tahoma, arial, 'Hiragino Sans GB', sans-serif;
-  font-size: @font-base;
-  line-height: 1.5;
-}
-
-body {
-  padding-top: 3px;
-}
-
-// h1 - h6
-h1, .h1 {
-  font-size: @font-size-h1;
-}
-
-h2, .h2 {
-  font-size: @font-size-h2;
-}
-
-h3, .h3 {
-  font-size: @font-size-h3;
-}
-
-h4, .h4 {
-  font-size: @font-size-h4;
-}
-
-h5, .h5 {
-  font-size: @font-size-h5;
-}
-
-h6, .h6 {
-  font-size: @font-size-h6;
-}
-
-// color bar
-body:before {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 3px;
-  overflow: hidden;
-  background: url("color_bar.png") center 0 no-repeat transparent;
-  content: "";
-  opacity: .9;
-}
-
-// a link
-a {
-  color: @black;
-  text-decoration: none;
-  transition: all .2s;
-}
-
-// img
-img.img-response {
-  max-width: 100%;
-}
-
-// btn
-.btn {
-  display: inline-block;
-  padding: 1em 3em;
-  color: @black;
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  transition: all .3s;
-  &:hover,
-  &:focus {
-    color: @white;
-    border-color: fade(@black, 40);
-    background: fade(@black, 80);
-  }
-  [class^="fi-"],
-  [class*=" fi-"] {
-    transition: none;
-  }
-}
-
-.btn-block {
-  display: block;
-  text-align: center;
-}
-
-// form
-.form-group {
-  margin-bottom: 15px;
-  .input-text {
-    position: relative;
-  }
-  input[type="text"] {
-    display: block;
-    width: 100%;
-    padding: 1em;
-    border: none;
-    background: none;
-    & + .input-border {
-      position: absolute;
-      bottom: 0;
-      display: block;
-      width: 100%;
-      height: 3px;
-      border: 1px solid @grey-light;
-      border-top: none;
-    }
-    &:focus + .input-border {
-      border-color: @black;
-    }
-  }
-}
-
-// media
-.media {
-  border-bottom: 1px solid @grey-lighter;
-  .media {
-    border-bottom: none;
-  }
-}
-
-.media-heading {
-  margin-bottom: 0;
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
-}
-
-.media-content p:first-child {
-  margin: 0;
-}
-
-.media-meta {
-  margin-top: 10px;
-  color: @grey-light;
-}
-
 // header
 header.header {
   position: relative;
@@ -246,7 +152,7 @@ header.header {
     text-align: center;
     .sj-logo {
       font-size: 1.667em;
-      line-height: 82px;
+      line-height: 92px;
     }
   }
   .slogan {
@@ -317,8 +223,127 @@ footer.footer {
     margin: 0 10px;
     padding: 15px;
   }
-  [class^="fi-"] {
+  [class^="fi-"],
+  [class*=" fi-"] {
     font-size: 1.714em;
     font-weight: bold;
   }
 }
+
+// btn
+.btn {
+  display: inline-block;
+  padding: 1em 3em;
+  color: @black;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  transition: all .3s;
+  &:hover,
+  &:focus {
+    color: @white;
+    border-color: fade(@black, 40);
+    background: fade(@black, 80);
+  }
+  [class^="fi-"],
+  [class*=" fi-"] {
+    transition: none;
+  }
+}
+
+.btn-block {
+  display: block;
+  text-align: center;
+}
+
+// form
+.form-group {
+  margin-bottom: 15px;
+  .input-text {
+    position: relative;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background: none;
+    & + .input-border {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      border: 1px solid @grey-light;
+      border-top: none;
+    }
+    &:focus + .input-border {
+      border-color: @black;
+    }
+  }
+}
+
+// 第三方库样式覆写
+// ========================================================================
+
+// fontello icons
+[class^="fi-"],
+[class*=" fi-"] {
+  position: relative;
+  //  top: -1px; // 修正图标垂直对齐位置，使之与文本垂直对齐
+  display: inline-block;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .2s;
+  &:before {
+    display: inline-block;
+    width: 1em;
+    margin: 0;
+  }
+}
+
+// media
+.media {
+  border-bottom: 1px solid @grey-lightest;
+  .media {
+    border-bottom: none;
+  }
+}
+
+.media-heading {
+  margin-bottom: 0;
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.media-content p:first-child {
+  margin: 0;
+}
+
+.media-meta {
+  margin-top: 10px;
+  color: @grey-light;
+}
+
+// magnific popup
+.mfp-bg {
+  background: @white;
+  opacity: .9;
+}
+
+.mfp-figure:after {
+  box-shadow: none;
+}
+
+.mfp-title,
+.mfp-close {
+  color: @black;
+}
+
