@@ -12,7 +12,7 @@
   <!--custom CSS-->
   <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
   <link href="app/global/global.css?v0.0.0" rel="stylesheet">
-  <link href="app/sign/sign.css?v0.0.0" rel="stylesheet">
+  <link href="app/my/my.css?v0.0.0" rel="stylesheet">
   <!--TP JS-->
   <script src="lib/requirejs/2.1.18/require.js"></script>
   <script src="lib/jquery/2.1.4/jquery.js"></script>
@@ -26,57 +26,77 @@
     </a>
   </h1>
   <h6 class="slogan">一瞬间，便是永恒。</h6>
+  <ul class="user-nav-l">
+    <li class="avatar">
+      <a href="#"><img src="app/global/me.png" alt="avatar"></a>
+    </li>
+    <li class="name"><a href="#">Sharon Guerrero</a>
+    </li>
+    <li class="sign-out"><a href="#">退出</a></li>
+  </ul>
+  <ul class="user-nav-r">
+    <li>
+      <a class="btn" href="#">摄影集</a>
+    </li>
+    <li>
+      <a class="btn" href="#">上传</a>
+    </li>
+  </ul>
 </header>
 
 <!--main-->
 <main class="container">
-  <div class="sign-up">
+  <div class="profile">
     <div class="title">
-      <h1>注册</h1>
-      <h4>只需花费您1分钟的时间，即可上传专属您的瞬间。</h4>
+      <h1>个人资料</h1>
+      <h4>修改头像、昵称或者登录密码。</h4>
     </div>
     <form class="row">
       <div class="col-lg-4 col-lg-offset-4">
         <div class="form-group">
-          <div class="avatar-upload-default">
-            <i class="fi-emo-sunglasses"></i>
+          <div class="avatar-upload-change">
+            <img src="app/my/avatar.png" alt="avatar">
+            <!--<i class="fi-emo-sunglasses"></i>-->
             <a class="upload-link" href="#">
-              点击<br>上传头像
+              点击<br>修改头像
             </a>
           </div>
         </div>
         <div class="form-group">
           <div class="input-text">
-            <input type="text" placeholder="用户名（昵称）">
+            <input type="text" value="Sharon Guerrero" placeholder="用户名（昵称）">
             <i class="input-border"></i>
           </div>
         </div>
         <div class="form-group">
           <div class="input-text">
-            <input type="email" placeholder="电子邮箱">
+            <input type="email" value="jsoon@g.cn（不可修改）" disabled>
             <i class="input-border"></i>
           </div>
         </div>
         <div class="form-group">
           <div class="input-text">
-            <input type="password" placeholder="密码">
+            <input type="password" placeholder="原密码">
             <i class="input-border"></i>
           </div>
         </div>
         <div class="form-group">
           <div class="input-text">
-            <input type="password" placeholder="确认密码">
+            <input type="password" placeholder="新密码">
             <i class="input-border"></i>
           </div>
         </div>
         <div class="form-group">
-          <a class="btn btn-block" href="#">注 册</a>
+          <div class="input-text">
+            <input type="password" placeholder="确认新密码">
+            <i class="input-border"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <a class="btn btn-block" href="#">保 存</a>
         </div>
       </div>
     </form>
-    <div class="sign-switch">
-      <span>已有账号？</span><a href="sign-in.html">去登录</a>
-    </div>
   </div>
 </main>
 
