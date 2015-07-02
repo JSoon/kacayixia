@@ -28,4 +28,7 @@ www/html/app/test
 ##############################################
 # 后端忽略文件
 ##############################################
-
+server/kacayixia/node_modules/
+server/kacayixia/.idea/
+server/kacayixia/excels/
+server/kacayixia/tmp/

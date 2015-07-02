@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "user_center",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "test": {
+    "username": "live",
+    "password": "b80ff3b3f510f168931b",
+    "database": "user_center",
+    "host": "10.160.50.227",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "production": {
+    "username": "sudiyi_edms",
+    "password": "sudiyi_edms10055",
+    "database": "user_center",
+    "host": "rds2yqr32riinmi.mysql.rds.aliyuncs.com",
+    "dialect": "mysql",
+    "port": 3306
+  }
+}
