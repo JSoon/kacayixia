@@ -1,5 +1,6 @@
 // Dependencies
 var gulp = require('gulp');
+var flatten = require('gulp-flatten');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
@@ -16,21 +17,36 @@ var banner = ['/**',
   ' * Licensed under the <%= pkg.license %> license',
   ' */',
   ''].join('\n');
+var paths = {
+    app: 'html/app/',
+    lib: 'html/lib/'
+}
 
 // Default
 gulp.task('default', ['watch']);
 
 // Compile less files
 gulp.task('less', function () {
-    var files = ['app/less/b.less'];
+    var files = [
+        paths.lib + 'bootstrap/3.3.6/bootstrap.css',
+        paths.app + 'global/assets/variables.less',
+        paths.app + 'global/assets/global.less',
+        paths.app + 'index/assets/index.less'
+    ];
 
     return gulp.src(files)
-        .pipe(sourcemaps.init())
+        .pipe(concat('kacayixia.less'))
         .pipe(less())
+        .pipe(header(banner, {
+            pkg: package
+        }))
+        .pipe(gulp.dest('html/dist'))
+        .pipe(rename('kacayixia.min.css'))
         .pipe(cssnano())
-        .pipe(rename('less.min.css'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'));
+        .pipe(header(banner, {
+            pkg: package
+        }))
+        .pipe(gulp.dest('html/dist'));
 });
 
 // Concat & Minify CSS files
