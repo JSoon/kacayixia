@@ -5,25 +5,16 @@
 ##############################################
 
 # git
-#.gitignore
 
 # npm
-package.json
 node_modules
 npm-debug.log
 
 # bower
-www/bower_components
-www/bower.json
+bower_components
 
-# WebStorm
-www/.idea
-
-# Grunt
-Gruntfile.js
-
-# test 测试文件
-www/html/app/test
+# test
+**/test
 
 ##############################################
 # 后端忽略文件
