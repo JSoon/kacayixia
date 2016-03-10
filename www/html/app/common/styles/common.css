@@ -1,0 +1,278 @@
+* {
+  font-family: "Lantinghei SC", "Open Sans", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-weight: lighter;
+  transition: all .3s;
+  webkit-tap-highlight-color: transparent;
+}
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+}
+html,
+body {
+  min-height: 100%;
+  color: #000;
+  background-color: #F8F9F7;
+}
+body {
+  padding-top: 3px;
+}
+body:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background: url("../images/color_bar.png") center 0 no-repeat transparent;
+  content: "";
+  opacity: .9;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: inherit;
+}
+@font-face {
+  font-family: "logo";
+  src: url('logo/iconfont.eot');
+  src: url('logo/iconfont.eot?#iefix') format('embedded-opentype'), url('logo/iconfont.woff') format('woff'), url('logo/iconfont.ttf') format('truetype'), url('logo/iconfont.svg#kacayixia') format('svg');
+}
+.sj-logo {
+  display: inline-block;
+  font-family: "logo" !important;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+.sj-logo:before {
+  content: "\e600";
+}
+header.header {
+  position: relative;
+  height: 100px;
+  margin-bottom: 20px;
+}
+header.header .logo {
+  height: 82px;
+  margin: 0;
+  text-align: center;
+}
+header.header .logo .sj-logo {
+  font-size: 1.667em;
+  line-height: 92px;
+}
+header.header .slogan {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.71428571em;
+}
+header.header .user-nav-l,
+header.header .user-nav-r {
+  position: relative;
+  margin: -100px 0;
+  padding: 0;
+  line-height: 100px;
+  list-style: none;
+}
+header.header .user-nav-l li,
+header.header .user-nav-r li {
+  float: left;
+}
+header.header .user-nav-l {
+  float: left;
+}
+header.header .user-nav-l a {
+  color: #bbbbbb;
+}
+header.header .user-nav-l a:hover,
+header.header .user-nav-l a:focus {
+  color: #000;
+}
+header.header .user-nav-l li {
+  margin-right: 10px;
+}
+header.header .user-nav-l li.avatar img {
+  vertical-align: middle;
+}
+header.header .user-nav-l li.name a {
+  color: #000;
+}
+header.header .user-nav-l li.name a:hover,
+header.header .user-nav-l li.name a:focus {
+  text-decoration: underline;
+}
+header.header .user-nav-r {
+  float: right;
+}
+header.header .user-nav-r li {
+  margin-left: 10px;
+}
+header.header .user-nav-r .btn {
+  line-height: 1.5;
+}
+footer.footer {
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #000;
+}
+.pagination {
+  margin-top: 10px;
+  text-align: center;
+}
+.pagination a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 15px;
+}
+.pagination [class^="fi-"],
+.pagination [class*=" fi-"] {
+  font-size: 1.714em;
+  font-weight: bold;
+}
+.btn {
+  display: inline-block;
+  padding: 1em 3em;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+}
+.btn [class^="fi-"],
+.btn [class*=" fi-"] {
+  transition: none;
+}
+.btn-block {
+  display: block;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group .input-text {
+  position: relative;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  background: none;
+}
+.form-group input[type="text"] + .input-border,
+.form-group input[type="email"] + .input-border,
+.form-group input[type="password"] + .input-border {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border: 1px solid #bbbbbb;
+  border-top: none;
+}
+.form-group input[type="text"]:focus + .input-border,
+.form-group input[type="email"]:focus + .input-border,
+.form-group input[type="password"]:focus + .input-border {
+  border-color: #000;
+}
+.form-group input[disabled] {
+  color: #999999;
+}
+[class^="fi-"],
+[class*=" fi-"] {
+  position: relative;
+  display: inline-block;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="fi-"]:before,
+[class*=" fi-"]:before {
+  display: inline-block;
+  width: 1em;
+  margin: 0;
+}
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.media {
+  border-bottom: 1px solid #eeeeee;
+}
+.media .media {
+  border-bottom: none;
+}
+.media-heading {
+  margin-bottom: 0;
+}
+.media-heading a:hover,
+.media-heading a:focus {
+  text-decoration: underline;
+}
+.media-content p:first-child {
+  margin: 0;
+}
+.media-meta {
+  margin-top: 10px;
+  color: #bbbbbb;
+}
+.mfp-bg {
+  background: #fff;
+  opacity: .9;
+}
+.mfp-figure:after {
+  box-shadow: none;
+}
+.mfp-title,
+.mfp-close {
+  color: #000;
+}

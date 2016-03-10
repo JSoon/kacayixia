@@ -1,0 +1,107 @@
+.home-tree:after {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+  background: linear-gradient(rgba(90, 85, 78, 0.45) 0%, rgba(100, 94, 85, 0.45) 20%, rgba(36, 43, 39, 0.55) 100%);
+  content: "";
+}
+.home-tree .photo-of-today {
+  z-index: 0;
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  bottom: -100%;
+  right: -100%;
+  margin: auto;
+  animation: photoOfToday 8s ease-in-out;
+}
+@keyframes photoOfToday {
+  from {
+    transform: scale(1.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.home-tree .upper {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+.home-tree .upper .logo {
+  display: inline-block;
+  width: 180px;
+  height: 156px;
+  background: url(../images/home-logo.png);
+}
+.home-tree .upper .slogan {
+  margin: 10px 0 30px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1em;
+  line-height: 1;
+}
+.home-tree .upper .browse {
+  display: inline-block;
+  padding: 13px 88px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.14285714em;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 40px;
+}
+.home-tree .upper .browse:hover,
+.home-tree .upper .browse:focus {
+  border-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+.home-tree .lower {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+.home-tree .lower .caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85714286em;
+}
+.home-tree .lower .avatar img {
+  width: 96px;
+  height: 96px;
+  margin: 10px 0;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: .8;
+}
+.home-tree .lower .avatar:hover img,
+.home-tree .lower .avatar:focus img {
+  opacity: 1;
+}
+.home-tree .lower .username {
+  margin: 0;
+}
+.home-tree .lower .username a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.home-tree .lower .username a:hover,
+.home-tree .lower .username a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+.home-tree footer.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+}

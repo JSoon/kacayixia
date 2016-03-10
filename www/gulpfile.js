@@ -19,7 +19,8 @@ var banner = ['/**',
   ''].join('\n');
 var paths = {
     app: 'html/app/',
-    lib: 'html/lib/'
+    lib: 'html/lib/',
+    test: 'html/test/'
 }
 
 // Default
@@ -28,25 +29,15 @@ gulp.task('default', ['watch']);
 // Compile less files
 gulp.task('less', function () {
     var files = [
-        paths.lib + 'bootstrap/3.3.6/bootstrap.css',
-        paths.app + 'global/assets/variables.less',
-        paths.app + 'global/assets/global.less',
-        paths.app + 'index/assets/index.less'
+        paths.app + '**/styles/*.less',
+        '!' + paths.app + '/common/styles/variables.less'
     ];
 
-    return gulp.src(files)
-        .pipe(concat('kacayixia.less'))
+    return gulp.src(files, {
+            base: './'
+        })
         .pipe(less())
-        .pipe(header(banner, {
-            pkg: package
-        }))
-        .pipe(gulp.dest('html/dist'))
-        .pipe(rename('kacayixia.min.css'))
-        .pipe(cssnano())
-        .pipe(header(banner, {
-            pkg: package
-        }))
-        .pipe(gulp.dest('html/dist'));
+        .pipe(gulp.dest('.'));
 });
 
 // Concat & Minify CSS files
@@ -90,8 +81,8 @@ gulp.task('JS', function () {
 });
 
 // Watch
-gulp.task('watch', ['less', 'CSS', 'JS'], function () {
-    var files = ['app/**/*'];
+gulp.task('watch', ['less'], function () {
+    var files = [paths.app + '**/*'];
 
-    gulp.watch(files, ['less', 'CSS', 'JS']);
+    gulp.watch(files, ['less']);
 });
