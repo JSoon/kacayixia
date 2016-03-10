@@ -1,29 +1,29 @@
 /* line 8, html/app/my/my.less */
-.profile .title {
+.my .title {
   text-align: center;
   margin: 30px 0 40px;
 }
 /* line 11, html/app/my/my.less */
-.profile .title h1,
-.profile .title h4 {
+.my .title h1,
+.my .title h4 {
   margin: 0;
   font-weight: normal;
 }
 /* line 15, html/app/my/my.less */
-.profile .title h1 {
+.my .title h1 {
   margin-bottom: 10px;
 }
 /* line 18, html/app/my/my.less */
-.profile .title h4 {
+.my .title h4 {
   color: #bbbbbb;
 }
-/* line 22, html/app/my/my.less */
-.profile form {
+/* line 26, html/app/my/my.less */
+.my-profile form {
   text-align: center;
 }
-/* line 24, html/app/my/my.less */
-.profile form .avatar-upload-default,
-.profile form .avatar-upload-change {
+/* line 28, html/app/my/my.less */
+.my-profile form .avatar-upload-default,
+.my-profile form .avatar-upload-change {
   position: relative;
   width: 128px;
   height: 128px;
@@ -31,17 +31,17 @@
   border: 5px solid #eeeeee;
   border-radius: 50%;
 }
-/* line 32, html/app/my/my.less */
-.profile form .avatar-upload-default [class^="fi-"],
-.profile form .avatar-upload-change [class^="fi-"],
-.profile form .avatar-upload-default [class*=" fi-"],
-.profile form .avatar-upload-change [class*=" fi-"] {
+/* line 36, html/app/my/my.less */
+.my-profile form .avatar-upload-default [class^="fi-"],
+.my-profile form .avatar-upload-change [class^="fi-"],
+.my-profile form .avatar-upload-default [class*=" fi-"],
+.my-profile form .avatar-upload-change [class*=" fi-"] {
   font-size: 8em;
   color: #dddddd;
 }
-/* line 37, html/app/my/my.less */
-.profile form .avatar-upload-default a.upload-link,
-.profile form .avatar-upload-change a.upload-link {
+/* line 41, html/app/my/my.less */
+.my-profile form .avatar-upload-default a.upload-link,
+.my-profile form .avatar-upload-change a.upload-link {
   position: absolute;
   top: 0;
   right: 0;
@@ -52,24 +52,35 @@
   font-size: 1.14285714em;
   color: #bbbbbb;
 }
-/* line 47, html/app/my/my.less */
-.profile form .avatar-upload-default a.upload-link:hover,
-.profile form .avatar-upload-change a.upload-link:hover,
-.profile form .avatar-upload-default a.upload-link:focus,
-.profile form .avatar-upload-change a.upload-link:focus {
+/* line 51, html/app/my/my.less */
+.my-profile form .avatar-upload-default a.upload-link:hover,
+.my-profile form .avatar-upload-change a.upload-link:hover,
+.my-profile form .avatar-upload-default a.upload-link:focus,
+.my-profile form .avatar-upload-change a.upload-link:focus {
   color: #000000;
 }
-/* line 53, html/app/my/my.less */
-.profile form .avatar-upload-change {
+/* line 57, html/app/my/my.less */
+.my-profile form .avatar-upload-change {
   border: none;
 }
-/* line 55, html/app/my/my.less */
-.profile form .avatar-upload-change a.upload-link {
+/* line 59, html/app/my/my.less */
+.my-profile form .avatar-upload-change a.upload-link {
   padding: 38px 0;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 61, html/app/my/my.less */
-.profile form .btn {
+/* line 65, html/app/my/my.less */
+.my-profile form .btn {
   font-size: 1.14285714em;
+}
+/* line 73, html/app/my/my.less */
+.my-upload .dropzone {
+  background-color: #eeeeee;
+  border: none;
+}
+/* line 76, html/app/my/my.less */
+.my-upload .dropzone .dz-message {
+  margin: 6em 0;
+  font-size: 1.28571429em;
+  color: #bbbbbb;
 }
