@@ -8,6 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 var strip = require('gulp-strip-comments');
+var flatten = require('gulp-flatten');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var package = require('./package.json');
@@ -18,9 +19,9 @@ var banner = ['/**',
   ' */',
   ''].join('\n');
 var paths = {
-    app: 'html/app/',
-    lib: 'html/lib/',
-    test: 'html/test/'
+    app: './html/app',
+    lib: './html/lib',
+    test: './html/test'
 }
 
 // Default
@@ -29,15 +30,18 @@ gulp.task('default', ['watch']);
 // Compile less files
 gulp.task('less', function () {
     var files = [
-        paths.app + '**/styles/*.less',
-        '!' + paths.app + '/common/styles/variables.less'
+        paths.app + '/**/*.less',
+        '!' + paths.app + '/**/variables.less'
     ];
 
-    return gulp.src(files, {
-            base: './'
-        })
+    return gulp.src(files)
         .pipe(less())
-        .pipe(gulp.dest('.'));
+        .pipe(rename(function (path) {
+            path.dirname += "/../css";
+        }))
+        .pipe(gulp.dest(function (path) {
+            return path.base;
+        }));
 });
 
 // Concat & Minify CSS files
@@ -82,7 +86,22 @@ gulp.task('JS', function () {
 
 // Watch
 gulp.task('watch', ['less'], function () {
-    var files = [paths.app + '**/*'];
+    var files = [paths.app + '/**/*'];
 
     gulp.watch(files, ['less']);
+});
+
+// test
+gulp.task('test', function () {
+    var files = [paths.test + '/**/*.less'];
+    return gulp.src(files)
+        .pipe(less())
+        .pipe(rename(function (path) {
+            // path.dirname - relative path from the base directory set by gulp.src to the filename,
+            // here is '/**/*.less'
+            path.dirname += "/../css";
+        }))
+        .pipe(gulp.dest(function (path) {
+            return path.base; // relative path, here is paths.test
+        }));
 });

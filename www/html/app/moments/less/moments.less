@@ -1,0 +1,205 @@
+@import "../../common/less/variables";
+// common
+// ========================================================================
+.moments-list figure,
+.moment-details figure.photo-preview {
+    margin: 0 0 20px;
+    img {
+        display: block;
+    }
+    .photo {
+        position: relative;
+        .photo-over {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100%;
+            background-color: transparent;
+            opacity: 0;
+            transition: all .2s;
+            [class^="fi-"] {
+                position: absolute;
+                top: 50%;
+                margin-top: -.5em;
+                margin-left: -.5em;
+                color: @white;
+                font-size: 2.571em;
+            }
+        }
+        &:hover,
+        &:focus {
+            .photo-over {
+                opacity: 1;
+                background-color: fade(@white, 50);
+            }
+        }
+    }
+    figcaption {
+        height: 42px;
+        margin-top: 8px;
+        line-height: 42px;
+        .avatar {
+            float: left;
+            margin-right: 10px;
+            img {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+            }
+        }
+        .name {
+            float: left;
+            font-size: @font-md;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        .like {
+            float: right;
+            [class^="fi-"] {
+                font-size: @font-x-lg;
+            }
+            .fi-heart-empty {
+                color: @grey-light;
+                &:hover,
+                &:focus {
+                    color: @red;
+                }
+            }
+            .fi-heart-full {
+                color: @red;
+            }
+        }
+    }
+}
+
+// moments list
+// ========================================================================
+// moment details
+// ========================================================================
+.moment-details {
+    figure.photo-preview {
+        margin-bottom: 40px;
+        .photo-over {
+            cursor: zoom-in;
+        }
+    }
+    // 面包屑导航
+    .breadcrumb {
+        line-height: 2;
+        margin-bottom: 10px;
+        [class^="fi-"] {
+            margin-right: 5px;
+        }
+        a {
+            display: inline-block;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+    // 照片信息
+    .photo-info {
+        [class^="fi-"] {
+            margin-right: 5px;
+        }
+        .title {
+            margin: 0;
+            [class^="fi-"] {
+                color: @grey-light;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.info {
+            margin-bottom: 15px;
+            padding: 15px 0;
+            line-height: 2.5;
+            border-bottom: 1px solid @grey-lightest;
+            span.k {
+                display: inline-block;
+                width: 3em;
+                margin-right: 1em;
+                color: @grey-light;
+            }
+        }
+        ul.price {
+            li {
+                margin-bottom: 15px;
+                overflow: hidden;
+            }
+        }
+        .dl-btn {
+            display: inline-block;
+            float: left;
+            [class^="fi-"],
+            [class*=" fi-"] {
+                transition: none;
+            }
+            span {
+                float: left;
+                display: inline-block;
+                border: 1px solid #ddd;
+                transition: all .3s;
+            }
+            &:hover,
+            &:focus {
+                span {
+                    color: @white;
+                    border-color: transparent;
+                    background: fade(@black, 80);
+                }
+            }
+            .k {
+                padding: 1em 2em 1em 2.5em;
+                border-right: none;
+                border-radius: 40px 0 0 40px;
+            }
+            .v {
+                padding: 1em 2.5em 1em 2em;
+                color: @white;
+                border-color: fade(@black, 80);
+                background: fade(@black, 80);
+                border-radius: 0 40px 40px 0;
+            }
+            em {
+                color: @grey-light;
+                font-style: normal;
+            }
+        }
+    }
+    // 评论
+    .comments {
+        .title {
+            padding-bottom: 15px;
+            border-bottom: 1px solid @grey-lightest;
+            span {
+                margin: 0 5px;
+                color: @grey-light;
+            }
+        }
+        .media-object {
+            border-radius: 50%;
+        }
+        .comment-reply {
+            display: none;
+            .form-group {
+                input[type="text"] {
+                    padding: .5em .7em;
+                }
+                .btn {
+                    padding: .5em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,198 @@
+.moments-list figure,
+.moment-details figure.photo-preview {
+  margin: 0 0 20px;
+}
+.moments-list figure img,
+.moment-details figure.photo-preview img {
+  display: block;
+}
+.moments-list figure .photo,
+.moment-details figure.photo-preview .photo {
+  position: relative;
+}
+.moments-list figure .photo .photo-over,
+.moment-details figure.photo-preview .photo .photo-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  transition: all .2s;
+}
+.moments-list figure .photo .photo-over [class^="fi-"],
+.moment-details figure.photo-preview .photo .photo-over [class^="fi-"] {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  color: #fff;
+  font-size: 2.571em;
+}
+.moments-list figure .photo:hover .photo-over,
+.moment-details figure.photo-preview .photo:hover .photo-over,
+.moments-list figure .photo:focus .photo-over,
+.moment-details figure.photo-preview .photo:focus .photo-over {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.moments-list figure figcaption,
+.moment-details figure.photo-preview figcaption {
+  height: 42px;
+  margin-top: 8px;
+  line-height: 42px;
+}
+.moments-list figure figcaption .avatar,
+.moment-details figure.photo-preview figcaption .avatar {
+  float: left;
+  margin-right: 10px;
+}
+.moments-list figure figcaption .avatar img,
+.moment-details figure.photo-preview figcaption .avatar img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.moments-list figure figcaption .name,
+.moment-details figure.photo-preview figcaption .name {
+  float: left;
+  font-size: 1em;
+}
+.moments-list figure figcaption .name:hover,
+.moment-details figure.photo-preview figcaption .name:hover,
+.moments-list figure figcaption .name:focus,
+.moment-details figure.photo-preview figcaption .name:focus {
+  text-decoration: underline;
+}
+.moments-list figure figcaption .like,
+.moment-details figure.photo-preview figcaption .like {
+  float: right;
+}
+.moments-list figure figcaption .like [class^="fi-"],
+.moment-details figure.photo-preview figcaption .like [class^="fi-"] {
+  font-size: 1.28571429em;
+}
+.moments-list figure figcaption .like .fi-heart-empty,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty {
+  color: #bbbbbb;
+}
+.moments-list figure figcaption .like .fi-heart-empty:hover,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty:hover,
+.moments-list figure figcaption .like .fi-heart-empty:focus,
+.moment-details figure.photo-preview figcaption .like .fi-heart-empty:focus {
+  color: #FF5736;
+}
+.moments-list figure figcaption .like .fi-heart-full,
+.moment-details figure.photo-preview figcaption .like .fi-heart-full {
+  color: #FF5736;
+}
+.moment-details figure.photo-preview {
+  margin-bottom: 40px;
+}
+.moment-details figure.photo-preview .photo-over {
+  cursor: zoom-in;
+}
+.moment-details .breadcrumb {
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.moment-details .breadcrumb [class^="fi-"] {
+  margin-right: 5px;
+}
+.moment-details .breadcrumb a {
+  display: inline-block;
+}
+.moment-details .breadcrumb a:hover,
+.moment-details .breadcrumb a:focus {
+  text-decoration: underline;
+}
+.moment-details .photo-info [class^="fi-"] {
+  margin-right: 5px;
+}
+.moment-details .photo-info .title {
+  margin: 0;
+}
+.moment-details .photo-info .title [class^="fi-"] {
+  color: #bbbbbb;
+}
+.moment-details .photo-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.moment-details .photo-info ul.info {
+  margin-bottom: 15px;
+  padding: 15px 0;
+  line-height: 2.5;
+  border-bottom: 1px solid #eeeeee;
+}
+.moment-details .photo-info ul.info span.k {
+  display: inline-block;
+  width: 3em;
+  margin-right: 1em;
+  color: #bbbbbb;
+}
+.moment-details .photo-info ul.price li {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.moment-details .photo-info .dl-btn {
+  display: inline-block;
+  float: left;
+}
+.moment-details .photo-info .dl-btn [class^="fi-"],
+.moment-details .photo-info .dl-btn [class*=" fi-"] {
+  transition: none;
+}
+.moment-details .photo-info .dl-btn span {
+  float: left;
+  display: inline-block;
+  border: 1px solid #ddd;
+  transition: all .3s;
+}
+.moment-details .photo-info .dl-btn:hover span,
+.moment-details .photo-info .dl-btn:focus span {
+  color: #fff;
+  border-color: transparent;
+  background: rgba(0, 0, 0, 0.8);
+}
+.moment-details .photo-info .dl-btn .k {
+  padding: 1em 2em 1em 2.5em;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+}
+.moment-details .photo-info .dl-btn .v {
+  padding: 1em 2.5em 1em 2em;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 40px 40px 0;
+}
+.moment-details .photo-info .dl-btn em {
+  color: #bbbbbb;
+  font-style: normal;
+}
+.moment-details .comments .title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+.moment-details .comments .title span {
+  margin: 0 5px;
+  color: #bbbbbb;
+}
+.moment-details .comments .media-object {
+  border-radius: 50%;
+}
+.moment-details .comments .comment-reply {
+  display: none;
+}
+.moment-details .comments .comment-reply .form-group input[type="text"] {
+  padding: .5em .7em;
+}
+.moment-details .comments .comment-reply .form-group .btn {
+  padding: .5em;
+}
