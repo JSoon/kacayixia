@@ -1,182 +1,187 @@
 <!DOCTYPE html>
 <html>
-<head lang="zh">
-  <title>瞬间</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="jsoon, lonso">
-  <meta name="keywords" content="瞬间">
-  <meta name="description" content="咔擦一下，就是瞬间。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!--TP CSS-->
-  <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
-  <!--custom CSS-->
-  <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
-  <link href="app/global/global.css?v0.0.0" rel="stylesheet">
-  <link href="app/moments/moments.css?v0.0.0" rel="stylesheet">
-  <!--TP JS-->
-  <script src="lib/requirejs/2.1.18/require.js"></script>
-  <script src="lib/jquery/2.1.4/jquery.js"></script>
+
+<head>
+    <title>瞬间</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="jsoon, lonso">
+    <meta name="keywords" content="瞬间">
+    <meta name="description" content="咔擦一下，就是瞬间。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--Third-party-->
+    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
+    <!--Custom-->
+    <link href="app/common/css/common.css" rel="stylesheet">
+    <link href="app/moments/css/moments.css" rel="stylesheet">
 </head>
-<body>
-<!--header-->
-<header class="header container">
-  <h1 class="logo">
-    <a href="index.html" title="首页">
-      <i class="sj-logo"></i>
-    </a>
-  </h1>
-  <h6 class="slogan">一瞬间，便是永恒。</h6>
-  <ul class="user-nav-l">
-    <li><a href="#">登录</a></li>
-    <li><a href="#">注册</a></li>
-    <!--<li class="avatar">-->
-    <!--<a href="#"><img src="app/global/me.png" alt="avatar"></a>-->
-    <!--</li>-->
-    <!--<li class="name"><a href="#">Sharon Guerrero</a>-->
-    <!--</li>-->
-    <!--<li class="sign-out"><a href="#">退出</a></li>-->
-  </ul>
-  <ul class="user-nav-r">
-    <li>
-      <a class="btn" href="my-upload.html">上传</a>
-    </li>
-    <li>
-      <a class="btn" href="#">摄影集</a>
-    </li>
-  </ul>
-</header>
 
-<!--main-->
-<main class="container">
-  <div class="moments-list">
-    <!--editor-picks-->
-    <div class="row editor-picks">
-      <div class="col-lg-8">
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="moment-details.html">
-              <img class="img-response" src="http://placekitten.com/g/850/700">
-            </a>
-            <a class="photo-over" href="moment-details.html"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Randy Ortiz</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4">
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="#">
-              <img class="img-response" src="http://placekitten.com/g/410/312">
-            </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Dylan Murphy</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
-          </figcaption>
-        </figure>
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="#">
-              <img class="img-response" src="http://placekitten.com/g/410/312">
-            </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Alice Gardner</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-empty"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="#">
-              <img class="img-response" src="http://placekitten.com/g/410/312">
-            </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Andrea Matthews</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4">
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="#">
-              <img class="img-response" src="http://placekitten.com/g/410/312">
-            </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Anna Reyes</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-empty"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4">
-        <figure>
-          <div class="photo">
-            <a class="photo-link" href="#">
-              <img class="img-response" src="http://placekitten.com/g/410/312">
-            </a>
-            <a class="photo-over" href="#"><i class="fi-search"></i></a>
-          </div>
-          <figcaption>
-            <a class="avatar" href="#">
-              <img src="http://placekitten.com/g/40/40">
-            </a>
-            <a class="name" href="#">Heather Richardson</a>
-            <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-  <div class="pagination">
-    <a class="prev btn" href="#" title="上一页">
-      <i class="fi-angle-left"></i>
-    </a>
-    <a class="next btn" href="#" title="下一页">
-      <i class="fi-angle-right"></i>
-    </a>
-  </div>
-</main>
+<body class="moments-tree">
+    <!--header-->
+    <header class="crown">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html" title="首页">瞬间</a>
+                <h6 class="slogan">一瞬间，便是永恒。</h6>
+            </div>
+            <ul class="nav-action-l">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <!--<li class="avatar">-->
+                <!--<a href="#"><img src="app/global/me.png" alt="avatar"></a>-->
+                <!--</li>-->
+                <!--<li class="name"><a href="#">Sharon Guerrero</a>-->
+                <!--</li>-->
+                <!--<li class="sign-out"><a href="#">退出</a></li>-->
+            </ul>
+            <ul class="nav-action-r">
+                <li>
+                    <a class="btn" href="my-upload.html">上传</a>
+                </li>
+                <li>
+                    <a class="btn" href="#">摄影集</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-<!--footer-->
-<footer class="footer">
-  2015
-</footer>
+    <!--main-->
+    <main class="trunk">
+        <div class="container">
+            <div class="moments-list">
+                <!--editor-picks-->
+                <div class="row editor-picks">
+                    <div class="col-lg-8">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="moment-details.html">
+                                    <img class="img-responsive" src="http://placekitten.com/g/850/700">
+                                </a>
+                                <a class="photo-over" href="moment-details.html"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Randy Ortiz</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/410/312">
+                                </a>
+                                <a class="photo-over" href="#"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Dylan Murphy</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/410/312">
+                                </a>
+                                <a class="photo-over" href="#"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Alice Gardner</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-empty"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/410/312">
+                                </a>
+                                <a class="photo-over" href="#"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Andrea Matthews</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/410/312">
+                                </a>
+                                <a class="photo-over" href="#"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Anna Reyes</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-empty"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/410/312">
+                                </a>
+                                <a class="photo-over" href="#"><i class="fi-search"></i></a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">
+                                </a>
+                                <a class="name" href="#">Heather Richardson</a>
+                                <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a class="prev btn" href="#" title="上一页">
+                    <i class="fi-angle-left"></i>
+                </a>
+                <a class="next btn" href="#" title="下一页">
+                    <i class="fi-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
 
-<script>
-  /**
-   * 页面入口
-   */
-  require(['app/config'], function (require) {
-    require(['app/moments/moments']);
-  });
-</script>
+    <!--footer-->
+    <footer class="root">
+        2015
+    </footer>
+
+    <!--Third-party-->
+    <script src="lib/requirejs/2.1.18/require.js"></script>
+    <script src="lib/jquery/1.12.1/jquery.js"></script>
+    <script>
+        /**
+         * 页面入口
+         */
+        require(['app/config'], function(require) {
+            require(['app/moments/moments']);
+        });
+
+    </script>
 </body>
+
 </html>

@@ -26,7 +26,7 @@ body:before {
   width: 100%;
   height: 3px;
   overflow: hidden;
-  background: url("../images/color_bar.png") center 0 no-repeat transparent;
+  background: url("../img/color_bar.png") center 0 no-repeat transparent;
   content: "";
   opacity: .9;
 }
@@ -69,71 +69,79 @@ h6,
 .sj-logo:before {
   content: "\e600";
 }
-header.header {
+header.crown {
   position: relative;
-  height: 100px;
   margin-bottom: 20px;
 }
-header.header .logo {
-  height: 82px;
-  margin: 0;
+header.crown .logo {
   text-align: center;
 }
-header.header .logo .sj-logo {
-  font-size: 1.667em;
-  line-height: 92px;
+header.crown .logo a {
+  display: inline-block;
+  width: 100px;
+  height: 88px;
+  text-indent: -9999px;
+  background-image: url(../img/logo.png);
+  background-size: 80px 71px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-header.header .slogan {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  header.crown .logo a {
+    background-image: url(../img/logo@2x.png);
+    background-size: 80px 71px;
+    background-repeat: no-repeat;
+  }
+}
+header.crown .logo .slogan {
   margin: 0;
-  text-align: center;
-  font-weight: normal;
   font-size: 0.71428571em;
 }
-header.header .user-nav-l,
-header.header .user-nav-r {
+header.crown .nav-action-l,
+header.crown .nav-action-r {
   position: relative;
   margin: -100px 0;
   padding: 0;
   line-height: 100px;
   list-style: none;
 }
-header.header .user-nav-l li,
-header.header .user-nav-r li {
+header.crown .nav-action-l li,
+header.crown .nav-action-r li {
   float: left;
 }
-header.header .user-nav-l {
+header.crown .nav-action-l {
   float: left;
 }
-header.header .user-nav-l a {
+header.crown .nav-action-l a {
   color: #bbbbbb;
 }
-header.header .user-nav-l a:hover,
-header.header .user-nav-l a:focus {
+header.crown .nav-action-l a:hover,
+header.crown .nav-action-l a:focus {
   color: #000;
 }
-header.header .user-nav-l li {
+header.crown .nav-action-l li {
   margin-right: 10px;
 }
-header.header .user-nav-l li.avatar img {
+header.crown .nav-action-l li.avatar img {
   vertical-align: middle;
 }
-header.header .user-nav-l li.name a {
+header.crown .nav-action-l li.name a {
   color: #000;
 }
-header.header .user-nav-l li.name a:hover,
-header.header .user-nav-l li.name a:focus {
+header.crown .nav-action-l li.name a:hover,
+header.crown .nav-action-l li.name a:focus {
   text-decoration: underline;
 }
-header.header .user-nav-r {
+header.crown .nav-action-r {
   float: right;
 }
-header.header .user-nav-r li {
+header.crown .nav-action-r li {
   margin-left: 10px;
 }
-header.header .user-nav-r .btn {
+header.crown .nav-action-r .btn {
   line-height: 1.5;
 }
-footer.footer {
+footer.root {
   margin: 40px 0 20px;
   text-align: center;
   color: #000;

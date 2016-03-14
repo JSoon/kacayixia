@@ -42,7 +42,19 @@
             display: inline-block;
             width: 180px;
             height: 156px;
-            background: url(../img/home-logo.png);
+            text-indent: -9999px;
+            background-image: url(../img/home-logo.png);
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and ( min--moz-device-pixel-ratio: 2),
+        only screen and ( -o-min-device-pixel-ratio: 2/1),
+        only screen and ( min-device-pixel-ratio: 2),
+        only screen and ( min-resolution: 192dpi),
+        only screen and ( min-resolution: 2dppx) {
+            .logo {
+                background-image: url(../img/home-logo@2x.png);
+                background-size: 180px 156px;
+            }
         }
         .slogan {
             margin: 10px 0 30px;
@@ -103,7 +115,7 @@
             }
         }
     }
-    footer.footer {
+    footer.root {
         position: fixed;
         bottom: 0;
         left: 0;
