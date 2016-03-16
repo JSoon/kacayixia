@@ -24,8 +24,8 @@
   opacity: 0;
   transition: all .2s;
 }
-.moments-list figure .photo .photo-over [class^="fi-"],
-.moment-details figure.photo-preview .photo .photo-over [class^="fi-"] {
+.moments-list figure .photo .photo-over [class*="sj-"],
+.moment-details figure.photo-preview .photo .photo-over [class*="sj-"] {
   position: absolute;
   top: 50%;
   margin-top: -0.5em;
@@ -71,23 +71,24 @@
 .moments-list figure figcaption .like,
 .moment-details figure.photo-preview figcaption .like {
   float: right;
+  text-decoration: none;
 }
-.moments-list figure figcaption .like [class^="fi-"],
-.moment-details figure.photo-preview figcaption .like [class^="fi-"] {
+.moments-list figure figcaption .like [class*="sj-"],
+.moment-details figure.photo-preview figcaption .like [class*="sj-"] {
   font-size: 1.28571429em;
 }
-.moments-list figure figcaption .like .fi-heart-empty,
-.moment-details figure.photo-preview figcaption .like .fi-heart-empty {
+.moments-list figure figcaption .like .sj-heart-o,
+.moment-details figure.photo-preview figcaption .like .sj-heart-o {
   color: #bbbbbb;
 }
-.moments-list figure figcaption .like .fi-heart-empty:hover,
-.moment-details figure.photo-preview figcaption .like .fi-heart-empty:hover,
-.moments-list figure figcaption .like .fi-heart-empty:focus,
-.moment-details figure.photo-preview figcaption .like .fi-heart-empty:focus {
+.moments-list figure figcaption .like .sj-heart-o:hover,
+.moment-details figure.photo-preview figcaption .like .sj-heart-o:hover,
+.moments-list figure figcaption .like .sj-heart-o:focus,
+.moment-details figure.photo-preview figcaption .like .sj-heart-o:focus {
   color: #FF5736;
 }
-.moments-list figure figcaption .like .fi-heart-full,
-.moment-details figure.photo-preview figcaption .like .fi-heart-full {
+.moments-list figure figcaption .like .sj-heart,
+.moment-details figure.photo-preview figcaption .like .sj-heart {
   color: #FF5736;
 }
 .moment-details figure.photo-preview {

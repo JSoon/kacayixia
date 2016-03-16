@@ -34,6 +34,10 @@ a {
   color: #000;
   text-decoration: none;
 }
+a:hover,
+a:focus {
+  color: #999999;
+}
 h1,
 h2,
 h3,
@@ -47,27 +51,6 @@ h6,
 .h5,
 .h6 {
   font-weight: inherit;
-}
-@font-face {
-  font-family: "logo";
-  src: url('logo/iconfont.eot');
-  src: url('logo/iconfont.eot?#iefix') format('embedded-opentype'), url('logo/iconfont.woff') format('woff'), url('logo/iconfont.ttf') format('truetype'), url('logo/iconfont.svg#kacayixia') format('svg');
-}
-.sj-logo {
-  display: inline-block;
-  font-family: "logo" !important;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-}
-.sj-logo:before {
-  content: "\e600";
 }
 header.crown {
   position: relative;
@@ -95,7 +78,7 @@ header.crown .logo a {
 }
 header.crown .logo .slogan {
   margin: 0;
-  font-size: 0.71428571em;
+  font-size: 0.85714286em;
 }
 header.crown .nav-action-l,
 header.crown .nav-action-r {
@@ -152,13 +135,14 @@ footer.root {
 }
 .pagination a {
   display: inline-block;
+  width: 66px;
+  height: 66px;
   margin: 0 10px;
-  padding: 15px;
+  padding: 0;
+  line-height: 65px;
 }
-.pagination [class^="fi-"],
-.pagination [class*=" fi-"] {
+.pagination [class*="sj-"] {
   font-size: 1.714em;
-  font-weight: bold;
 }
 .btn {
   display: inline-block;
@@ -173,8 +157,7 @@ footer.root {
   border-color: rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.8);
 }
-.btn [class^="fi-"],
-.btn [class*=" fi-"] {
+.btn [class*="sj-"] {
   transition: none;
 }
 .btn-block {

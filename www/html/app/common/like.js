@@ -5,17 +5,17 @@
 
 define(function () {
 
-  $('.JS_like').on('click', function (e) {
-    e.preventDefault();
-    var heart = $(this).children('i');
-    // 若未点赞，则加赞
-    if (heart.hasClass('fi-heart-empty')) {
-      heart.attr('class', 'fi-heart-full');
-    }
-    // 若已点赞，则取消赞
-    else if (heart.hasClass('fi-heart-full')) {
-      heart.attr('class', 'fi-heart-empty');
-    }
-  });
+    $('.J_Like').on('click', function (e) {
+        e.preventDefault();
+        var heart = $(this).children('i');
+        // 若未点赞，则加赞
+        if (heart.hasClass('sj-heart-o')) {
+            heart.attr('class', 'sj sj-heart');
+        }
+        // 若已点赞，则取消赞
+        else if (heart.hasClass('sj-heart')) {
+            heart.attr('class', 'sj sj-heart-o');
+        }
+    });
 
 });

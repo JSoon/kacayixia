@@ -1,5 +1,5 @@
 @import "variables";
-// Html tags
+// Tags
 // ========================================================================
 * {
     font-family: "Lantinghei SC", "Open Sans", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
@@ -43,6 +43,10 @@ body {
 a {
     color: @black;
     text-decoration: none;
+    &:hover,
+    &:focus {
+        color: @grey;
+    }
 }
 
 h1,
@@ -62,30 +66,6 @@ h6,
 
 // 公用样式
 // ========================================================================
-// logo font
-@font-face {
-    font-family: "logo";
-    src: url('logo/iconfont.eot');
-    src: url('logo/iconfont.eot?#iefix') format('embedded-opentype'), url('logo/iconfont.woff') format('woff'), url('logo/iconfont.ttf') format('truetype'), url('logo/iconfont.svg#kacayixia') format('svg');
-}
-
-.sj-logo {
-    display: inline-block;
-    font-family: "logo" !important;
-    font-size: inherit;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
-    &:before {
-        content: "\e600";
-    }
-}
-
 // header
 header.crown {
     position: relative;
@@ -116,7 +96,7 @@ header.crown {
         }
         .slogan {
             margin: 0;
-            font-size: @font-x-sm;
+            font-size: @font-sm;
         }
     }
     .nav-action-l,
@@ -177,13 +157,14 @@ footer.root {
     text-align: center;
     a {
         display: inline-block;
+        width: 66px;
+        height: 66px;
         margin: 0 10px;
-        padding: 15px;
+        padding: 0;
+        line-height: 65px;
     }
-    [class^="fi-"],
-    [class*=" fi-"] {
+    [class*="sj-"] {
         font-size: 1.714em;
-        font-weight: bold;
     }
 }
 
@@ -200,8 +181,7 @@ footer.root {
         border-color: fade(@black, 40);
         background: fade(@black, 80);
     }
-    [class^="fi-"],
-    [class*=" fi-"] {
+    [class*="sj-"] {
         transition: none;
     }
 }

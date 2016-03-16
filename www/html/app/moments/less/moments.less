@@ -21,7 +21,7 @@
             background-color: transparent;
             opacity: 0;
             transition: all .2s;
-            [class^="fi-"] {
+            [class*="sj-"] {
                 position: absolute;
                 top: 50%;
                 margin-top: -.5em;
@@ -61,17 +61,18 @@
         }
         .like {
             float: right;
-            [class^="fi-"] {
+            text-decoration: none;
+            [class*="sj-"] {
                 font-size: @font-x-lg;
             }
-            .fi-heart-empty {
+            .sj-heart-o {
                 color: @grey-light;
                 &:hover,
                 &:focus {
                     color: @red;
                 }
             }
-            .fi-heart-full {
+            .sj-heart {
                 color: @red;
             }
         }
