@@ -6,6 +6,7 @@
   right: 0;
   display: block;
   z-index: 0;
+  background: -webkit-linear-gradient(rgba(90, 85, 78, 0.45) 0%, rgba(100, 94, 85, 0.45) 20%, rgba(36, 43, 39, 0.55) 100%);
   background: linear-gradient(rgba(90, 85, 78, 0.45) 0%, rgba(100, 94, 85, 0.45) 20%, rgba(36, 43, 39, 0.55) 100%);
   content: "";
 }
@@ -17,14 +18,27 @@
   bottom: -100%;
   right: -100%;
   margin: auto;
-  animation: photoOfToday 8s ease-in-out;
+  -webkit-animation: photoOfToday 8s ease-in-out;
+          animation: photoOfToday 8s ease-in-out;
+}
+@-webkit-keyframes photoOfToday {
+  from {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 @keyframes photoOfToday {
   from {
-    transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
   }
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 .home-tree .upper {
@@ -36,20 +50,12 @@
   text-align: center;
 }
 .home-tree .upper .logo {
-  display: inline-block;
-  width: 180px;
-  height: 156px;
-  text-indent: -9999px;
-  background-image: url(../img/home-logo.png);
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .home-tree .upper .logo {
-    background-image: url(../img/home-logo@2x.png);
-    background-size: 180px 156px;
-  }
+  font-size: 11em;
+  line-height: 1;
+  color: #fff;
 }
 .home-tree .upper .slogan {
-  margin: 10px 0 30px;
+  margin: 30px 0;
   color: rgba(255, 255, 255, 0.95);
   font-size: 1em;
   line-height: 1;

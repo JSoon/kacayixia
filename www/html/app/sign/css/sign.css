@@ -128,7 +128,8 @@
 }
 .sign-up section.sign-in-animation ul.sign-in-loading .avatar,
 .sign-in section.sign-in-animation ul.sign-in-loading .avatar {
-  animation-duration: .5s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 .sign-up section.sign-in-animation ul.sign-in-loading .avatar img,
 .sign-in section.sign-in-animation ul.sign-in-loading .avatar img {

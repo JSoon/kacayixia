@@ -76,22 +76,10 @@ header.crown {
             display: inline-block;
             width: 100px;
             height: 88px;
-            text-indent: -9999px;
-            background-image: url(../img/logo.png);
-            background-size: 80px 71px;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-        @media only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and ( min--moz-device-pixel-ratio: 2),
-        only screen and ( -o-min-device-pixel-ratio: 2/1),
-        only screen and ( min-device-pixel-ratio: 2),
-        only screen and ( min-resolution: 192dpi),
-        only screen and ( min-resolution: 2dppx) {
-            a {
-                background-image: url(../img/logo@2x.png);
-                background-size: 80px 71px;
-                background-repeat: no-repeat;
+            font-size: 4em;
+            &:hover,
+            &:focus {
+                text-decoration: none;
             }
         }
         .slogan {

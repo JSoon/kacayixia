@@ -4,6 +4,7 @@ var flatten = require('gulp-flatten');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
+var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var less = require('gulp-less');
@@ -21,18 +22,36 @@ var banner = ['/**',
 var paths = {
     app: './html/app',
     lib: './html/lib',
-    test: './html/test'
+    test: './html/test',
+    dist: './html/dist'
 }
 
 // Default
 gulp.task('default', ['watch']);
 
-// Compile less files
+// Less compiling
 gulp.task('less', function () {
     var files = [
         paths.app + '/**/*.less',
         '!' + paths.app + '/**/variables.less'
     ];
+
+    return gulp.src(files)
+        .pipe(less())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions', '> 5%', 'IE 8', 'IE 9']
+        }))
+        .pipe(rename(function (path) {
+            path.dirname += "/../css";
+        }))
+        .pipe(gulp.dest(function (path) {
+            return path.base;
+        }));
+});
+
+// CSS distribution 
+gulp.task('dist-css', function () {
+    var files = [paths.dist + '/less/kacayixia.less'];
 
     return gulp.src(files)
         .pipe(less())
