@@ -7,15 +7,15 @@ define([
   'magnific'
 ], function () {
 
-  // 照片预览
-  $('.JS_photo_preview').magnificPopup({
-    type: 'image',
-    closeBtnInside: false,
-    closeOnContentClick: true,
-    mainClass: 'mfp-img-mobile',
-    image: {
-      verticalFit: true
-    }
-  });
+    // 照片预览
+    $('.J_PhotoPreview').magnificPopup({
+        type: 'image',
+        closeBtnInside: false,
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+    });
 
 });
