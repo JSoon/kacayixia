@@ -4,9 +4,6 @@
 .moments-list figure,
 .moment-details figure.photo-preview {
     margin: 0 0 20px;
-    img {
-        display: block;
-    }
     .photo {
         position: relative;
         .photo-over {
@@ -20,7 +17,7 @@
             line-height: 1;
             background-color: transparent;
             opacity: 0;
-            [class*="sj-"] {
+            .sj {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -34,7 +31,7 @@
         &:focus {
             .photo-over {
                 opacity: 1;
-                background-color: fade(@white, 50);
+                background-color: fade(@white, 35);
             }
         }
     }
@@ -44,10 +41,10 @@
         line-height: 42px;
         .avatar {
             float: left;
-            margin-right: 10px;
             img {
                 width: 42px;
                 height: 42px;
+                margin-right: 10px;
                 border-radius: 50%;
             }
         }
@@ -62,7 +59,7 @@
         .like {
             float: right;
             text-decoration: none;
-            [class*="sj-"] {
+            .sj {
                 font-size: @font-x-lg;
             }
             .sj-heart-o {
@@ -94,15 +91,9 @@
     .breadcrumb {
         line-height: 2;
         margin-bottom: 10px;
-        [class^="fi-"] {
+        .sj {
             margin-right: 5px;
-        }
-        a {
-            display: inline-block;
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
+            font-size: 14px;
         }
     }
     // 照片信息
@@ -140,32 +131,35 @@
             }
         }
         .dl-btn {
-            display: inline-block;
-            float: left;
-            [class^="fi-"],
-            [class*=" fi-"] {
-                transition: none;
-            }
             span {
                 float: left;
                 display: inline-block;
+                height: 50px;
+                line-height: 48px;
                 border: 1px solid #ddd;
             }
             &:hover,
             &:focus {
+                cursor: pointer;
                 span {
                     color: @white;
                     border-color: transparent;
                     background: fade(@black, 80);
                 }
             }
+            .sj {
+                font-size: 14px;
+                margin-right: 5px;
+            }
             .k {
-                padding: 1em 2em 1em 2.5em;
+                padding-left: 2.5em;
+                padding-right: 2em;
                 border-right: none;
                 border-radius: 40px 0 0 40px;
             }
             .v {
-                padding: 1em 2.5em 1em 2em;
+                padding-left: 2em;
+                padding-right: 2.5em;
                 color: @white;
                 border-color: fade(@black, 80);
                 background: fade(@black, 80);
@@ -174,6 +168,7 @@
             em {
                 color: @grey-light;
                 font-style: normal;
+                vertical-align: middle;
             }
         }
     }
@@ -182,6 +177,9 @@
         .title {
             padding-bottom: 15px;
             border-bottom: 1px solid @grey-lightest;
+            .sj {
+                font-size: @font-xx-lg;
+            }
             span {
                 margin: 0 5px;
                 color: @grey-light;
@@ -189,6 +187,9 @@
         }
         .media-object {
             border-radius: 50%;
+        }
+        .sj-reply {
+            margin-left: 5px;
         }
         .comment-reply {
             display: none;

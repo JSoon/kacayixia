@@ -1,253 +1,274 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>瞬间</title>
-    <meta charset="UTF-8">
     <meta name="author" content="jsoon, lonso">
     <meta name="keywords" content="瞬间">
     <meta name="description" content="咔擦一下，就是瞬间。">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <!--TP CSS-->
-    <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
+    <!--Third-party-->
+    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
     <link href="lib/magnific-popup/1.1.0/magnific-popup.css" rel="stylesheet">
-    <!--custom CSS-->
-    <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
-    <link href="app/global/global.css" rel="stylesheet">
-    <link href="app/moments/moments.css" rel="stylesheet">
-    <!--TP JS-->
-    <script src="lib/requirejs/2.1.18/require.js"></script>
-    <script src="lib/jquery/2.1.4/jquery.js"></script>
+    <!--Custom-->
+    <link href="app/common/iconfont/iconfont.css" rel="stylesheet">
+    <link href="app/common/css/common.css" rel="stylesheet">
+    <link href="app/moments/css/moments.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body>
+<body class="moments-tree">
     <!--header-->
-    <header class="header container">
-        <h1 class="logo">
-            <a href="index.html" title="首页">
-              <i class="sj-logo"></i>
-          </a>
-      </h1>
-        <h6 class="slogan">一瞬间，便是永恒。</h6>
-        <ul class="user-nav-l">
-            <li><a href="#">登录</a></li>
-            <li><a href="#">注册</a></li>
-            <!--<li class="avatar">-->
-            <!--<a href="#"><img src="app/global/me.png" alt="avatar"></a>-->
-            <!--</li>-->
-            <!--<li class="name"><a href="#">Sharon Guerrero</a>-->
-            <!--</li>-->
-            <!--<li class="sign-out"><a href="#">退出</a></li>-->
-        </ul>
-        <ul class="user-nav-r">
-            <li>
-                <a class="btn" href="#">摄影集</a>
-            </li>
-            <li>
-                <a class="btn" href="#">上传</a>
-            </li>
-        </ul>
+    <header class="crown">
+        <div class="container">
+            <div class="logo">
+                <a class="sj sj-logo" href="home.html" title="首页"></a>
+                <h6 class="slogan">一瞬间，便是永恒。</h6>
+            </div>
+            <ul class="nav-action-l">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <!--<li class="avatar">-->
+                <!--<a href="#"><img src="app/global/me.png" alt="avatar"></a>-->
+                <!--</li>-->
+                <!--<li class="name"><a href="#">Sharon Guerrero</a>-->
+                <!--</li>-->
+                <!--<li class="sign-out"><a href="#">退出</a></li>-->
+            </ul>
+            <ul class="nav-action-r">
+                <li>
+                    <a class="btn" href="my-upload.html">上传</a>
+                </li>
+                <li>
+                    <a class="btn" href="#">摄影集</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!--main-->
-    <main class="container">
-        <div class="moment-details">
-            <div class="breadcrumb">
-                <a href="moments.html"><i class="fi-arrow-bold-left"></i>浏览所有照片</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <!--照片预览-->
-                    <figure class="photo-preview">
-                        <div class="photo">
-                            <a class="photo-link" href="http://placekitten.com/g/850/700">
-                                <img class="img-response" src="http://placekitten.com/g/850/700">
-                            </a>
-                            <a class="photo-over JS_photo_preview" href="http://placekitten.com/g/850/700" title="Place Kitten">
-                                <i class="fi-zoom-in"></i>
-                            </a>
-                        </div>
-                        <figcaption>
-                            <a class="avatar" href="#">
-                                <img src="http://placekitten.com/g/40/40">
-                            </a>
-                            <a class="name" href="#">Randy Ortiz</a>
-                            <a class="like JS_like" href="#"><i class="fi-heart-full"></i></a>
-                        </figcaption>
-                    </figure>
-                    <!--评论-->
-                    <article class="comments">
-                        <h4 class="title"><span>2</span>条评论</h4>
-                        <!--发表评论-->
-                        <form class="row">
-                            <div class="col-lg-9">
-                                <div class="form-group">
-                                    <div class="input-text">
-                                        <input type="text" placeholder="说点什么吧 ;)">
-                                        <i class="input-border"></i>
+    <main class="trunk">
+        <div class="container">
+            <div class="moment-details">
+                <div class="breadcrumb">
+                    <a href="moments.html">
+                        <i class="sj sj-arrow-l">浏览所有照片</i>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!--照片预览-->
+                        <figure class="photo-preview">
+                            <div class="photo">
+                                <a class="photo-link" href="http://placekitten.com/g/850/700">
+                                    <img class="img-responsive" src="http://placekitten.com/g/850/700">
+                                </a>
+                                <a class="photo-over JS_photo_preview" href="http://placekitten.com/g/850/700" title="Place Kitten">
+                                    <i class="sj sj-magnifier"></i>
+                                </a>
+                            </div>
+                            <figcaption>
+                                <a class="avatar" href="#">
+                                    <img src="http://placekitten.com/g/40/40">Randy Ortiz
+                                </a>
+                                <a class="like J_Like" href="#"><i class="sj sj-heart"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <!--照片信息-->
+                        <section class="photo-info">
+                            <h4 class="title">
+                                <i class="fi-info"></i>照片信息
+                            </h4>
+                            <ul class="info">
+                                <li>
+                                    <span class="k">时间</span>
+                                    <span class="v">2015/05/07 14:30</span>
+                                </li>
+                                <li>
+                                    <span class="k">相机</span>
+                                    <span class="v">佳能5D</span>
+                                </li>
+                                <li>
+                                    <span class="k">镜头</span>
+                                    <span class="v">DT 18-135mm F3.5-5.6 SAM</span>
+                                </li>
+                                <li>
+                                    <span class="k">ISO</span>
+                                    <span class="v">200</span>
+                                </li>
+                                <li>
+                                    <span class="k">光圈</span>
+                                    <span class="v">f/4.0</span>
+                                </li>
+                                <li>
+                                    <span class="k">焦距</span>
+                                    <span class="v">18mm</span>
+                                </li>
+                                <li>
+                                    <span class="k">曝光</span>
+                                    <span class="v">1/60s</span>
+                                </li>
+                            </ul>
+                            <ul class="price">
+                                <li>
+                                    <div class="dl-btn">
+                                        <span class="k">
+                                            <i class="sj sj-download"></i>
+                                            标清
+                                            <em>1200x800px 5mb</em>
+                                        </span>
+                                        <span class="v">免费</span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="dl-btn">
+                                        <span class="k">
+                                            <i class="sj sj-download"></i>
+                                            高清
+                                            <em>1200x800px 5mb</em>
+                                        </span>
+                                        <span class="v">5元</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dl-btn">
+                                        <span class="k">
+                                           <i class="sj sj-download"></i>
+                                           超清
+                                           <em>1200x800px 5mb</em>
+                                        </span>
+                                        <span class="v">15元</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!--评论-->
+                        <div class="comments">
+                            <h4 class="title">
+                                <i class="sj sj-comment"></i>
+                                <span>2</span>条评论
+                            </h4>
+                            <!--发表评论-->
+                            <form class="row">
+                                <div class="col-lg-9">
+                                    <div class="form-group">
+                                        <div class="input-text">
+                                            <input type="text" placeholder="说点什么吧 ;)">
+                                            <i class="input-border"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="form-group">
-                                    <a class="btn btn-block" href="#">发表评论</a>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <a class="btn btn-block" href="#">发表评论</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                        <!--评论列表-->
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="#">Judith Hernandez</a></h5>
+                            </form>
+                            <!--评论列表-->
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><a href="#">Judith Hernandez</a></h5>
 
-                                    <div class="media-content">
-                                        <p>我喜欢这张照片，你是在哪儿拍摄的？</p>
+                                        <div class="media-content">
+                                            <p>我喜欢这张照片，你是在哪儿拍摄的？</p>
 
-                                        <p class="media-meta">
-                                            2015/05/18, 11:40
-                                            <a class="fi-reply JS_reply" href="#" title="回复"></a>
-                                        </p>
+                                            <p class="media-meta">
+                                                2015/05/18, 11:40
+                                                <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
+                                            </p>
 
-                                        <div class="comment-reply row">
-                                            <div class="col-lg-9">
-                                                <div class="form-group">
-                                                    <div class="input-text">
-                                                        <input type="text" placeholder="回复 Judith Hernandez">
-                                                        <i class="input-border"></i>
+                                            <div class="comment-reply row">
+                                                <div class="col-lg-9">
+                                                    <div class="form-group">
+                                                        <div class="input-text">
+                                                            <input type="text" placeholder="回复 Judith Hernandez">
+                                                            <i class="input-border"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <a class="btn btn-block" href="#">回复</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="form-group">
-                                                    <a class="btn btn-block" href="#">回复</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><a href="#">Keith Freeman</a></h5>
+
+                                        <div class="media-content">
+                                            <p>i love it dude!</p>
+
+                                            <p class="media-meta">
+                                                2015/05/21, 17:33
+                                                <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
+                                            </p>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="#">Kelly Berry</a></h5>
+
+                                                <div class="media-content">
+                                                    <p>看来我们有共同的喜好：）</p>
+
+                                                    <p class="media-meta">
+                                                        2015/05/23, 12:16
+                                                        <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="#">Keith Freeman</a></h5>
-
-                                    <div class="media-content">
-                                        <p>i love it dude!</p>
-
-                                        <p class="media-meta">
-                                            2015/05/21, 17:33
-                                            <a class="fi-reply JS_reply" href="#" title="回复"></a>
-                                        </p>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <img class="media-object" src="http://placekitten.com/g/40/40" alt="avatar">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><a href="#">Kelly Berry</a></h5>
-
-                                            <div class="media-content">
-                                                <p>看来我们有共同的喜好：）</p>
-
-                                                <p class="media-meta">
-                                                    2015/05/23, 12:16
-                                                    <a class="fi-reply JS_reply" href="#" title="回复"></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <!--照片信息-->
-                    <section class="photo-info">
-                        <h4 class="title">
-                        <i class="fi-info"></i>照片信息
-                    </h4>
-                        <ul class="info">
-                            <li>
-                                <span class="k">时间</span>
-                                <span class="v">2015/05/07 14:30</span>
-                            </li>
-                            <li>
-                                <span class="k">相机</span>
-                                <span class="v">佳能5D</span>
-                            </li>
-                            <li>
-                                <span class="k">镜头</span>
-                                <span class="v">DT 18-135mm F3.5-5.6 SAM</span>
-                            </li>
-                            <li>
-                                <span class="k">ISO</span>
-                                <span class="v">200</span>
-                            </li>
-                            <li>
-                                <span class="k">光圈</span>
-                                <span class="v">f/4.0</span>
-                            </li>
-                            <li>
-                                <span class="k">焦距</span>
-                                <span class="v">18mm</span>
-                            </li>
-                            <li>
-                                <span class="k">曝光</span>
-                                <span class="v">1/60s</span>
-                            </li>
-                        </ul>
-                        <ul class="price">
-                            <li>
-                                <a class="dl-btn" href="#">
-                                    <span class="k">
-                                  <i class="fi-download"></i>标清
-                                  <em>1200x800px 5mb</em>
-                              </span>
-                                    <span class="v">免费</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dl-btn" href="#">
-                                    <span class="k">
-                              <i class="fi-download"></i>高清
-                              <em>1200x800px 5mb</em>
-                          </span>
-                                    <span class="v">5元</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dl-btn" href="#">
-                                    <span class="k">
-                          <i class="fi-download"></i>超清
-                          <em>1200x800px 5mb</em>
-                      </span>
-                                    <span class="v">15元</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <!--footer-->
-    <footer class="footer">
+    <footer class="root">
         2015
     </footer>
 
+    <!--Third-party-->
+    <script src="lib/requirejs/2.1.18/require.js"></script>
+    <script src="lib/jquery/1.12.1/jquery.js"></script>
     <script>
         /**
          * 页面入口

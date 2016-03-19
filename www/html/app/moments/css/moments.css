@@ -2,10 +2,6 @@
 .moment-details figure.photo-preview {
   margin: 0 0 20px;
 }
-.moments-list figure img,
-.moment-details figure.photo-preview img {
-  display: block;
-}
 .moments-list figure .photo,
 .moment-details figure.photo-preview .photo {
   position: relative;
@@ -23,8 +19,8 @@
   background-color: transparent;
   opacity: 0;
 }
-.moments-list figure .photo .photo-over [class*="sj-"],
-.moment-details figure.photo-preview .photo .photo-over [class*="sj-"] {
+.moments-list figure .photo .photo-over .sj,
+.moment-details figure.photo-preview .photo .photo-over .sj {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,7 +34,7 @@
 .moments-list figure .photo:focus .photo-over,
 .moment-details figure.photo-preview .photo:focus .photo-over {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 .moments-list figure figcaption,
 .moment-details figure.photo-preview figcaption {
@@ -49,12 +45,12 @@
 .moments-list figure figcaption .avatar,
 .moment-details figure.photo-preview figcaption .avatar {
   float: left;
-  margin-right: 10px;
 }
 .moments-list figure figcaption .avatar img,
 .moment-details figure.photo-preview figcaption .avatar img {
   width: 42px;
   height: 42px;
+  margin-right: 10px;
   border-radius: 50%;
 }
 .moments-list figure figcaption .name,
@@ -73,8 +69,8 @@
   float: right;
   text-decoration: none;
 }
-.moments-list figure figcaption .like [class*="sj-"],
-.moment-details figure.photo-preview figcaption .like [class*="sj-"] {
+.moments-list figure figcaption .like .sj,
+.moment-details figure.photo-preview figcaption .like .sj {
   font-size: 1.28571429em;
 }
 .moments-list figure figcaption .like .sj-heart-o,
@@ -102,15 +98,9 @@
   line-height: 2;
   margin-bottom: 10px;
 }
-.moment-details .breadcrumb [class^="fi-"] {
+.moment-details .breadcrumb .sj {
   margin-right: 5px;
-}
-.moment-details .breadcrumb a {
-  display: inline-block;
-}
-.moment-details .breadcrumb a:hover,
-.moment-details .breadcrumb a:focus {
-  text-decoration: underline;
+  font-size: 14px;
 }
 .moment-details .photo-info [class^="fi-"] {
   margin-right: 5px;
@@ -142,19 +132,16 @@
   margin-bottom: 15px;
   overflow: hidden;
 }
-.moment-details .photo-info .dl-btn {
-  display: inline-block;
-  float: left;
-}
-.moment-details .photo-info .dl-btn [class^="fi-"],
-.moment-details .photo-info .dl-btn [class*=" fi-"] {
-  -webkit-transition: none;
-  transition: none;
-}
 .moment-details .photo-info .dl-btn span {
   float: left;
   display: inline-block;
+  height: 50px;
+  line-height: 48px;
   border: 1px solid #ddd;
+}
+.moment-details .photo-info .dl-btn:hover,
+.moment-details .photo-info .dl-btn:focus {
+  cursor: pointer;
 }
 .moment-details .photo-info .dl-btn:hover span,
 .moment-details .photo-info .dl-btn:focus span {
@@ -162,13 +149,19 @@
   border-color: transparent;
   background: rgba(0, 0, 0, 0.8);
 }
+.moment-details .photo-info .dl-btn .sj {
+  font-size: 14px;
+  margin-right: 5px;
+}
 .moment-details .photo-info .dl-btn .k {
-  padding: 1em 2em 1em 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2em;
   border-right: none;
   border-radius: 40px 0 0 40px;
 }
 .moment-details .photo-info .dl-btn .v {
-  padding: 1em 2.5em 1em 2em;
+  padding-left: 2em;
+  padding-right: 2.5em;
   color: #fff;
   border-color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.8);
@@ -177,10 +170,14 @@
 .moment-details .photo-info .dl-btn em {
   color: #bbbbbb;
   font-style: normal;
+  vertical-align: middle;
 }
 .moment-details .comments .title {
   padding-bottom: 15px;
   border-bottom: 1px solid #eeeeee;
+}
+.moment-details .comments .title .sj {
+  font-size: 1.42857143em;
 }
 .moment-details .comments .title span {
   margin: 0 5px;
@@ -188,6 +185,9 @@
 }
 .moment-details .comments .media-object {
   border-radius: 50%;
+}
+.moment-details .comments .sj-reply {
+  margin-left: 5px;
 }
 .moment-details .comments .comment-reply {
   display: none;

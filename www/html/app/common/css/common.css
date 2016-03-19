@@ -5,6 +5,11 @@
   transition: all .3s;
   webkit-tap-highlight-color: transparent;
 }
+*:hover .sj,
+*:focus .sj {
+  -webkit-transition: none;
+  transition: none;
+}
 ::-moz-selection {
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
@@ -139,7 +144,7 @@ footer.root {
   padding: 0;
   line-height: 65px;
 }
-.pagination [class*="sj-"] {
+.pagination .sj {
   font-size: 1.714em;
 }
 .btn {
@@ -154,10 +159,6 @@ footer.root {
   color: #fff;
   border-color: rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.8);
-}
-.btn [class*="sj-"] {
-  -webkit-transition: none;
-  transition: none;
 }
 .btn-block {
   display: block;
@@ -197,22 +198,9 @@ footer.root {
 .form-group input[disabled] {
   color: #999999;
 }
-[class^="fi-"],
-[class*=" fi-"] {
-  position: relative;
-  display: inline-block;
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-[class^="fi-"]:before,
-[class*=" fi-"]:before {
-  display: inline-block;
-  width: 1em;
-  margin: 0;
+.sj {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke-width: 0;
 }
 .animate-spin {
   -webkit-animation: spin 2s infinite linear;
@@ -244,9 +232,6 @@ footer.root {
 }
 .media .media {
   border-bottom: none;
-}
-.media-heading {
-  margin-bottom: 0;
 }
 .media-heading a:hover,
 .media-heading a:focus {

@@ -1,6 +1,5 @@
 // Dependencies
 var gulp = require('gulp');
-var flatten = require('gulp-flatten');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
@@ -11,6 +10,7 @@ var less = require('gulp-less');
 var strip = require('gulp-strip-comments');
 var flatten = require('gulp-flatten');
 var rename = require('gulp-rename');
+var clean = require('gulp-clean');
 var header = require('gulp-header');
 var package = require('./package.json');
 var banner = ['/**',
@@ -61,46 +61,6 @@ gulp.task('dist-css', function () {
         .pipe(gulp.dest(function (path) {
             return path.base;
         }));
-});
-
-// Concat & Minify CSS files
-gulp.task('CSS', function () {
-    var files = ['app/css/*'];
-
-    return gulp.src(files)
-        .pipe(concat('styles.css'))
-        .pipe(rename('styles.min.css'))
-        .pipe(gulp.dest('dist'))
-        .pipe(sourcemaps.init())
-        .pipe(cssnano())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions', '> 5%', 'IE 8', 'IE 9']
-        }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'));
-});
-
-// Concat & Minify JS files
-gulp.task('JS', function () {
-    var files = ['app/js/*'];
-
-    return gulp.src(files)
-        .pipe(concat('scripts.js', {
-            newLine: ';'
-        }))
-        .pipe(strip())
-        .pipe(header(banner, {
-            pkg: package
-        }))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('scripts.min.js'))
-        .pipe(sourcemaps.init())
-        .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
-        .pipe(header(banner, {
-            pkg: package
-        }))
-        .pipe(gulp.dest('dist'));
 });
 
 // Watch

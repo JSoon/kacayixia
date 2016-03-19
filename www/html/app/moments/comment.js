@@ -5,19 +5,19 @@
 
 define(function () {
 
-  // 回复
-  $('.JS_reply').on('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var replyForm = $(this).parent().next('.comment-reply');
-    replyForm.on('click', function (e) {
-      e.stopPropagation();
+    // 回复
+    $('.J_Reply').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var replyForm = $(this).parent().next('.comment-reply');
+        replyForm.on('click', function (e) {
+            e.stopPropagation();
+        });
+        replyForm.show();
+        replyForm.find('input').focus(); // auto focus after form shown
+        $('body').one('click', function () {
+            replyForm.hide();
+        });
     });
-    replyForm.show();
-    replyForm.find('input').focus(); // auto focus after form shown
-    $('body').one('click', function () {
-      replyForm.hide();
-    });
-  });
 
 });
