@@ -4,14 +4,15 @@
 
 define(function () {
 
-  // 登录
-  var form = $('.sign-in-form'),
-      loading = $('.sign-in-loading'),
-      t;
-  $('.JS_submit').on('click', function (e) {
-    e.preventDefault();
-    form.addClass('animated fadeOutDown');
-    loading.fadeIn().children('li').addClass('animated fadeInUp');
-  });
+    // 登录
+    var form = $('.J_SignInForm'),
+        loading = $('.J_SignInLoading');
+    $('.J_Submit').on('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+            form.addClass('animated fadeOutDown');
+            loading.fadeIn().children('li:not(".loading")').addClass('animated fadeInUp');
+        }, 500);
+    });
 
 });

@@ -102,14 +102,11 @@
   margin-right: 5px;
   font-size: 14px;
 }
-.moment-details .photo-info [class^="fi-"] {
-  margin-right: 5px;
-}
 .moment-details .photo-info .title {
   margin: 0;
 }
-.moment-details .photo-info .title [class^="fi-"] {
-  color: #bbbbbb;
+.moment-details .photo-info .title .sj {
+  margin-right: 5px;
 }
 .moment-details .photo-info ul {
   list-style: none;

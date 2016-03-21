@@ -1,31 +1,25 @@
-.sign-up .title,
-.sign-in .title {
+.sign-tree .crown {
+  margin-bottom: 50px;
+}
+.sign-tree .title {
   text-align: center;
   margin: 30px 0 40px;
 }
-.sign-up .title h1,
-.sign-in .title h1,
-.sign-up .title h4,
-.sign-in .title h4 {
+.sign-tree .title h1,
+.sign-tree .title h4 {
   margin: 0;
-  font-weight: normal;
 }
-.sign-up .title h1,
-.sign-in .title h1 {
+.sign-tree .title h1 {
   margin-bottom: 10px;
 }
-.sign-up .title h4,
-.sign-in .title h4 {
+.sign-tree .title h4 {
   color: #bbbbbb;
 }
-.sign-up form,
-.sign-in form {
+.sign-tree form {
   text-align: center;
 }
-.sign-up form .avatar-upload-default,
-.sign-in form .avatar-upload-default,
-.sign-up form .avatar-upload-change,
-.sign-in form .avatar-upload-change {
+.sign-tree form .avatar-upload-default,
+.sign-tree form .avatar-upload-change {
   position: relative;
   width: 128px;
   height: 128px;
@@ -33,21 +27,19 @@
   border: 5px solid #eeeeee;
   border-radius: 50%;
 }
-.sign-up form .avatar-upload-default [class^="fi-"],
-.sign-in form .avatar-upload-default [class^="fi-"],
-.sign-up form .avatar-upload-change [class^="fi-"],
-.sign-in form .avatar-upload-change [class^="fi-"],
-.sign-up form .avatar-upload-default [class*=" fi-"],
-.sign-in form .avatar-upload-default [class*=" fi-"],
-.sign-up form .avatar-upload-change [class*=" fi-"],
-.sign-in form .avatar-upload-change [class*=" fi-"] {
-  font-size: 8em;
+.sign-tree form .avatar-upload-default .sj,
+.sign-tree form .avatar-upload-change .sj {
+  font-size: 2em;
   color: #dddddd;
 }
-.sign-up form .avatar-upload-default a.upload-link,
-.sign-in form .avatar-upload-default a.upload-link,
-.sign-up form .avatar-upload-change a.upload-link,
-.sign-in form .avatar-upload-change a.upload-link {
+.sign-tree form .avatar-upload-default:hover .sj,
+.sign-tree form .avatar-upload-change:hover .sj,
+.sign-tree form .avatar-upload-default:focus .sj,
+.sign-tree form .avatar-upload-change:focus .sj {
+  font-size: 7em;
+}
+.sign-tree form .avatar-upload-default a.upload-link,
+.sign-tree form .avatar-upload-change a.upload-link {
   position: absolute;
   top: 0;
   right: 0;
@@ -58,92 +50,70 @@
   font-size: 1.14285714em;
   color: #bbbbbb;
 }
-.sign-up form .avatar-upload-default a.upload-link:hover,
-.sign-in form .avatar-upload-default a.upload-link:hover,
-.sign-up form .avatar-upload-change a.upload-link:hover,
-.sign-in form .avatar-upload-change a.upload-link:hover,
-.sign-up form .avatar-upload-default a.upload-link:focus,
-.sign-in form .avatar-upload-default a.upload-link:focus,
-.sign-up form .avatar-upload-change a.upload-link:focus,
-.sign-in form .avatar-upload-change a.upload-link:focus {
+.sign-tree form .avatar-upload-default a.upload-link:hover,
+.sign-tree form .avatar-upload-change a.upload-link:hover,
+.sign-tree form .avatar-upload-default a.upload-link:focus,
+.sign-tree form .avatar-upload-change a.upload-link:focus {
   color: #000;
 }
-.sign-up form .avatar-upload-change,
-.sign-in form .avatar-upload-change {
+.sign-tree form .avatar-upload-change {
   border: none;
 }
-.sign-up form .avatar-upload-change a.upload-link,
-.sign-in form .avatar-upload-change a.upload-link {
+.sign-tree form .avatar-upload-change a.upload-link {
   padding: 38px 0;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.sign-up form .btn,
-.sign-in form .btn {
+.sign-tree form .btn {
   font-size: 1.14285714em;
 }
-.sign-up .sign-switch,
-.sign-in .sign-switch {
+.sign-tree .sign-switch {
   margin-bottom: 15px;
   text-align: center;
 }
-.sign-up .sign-switch span,
-.sign-in .sign-switch span {
+.sign-tree .sign-switch span {
   color: #999999;
 }
-.sign-up .sign-switch a:hover,
-.sign-in .sign-switch a:hover,
-.sign-up .sign-switch a:focus,
-.sign-in .sign-switch a:focus {
+.sign-tree .sign-switch a:hover,
+.sign-tree .sign-switch a:focus {
   text-decoration: underline;
 }
-.sign-up section.sign-in-animation,
-.sign-in section.sign-in-animation {
+.sign-tree section.sign-in-animation {
   position: relative;
   height: 201px;
   margin-bottom: 20px;
   overflow: hidden;
 }
-.sign-up section.sign-in-animation .sign-in-form,
-.sign-in section.sign-in-animation .sign-in-form,
-.sign-up section.sign-in-animation .sign-in-loading,
-.sign-in section.sign-in-animation .sign-in-loading {
+.sign-tree section.sign-in-animation .sign-in-form,
+.sign-tree section.sign-in-animation .sign-in-loading {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   text-align: center;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading,
-.sign-in section.sign-in-animation ul.sign-in-loading {
+.sign-tree section.sign-in-animation ul.sign-in-loading {
   display: none;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading li,
-.sign-in section.sign-in-animation ul.sign-in-loading li {
+.sign-tree section.sign-in-animation ul.sign-in-loading li {
   margin-bottom: 10px;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading .avatar,
-.sign-in section.sign-in-animation ul.sign-in-loading .avatar {
+.sign-tree section.sign-in-animation ul.sign-in-loading .avatar {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading .avatar img,
-.sign-in section.sign-in-animation ul.sign-in-loading .avatar img {
+.sign-tree section.sign-in-animation ul.sign-in-loading .avatar img {
   display: block;
   margin: auto;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading .loading,
-.sign-in section.sign-in-animation ul.sign-in-loading .loading {
+.sign-tree section.sign-in-animation ul.sign-in-loading .loading {
   color: #999999;
 }
-.sign-up section.sign-in-animation ul.sign-in-loading .loading [class^="fi-"],
-.sign-in section.sign-in-animation ul.sign-in-loading .loading [class^="fi-"],
-.sign-up section.sign-in-animation ul.sign-in-loading .loading [class*=" fi-"],
-.sign-in section.sign-in-animation ul.sign-in-loading .loading [class*=" fi-"] {
+.sign-tree section.sign-in-animation ul.sign-in-loading .loading .sj {
   margin-right: 5px;
   font-size: 1.42857143em;
   color: #000;

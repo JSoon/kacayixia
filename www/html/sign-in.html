@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head lang="zh">
-  <title>瞬间</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="jsoon, lonso">
-  <meta name="keywords" content="瞬间">
-  <meta name="description" content="咔擦一下，就是瞬间。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!--TP CSS-->
-  <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
-  <link href="lib/animate-css/3.3.0/animate.css" rel="stylesheet">
-  <!--custom CSS-->
-  <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
-  <link href="app/global/global.css?v0.0.0" rel="stylesheet">
-  <link href="app/sign/sign.css?v0.0.0" rel="stylesheet">
-  <!--TP JS-->
-  <script src="lib/requirejs/2.1.18/require.js"></script>
-  <script src="lib/jquery/2.1.4/jquery.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>瞬间</title>
+    <meta name="author" content="jsoon, lonso">
+    <meta name="keywords" content="瞬间">
+    <meta name="description" content="咔擦一下，就是瞬间。">
+    <!--Third-party-->
+    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
+    <link href="lib/animate-css/3.3.0/animate.css" rel="stylesheet">
+    <!--Custom-->
+    <link href="app/common/iconfont/iconfont.css" rel="stylesheet">
+    <link href="app/common/css/common.css" rel="stylesheet">
+    <link href="app/sign/css/sign.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<!--header-->
-<header class="header container">
-  <h1 class="logo">
-    <a href="index.html" title="首页">
-      <i class="sj-logo"></i>
-    </a>
-  </h1>
-  <h6 class="slogan">一瞬间，便是永恒。</h6>
-</header>
 
-<!--main-->
-<main class="container">
-  <div class="sign-in">
-    <div class="title">
-      <h1>登录</h1>
-      <h4>即刻开启专属于您的瞬间。</h4>
-    </div>
-    <section class="sign-in-animation">
-      <form class="sign-in-form">
-        <div class="row">
-          <div class="col-lg-4 col-lg-offset-4">
-            <div class="form-group">
-              <div class="input-text">
-                <input type="email" placeholder="电子邮箱">
-                <i class="input-border"></i>
-              </div>
+<body class="sign-tree">
+    <!--header-->
+    <header class="crown">
+        <div class="container">
+            <div class="logo">
+                <a class="sj sj-logo" href="home.html" title="首页"></a>
+                <h6 class="slogan">一瞬间，便是永恒。</h6>
             </div>
-            <div class="form-group">
-              <div class="input-text">
-                <input type="password" placeholder="密码">
-                <i class="input-border"></i>
-              </div>
-            </div>
-            <div class="form-group">
-              <a class="btn btn-block JS_submit" href="#">登 录</a>
-            </div>
-          </div>
         </div>
-      </form>
-      <ul class="sign-in-loading">
-        <li class="avatar">
-          <img src="app/sign/avatar.png" alt="avatar">
-        </li>
-        <li class="name">Lori Foster</li>
-        <li class="loading">
-          <i class="fi-spin6 animate-spin"></i>登录中...
-        </li>
-      </ul>
-    </section>
-    <div class="sign-switch">
-      <span>还没有账号？</span><a href="sign-up.html">去注册</a>
-    </div>
-  </div>
-</main>
+    </header>
 
-<!--footer-->
-<footer class="footer">
-  2015
-</footer>
+    <!--main-->
+    <main class="trunk">
+        <div class="container">
+            <div class="title">
+                <h1>登录</h1>
+                <h4>即刻开启专属于您的瞬间。</h4>
+            </div>
+            <section class="sign-in-animation">
+                <form class="sign-in-form J_SignInForm">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <div class="form-group">
+                                <div class="input-text">
+                                    <input type="email" placeholder="电子邮箱">
+                                    <i class="input-border"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-text">
+                                    <input type="password" placeholder="密码">
+                                    <i class="input-border"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <a class="btn btn-block J_Submit" href="#">登 录</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <ul class="sign-in-loading J_SignInLoading">
+                    <li class="avatar">
+                        <img src="app/sign/img/avatar.png" alt="avatar">
+                    </li>
+                    <li class="name">Lori Foster</li>
+                    <li class="loading">
+                        <div class="sk-wave">
+                            <div class="sk-rect sk-rect1"></div>
+                            <div class="sk-rect sk-rect2"></div>
+                            <div class="sk-rect sk-rect3"></div>
+                            <div class="sk-rect sk-rect4"></div>
+                            <div class="sk-rect sk-rect5"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <div class="sign-switch">
+                <span>还没有账号？</span><a href="sign-up.html">去注册</a>
+            </div>
+        </div>
+    </main>
 
-<script>
-  /**
-   * 页面入口
-   */
-  require(['app/config'], function (require) {
-    require(['app/sign/sign-in']);
-  });
-</script>
+    <!--footer-->
+    <footer class="root">
+        2015
+    </footer>
+
+    <!--Third-party-->
+    <script src="lib/requirejs/2.1.18/require.js"></script>
+    <script src="lib/jquery/1.12.1/jquery.js"></script>
+    <script>
+        /**
+         * 页面入口
+         */
+        require(['app/config'], function(require) {
+            require(['app/sign/sign-in']);
+        });
+
+    </script>
 </body>
+
 </html>

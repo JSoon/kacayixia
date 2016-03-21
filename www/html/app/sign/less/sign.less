@@ -1,116 +1,120 @@
 @import "../../common/less/variables";
-
-// Sign up
+// Sign
 // ========================================================================
-
-.sign-up,
-.sign-in {
-  .title {
-    text-align: center;
-    margin: 30px 0 40px;
-    h1, h4 {
-      margin: 0;
-      font-weight: normal;
+.sign-tree {
+    .crown {
+        margin-bottom: 50px;
     }
-    h1 {
-      margin-bottom: 10px;
-    }
-    h4 {
-      color: @grey-light;
-    }
-  }
-  form {
-    text-align: center;
-    .avatar-upload-default,
-    .avatar-upload-change {
-      position: relative;
-      width: 128px;
-      height: 128px;
-      margin: 0 auto;
-      border: 5px solid @grey-lightest;
-      border-radius: 50%;
-      [class^="fi-"],
-      [class*=" fi-"] {
-        font-size: 8em;
-        color: @grey-lighter;
-      }
-      a.upload-link {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        padding: 34px 0;
-        font-size: @font-lg;
-        color: @grey-light;
-        &:hover,
-        &:focus {
-          color: @black;
+    .title {
+        text-align: center;
+        margin: 30px 0 40px;
+        h1,
+        h4 {
+            margin: 0;
         }
-      }
-    }
-    .avatar-upload-change {
-      border: none;
-      a.upload-link {
-        padding: 38px 0;
-        color: @white;
-        background-color: fade(@white, 50);
-      }
-    }
-    .btn {
-      font-size: @font-lg;
-    }
-  }
-  .sign-switch {
-    margin-bottom: 15px;
-    text-align: center;
-    span {
-      color: @grey;
-    }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
-  }
-  section.sign-in-animation {
-    position: relative;
-    height: 201px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    .sign-in-form,
-    .sign-in-loading {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-    }
-    ul.sign-in-loading {
-      display: none;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      li {
-        margin-bottom: 10px;
-      }
-      .avatar {
-        animation-duration: .5s;
-        img {
-          display: block;
-          margin: auto;
+        h1 {
+            margin-bottom: 10px;
         }
-      }
-      .loading {
-        color: @grey;
-        [class^="fi-"],
-        [class*=" fi-"] {
-          margin-right: 5px;
-          font-size: @font-xx-lg;
-          color: @black;
+        h4 {
+            color: @grey-light;
         }
-      }
     }
-  }
+    form {
+        text-align: center;
+        .avatar-upload-default,
+        .avatar-upload-change {
+            position: relative;
+            width: 128px;
+            height: 128px;
+            margin: 0 auto;
+            border: 5px solid @grey-lightest;
+            border-radius: 50%;
+            .sj {
+                font-size: 2em;
+                color: @grey-lighter;
+            }
+            &:hover,
+            &:focus {
+                .sj {
+                    font-size: 7em;
+                }
+            }
+            a.upload-link {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                padding: 34px 0;
+                font-size: @font-lg;
+                color: @grey-light;
+                &:hover,
+                &:focus {
+                    color: @black;
+                }
+            }
+        }
+        .avatar-upload-change {
+            border: none;
+            a.upload-link {
+                padding: 38px 0;
+                color: @white;
+                background-color: fade(@white, 50);
+            }
+        }
+        .btn {
+            font-size: @font-lg;
+        }
+    }
+    .sign-switch {
+        margin-bottom: 15px;
+        text-align: center;
+        span {
+            color: @grey;
+        }
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+    }
+    section.sign-in-animation {
+        position: relative;
+        height: 201px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        .sign-in-form,
+        .sign-in-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        ul.sign-in-loading {
+            display: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+            }
+            .avatar {
+                animation-duration: .5s;
+                img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .loading {
+                color: @grey;
+                .sj {
+                    margin-right: 5px;
+                    font-size: @font-xx-lg;
+                    color: @black;
+                }
+            }
+        }
+    }
 }

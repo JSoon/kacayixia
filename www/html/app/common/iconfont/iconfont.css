@@ -1,10 +1,10 @@
 
 @font-face {font-family: "sj";
-  src: url('iconfont.eot?t=1458400405'); /* IE9*/
-  src: url('iconfont.eot?t=1458400405#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1458400405') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1458400405') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1458400405#sj') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1458570030'); /* IE9*/
+  src: url('iconfont.eot?t=1458570030#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1458570030') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1458570030') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1458570030#sj') format('svg'); /* iOS 4.1- */
 }
 
 .sj {
@@ -15,8 +15,11 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.sj-joke-face:before { content: "\e609"; }
 .sj-magnifier:before { content: "\e607"; }
 .sj-reply:before { content: "\e605"; }
+.sj-info:before { content: "\e60a"; }
+.sj-info-o:before { content: "\e60b"; }
 .sj-download:before { content: "\e606"; }
 .sj-comment:before { content: "\e608"; }
 .sj-heart-o:before { content: "\e601"; }
