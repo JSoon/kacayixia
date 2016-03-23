@@ -1,16 +1,15 @@
-.my .title {
+.my-tree .title {
   text-align: center;
-  margin: 30px 0 40px;
+  margin: 50px 0 40px;
 }
-.my .title h1,
-.my .title h4 {
+.my-tree .title h1,
+.my-tree .title h4 {
   margin: 0;
-  font-weight: normal;
 }
-.my .title h1 {
+.my-tree .title h1 {
   margin-bottom: 10px;
 }
-.my .title h4 {
+.my-tree .title h4 {
   color: #bbbbbb;
 }
 .my-profile form {

@@ -105,6 +105,8 @@ header.crown .nav-action-l li {
 }
 header.crown .nav-action-l li.avatar img {
   vertical-align: middle;
+  width: 46px;
+  height: 46px;
 }
 header.crown .nav-action-l li.name a {
   color: #000;

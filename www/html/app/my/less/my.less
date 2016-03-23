@@ -1,82 +1,80 @@
 @import "../../common/less/variables";
-
 // My center
 // ========================================================================
-
 // common
-.my {
-  .title {
-    text-align: center;
-    margin: 30px 0 40px;
-    h1, h4 {
-      margin: 0;
-      font-weight: normal;
+.my-tree {
+    .title {
+        text-align: center;
+        margin: 50px 0 40px;
+        h1,
+        h4 {
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: @grey-light;
+        }
     }
-    h1 {
-      margin-bottom: 10px;
-    }
-    h4 {
-      color: @grey-light;
-    }
-  }
 }
 
 // profile
 .my-profile {
-  form {
-    text-align: center;
-    .avatar-upload-default,
-    .avatar-upload-change {
-      position: relative;
-      width: 128px;
-      height: 128px;
-      margin: 0 auto;
-      border: 5px solid @grey-lightest;
-      border-radius: 50%;
-      [class^="fi-"],
-      [class*=" fi-"] {
-        font-size: 8em;
-        color: @grey-lighter;
-      }
-      a.upload-link {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        padding: 34px 0;
-        font-size: @font-lg;
-        color: @grey-light;
-        &:hover,
-        &:focus {
-          color: @black;
+    form {
+        text-align: center;
+        .avatar-upload-default,
+        .avatar-upload-change {
+            position: relative;
+            width: 128px;
+            height: 128px;
+            margin: 0 auto;
+            border: 5px solid @grey-lightest;
+            border-radius: 50%;
+            [class^="fi-"],
+            [class*=" fi-"] {
+                font-size: 8em;
+                color: @grey-lighter;
+            }
+            a.upload-link {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                padding: 34px 0;
+                font-size: @font-lg;
+                color: @grey-light;
+                &:hover,
+                &:focus {
+                    color: @black;
+                }
+            }
         }
-      }
+        .avatar-upload-change {
+            border: none;
+            a.upload-link {
+                padding: 38px 0;
+                color: @white;
+                background-color: fade(@white, 50);
+            }
+        }
+        .btn {
+            font-size: @font-lg;
+        }
     }
-    .avatar-upload-change {
-      border: none;
-      a.upload-link {
-        padding: 38px 0;
-        color: @white;
-        background-color: fade(@white, 50);
-      }
-    }
-    .btn {
-      font-size: @font-lg;
-    }
-  }
 }
 
 // upload
 .my-upload {
-  .dropzone {
-    background-color: @grey-lightest;
-    border: none;
-    .dz-message {
-      margin: 6em 0;
-      font-size: @font-x-lg;
-      color: @grey-light;
+    .dropzone {
+        background-color: @grey-lightest;
+        border: none;
+        .dz-message {
+            margin: 6em 0;
+            font-size: @font-x-lg;
+            color: @grey-light;
+        }
     }
-  }
 }

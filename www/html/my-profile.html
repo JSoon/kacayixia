@@ -1,118 +1,129 @@
 <!DOCTYPE html>
 <html>
-<head lang="zh">
-  <title>瞬间</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="jsoon, lonso">
-  <meta name="keywords" content="瞬间">
-  <meta name="description" content="咔擦一下，就是瞬间。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!--TP CSS-->
-  <link href="app/global/twbs.css?v3.3.4" rel="stylesheet">
-  <!--custom CSS-->
-  <link href="app/global/fontello/css/fontello.css" rel="stylesheet">
-  <link href="app/global/global.css?v0.0.0" rel="stylesheet">
-  <link href="app/my/my.css?v0.0.0" rel="stylesheet">
-  <!--TP JS-->
-  <script src="lib/requirejs/2.1.18/require.js"></script>
-  <script src="lib/jquery/2.1.4/jquery.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>瞬间</title>
+    <meta name="author" content="jsoon, lonso">
+    <meta name="keywords" content="瞬间">
+    <meta name="description" content="咔擦一下，就是瞬间。">
+    <!--Third-party-->
+    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
+    <!--Custom-->
+    <link href="app/common/iconfont/iconfont.css" rel="stylesheet">
+    <link href="app/common/css/common.css" rel="stylesheet">
+    <link href="app/my/css/my.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<!--header-->
-<header class="header container">
-  <h1 class="logo">
-    <a href="index.html" title="首页">
-      <i class="sj-logo"></i>
-    </a>
-  </h1>
-  <h6 class="slogan">一瞬间，便是永恒。</h6>
-  <ul class="user-nav-l">
-    <li class="avatar">
-      <a href="my-profile.html"><img src="app/global/me.png" alt="avatar"></a>
-    </li>
-    <li class="name">
-      <a href="my-profile.html">Sharon Guerrero</a>
-    </li>
-    <li class="sign-out"><a href="#">退出</a></li>
-  </ul>
-  <ul class="user-nav-r">
-    <li>
-      <a class="btn" href="my-upload.html">上传</a>
-    </li>
-    <li>
-      <a class="btn" href="#">摄影集</a>
-    </li>
-  </ul>
-</header>
 
-<!--main-->
-<main class="container">
-  <div class="my my-profile">
-    <div class="title">
-      <h1>个人资料</h1>
-      <h4>修改头像、昵称或者登录密码。</h4>
-    </div>
-    <form class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-        <div class="form-group">
-          <div class="avatar-upload-change">
-            <img src="app/my/avatar.png" alt="avatar">
-            <!--<i class="fi-emo-sunglasses"></i>-->
-            <a class="upload-link" href="#">
-              点击<br>修改头像
-            </a>
-          </div>
+<body class="my-tree">
+    <!--header-->
+    <header class="crown">
+        <div class="container">
+            <div class="logo">
+                <a class="sj sj-logo" href="home.html" title="首页"></a>
+                <h6 class="slogan">一瞬间，便是永恒。</h6>
+            </div>
+            <ul class="nav-action-l">
+                <li class="avatar">
+                    <a href="#"><img src="app/common/img/me.png" alt="avatar"></a>
+                </li>
+                <li class="name"><a href="#">Sharon Guerrero</a>
+                </li>
+                <li class="sign-out"><a href="#">退出</a></li>
+            </ul>
+            <ul class="nav-action-r">
+                <li>
+                    <a class="btn" href="my-upload.html">上传</a>
+                </li>
+                <li>
+                    <a class="btn" href="#">摄影集</a>
+                </li>
+            </ul>
         </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="text" value="Sharon Guerrero" placeholder="用户名（昵称）">
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="email" value="jsoon@g.cn（不可修改）" disabled>
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="password" placeholder="原密码">
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="password" placeholder="新密码">
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-text">
-            <input type="password" placeholder="确认新密码">
-            <i class="input-border"></i>
-          </div>
-        </div>
-        <div class="form-group">
-          <a class="btn btn-block" href="#">保 存</a>
-        </div>
-      </div>
-    </form>
-  </div>
-</main>
+    </header>
 
-<!--footer-->
-<footer class="footer">
-  2015
-</footer>
+    <!--main-->
+    <main class="trunk">
+        <div class="container">
+            <div class="my-profile">
+                <div class="title">
+                    <h1>个人资料</h1>
+                    <h4>修改头像、昵称或者登录密码。</h4>
+                </div>
+                <form class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <div class="form-group">
+                            <div class="avatar-upload-change">
+                                <img src="app/my/img/avatar.png" alt="avatar">
+                                <a class="upload-link" href="#">
+                                  点击<br>修改头像
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-text">
+                                <input type="text" value="Sharon Guerrero" placeholder="用户名（昵称）">
+                                <i class="input-border"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-text">
+                                <input type="email" value="serdeemail@gmail.com" disabled>
+                                <i class="input-border"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-text">
+                                <input type="password" placeholder="原密码">
+                                <i class="input-border"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-text">
+                                <input type="password" placeholder="新密码">
+                                <i class="input-border"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-text">
+                                <input type="password" placeholder="确认新密码">
+                                <i class="input-border"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-block" href="#">保 存</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
 
-<script>
-  /**
-   * 页面入口
-   */
-  require(['app/config'], function (require) {
+    <!--footer-->
+    <footer class="root">
+        2015
+    </footer>
 
-  });
-</script>
+    <!--Third-party-->
+    <script src="lib/requirejs/2.1.18/require.js"></script>
+    <script src="lib/jquery/1.12.1/jquery.js"></script>
+    <script>
+        /**
+         * 页面入口
+         */
+        require(['app/config'], function(require) {
+
+        });
+
+    </script>
 </body>
+
 </html>
