@@ -17,28 +17,26 @@
   left: -100%;
   bottom: -100%;
   right: -100%;
+  width: 100%;
+  min-width: 100%;
   margin: auto;
   -webkit-animation: photoOfToday 8s ease-in-out;
           animation: photoOfToday 8s ease-in-out;
 }
 @-webkit-keyframes photoOfToday {
   from {
-    -webkit-transform: scale(1.8);
-            transform: scale(1.8);
+    width: 180%;
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    width: 100%;
   }
 }
 @keyframes photoOfToday {
   from {
-    -webkit-transform: scale(1.8);
-            transform: scale(1.8);
+    width: 180%;
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    width: 100%;
   }
 }
 .home-tree .upper {
@@ -53,6 +51,7 @@
   font-size: 11em;
   line-height: 1;
   color: #fff;
+  opacity: .8;
 }
 .home-tree .upper .slogan {
   margin: 30px 0;

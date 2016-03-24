@@ -3,7 +3,7 @@
  */
 
 define([
-  'dropzone'
+    'dropzone'
 ], function () {
 
     // 照片上传

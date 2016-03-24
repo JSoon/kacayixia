@@ -3,7 +3,7 @@
  */
 
 define([
-  'app/common/like'
+    'app/common/like'
 ], function () {
 
 

@@ -3,9 +3,9 @@
  */
 
 define([
-  'app/common/like',
-  'app/moments/comment',
-  'app/moments/preview'
+    'app/common/like',
+    'app/moments/comment',
+    'app/moments/preview'
 ], function () {
 
 

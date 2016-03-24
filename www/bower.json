@@ -1,33 +1,35 @@
 {
-  "name": "kacayixia",
-  "description": "咔擦一下，就是瞬间。",
-  "version": "1.0.0",
-  "main": [],
-  "keywords": [
+    "name": "kacayixia",
+    "description": "咔擦一下，就是瞬间。",
+    "version": "1.0.0",
+    "main": [],
+    "keywords": [
     "瞬间"
   ],
-  "authors": [
+    "authors": [
     "lonso: lonso@foxmail.com",
     "jsoon: serdeemail@gmail.com"
   ],
-  "license": "kacayixia",
-  "ignore": [
+    "license": "kacayixia",
+    "ignore": [
     "node_modules",
     "bower_components",
     "test",
     "tests",
     "**/.*"
   ],
-  "private": true,
-  "dependencies": {
-    "jquery": "^1.12.1",
-    "requirejs": "^2.1.18",
-    "magnific-popup": "^1.1.0",
-    "dropzone": "~4.3.0",
-    "bootstrap": "~3.3.6"
-  },
-  "homepage": "https://github.com/JSoon/kacayixia",
-  "moduleType": [
+    "private": true,
+    "dependencies": {
+        "jquery": "#1.12.1",
+        "requirejs": "#2.2.0",
+        "magnific-popup": "#1.1.0",
+        "dropzone": "#4.3.0",
+        "bootstrap": "#3.3.6",
+        "nprogress": "#0.2.0",
+        "domReady": "requirejs-domReady#2.0.1"
+    },
+    "homepage": "https://github.com/JSoon/kacayixia",
+    "moduleType": [
     "amd"
   ]
 }
