@@ -1,7 +1,7 @@
 /**
  * requirejs 配置文件
  */
-define(function () {
+define(function() {
 
     // 配置模块路径
     require.config({
