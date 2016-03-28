@@ -25,17 +25,17 @@ body {
     padding-top: 3px;
     // color bar
     &:before {
+        content: "";
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
         z-index: 1;
         display: block;
-        width: 100%;
+        width: 210px;
         height: 3px;
+        margin-left: -105px;
         overflow: hidden;
-        background: url("../img/color_bar.png") center 0 no-repeat transparent;
-        content: "";
-        opacity: .9;
+        background: url("../img/color-bar.png") center 0 no-repeat transparent;
     }
 }
 
