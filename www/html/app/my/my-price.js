@@ -1,9 +1,9 @@
 /**
- * moments
+ * my price
  */
 
 define([
-    'app/common/like'
+    'app/common/check'
 ], function() {
 
 

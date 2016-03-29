@@ -38,9 +38,9 @@
 }
 .moments-list figure figcaption,
 .moment-details figure.photo-preview figcaption {
-  height: 42px;
+  height: 40px;
   margin-top: 8px;
-  line-height: 42px;
+  line-height: 40px;
 }
 .moments-list figure figcaption .avatar,
 .moment-details figure.photo-preview figcaption .avatar {
@@ -48,44 +48,50 @@
 }
 .moments-list figure figcaption .avatar img,
 .moment-details figure.photo-preview figcaption .avatar img {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   border-radius: 50%;
-}
-.moments-list figure figcaption .name,
-.moment-details figure.photo-preview figcaption .name {
-  float: left;
-  font-size: 1em;
-}
-.moments-list figure figcaption .name:hover,
-.moment-details figure.photo-preview figcaption .name:hover,
-.moments-list figure figcaption .name:focus,
-.moment-details figure.photo-preview figcaption .name:focus {
-  text-decoration: underline;
 }
 .moments-list figure figcaption .like,
 .moment-details figure.photo-preview figcaption .like {
   float: right;
   text-decoration: none;
 }
-.moments-list figure figcaption .like .sj,
-.moment-details figure.photo-preview figcaption .like .sj {
-  font-size: 1.28571429em;
+.moments-list figure figcaption .sj,
+.moment-details figure.photo-preview figcaption .sj {
+  font-size: 18px;
 }
-.moments-list figure figcaption .like .sj-heart-o,
-.moment-details figure.photo-preview figcaption .like .sj-heart-o {
+.moments-list figure figcaption .sj-heart-o,
+.moment-details figure.photo-preview figcaption .sj-heart-o {
   color: #bbbbbb;
 }
-.moments-list figure figcaption .like .sj-heart-o:hover,
-.moment-details figure.photo-preview figcaption .like .sj-heart-o:hover,
-.moments-list figure figcaption .like .sj-heart-o:focus,
-.moment-details figure.photo-preview figcaption .like .sj-heart-o:focus {
+.moments-list figure figcaption .sj-heart-o:hover,
+.moment-details figure.photo-preview figcaption .sj-heart-o:hover {
   color: #FF5736;
 }
-.moments-list figure figcaption .like .sj-heart,
-.moment-details figure.photo-preview figcaption .like .sj-heart {
+.moments-list figure figcaption .sj-heart,
+.moment-details figure.photo-preview figcaption .sj-heart {
   color: #FF5736;
+}
+.moments-list figure .photo-link {
+  position: relative;
+  display: block;
+  height: 266px;
+  overflow: hidden;
+}
+.moments-list figure .photo-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.moments-list figure.top-pick .photo-link {
+  height: 600px;
 }
 .moment-details figure.photo-preview {
   margin-bottom: 40px;
@@ -174,7 +180,7 @@
   border-bottom: 1px solid #eeeeee;
 }
 .moment-details .comments .title .sj {
-  font-size: 1.42857143em;
+  font-size: 20px;
 }
 .moment-details .comments .title span {
   margin: 0 5px;

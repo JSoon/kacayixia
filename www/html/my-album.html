@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>瞬间</title>
+    <meta name="author" content="jsoon, lonso">
+    <meta name="keywords" content="瞬间">
+    <meta name="description" content="咔擦一下，就是瞬间。">
+    <!--Third-party-->
+    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
+    <link href="lib/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+    <!--Custom-->
+    <link href="app/common/iconfont/iconfont.css" rel="stylesheet">
+    <link href="app/common/css/common.css" rel="stylesheet">
+    <link href="app/my/css/my.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="my-tree">
+    <!--header-->
+    <header class="crown">
+        <div class="container">
+            <div class="logo">
+                <a class="sj sj-logo" href="home.html" title="首页"></a>
+                <h6 class="slogan">一瞬间，便是永恒。</h6>
+            </div>
+            <ul class="nav-action-l">
+                <li class="avatar">
+                    <a href="#"><img src="app/common/img/me.png" alt="avatar"></a>
+                </li>
+                <li class="name"><a href="#">Sharon Guerrero</a>
+                </li>
+                <li class="sign-out"><a href="#">退出</a></li>
+            </ul>
+            <ul class="nav-action-r">
+                <li>
+                    <a class="btn" href="my-upload.html">上传</a>
+                </li>
+                <li>
+                    <a class="btn" href="my-profile.html">个人资料</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--main-->
+    <main class="trunk">
+        <div class="container">
+            <div class="my-album">
+                <div class="title">
+                    <h1>您的摄影集总容量为10张，当前作品数为4张。</h1>
+                    <h4><a href="#">容量扩充（什么是容量扩充？）</a></h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/555/400">
+                                </a>
+                                <a class="photo-over" href="#"><i class="sj sj-magnifier"></i></a>
+                            </div>
+                            <figcaption>
+                                <span class="like"><i class="sj sj-heart"></i>128</span>
+                                <a class="sj sj-trash del J_Del" href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/555/400">
+                                </a>
+                                <a class="photo-over" href="#"><i class="sj sj-magnifier"></i></a>
+                            </div>
+                            <figcaption>
+                                <span class="like"><i class="sj sj-heart"></i>128</span>
+                                <a class="sj sj-trash del J_Del" href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/555/400">
+                                </a>
+                                <a class="photo-over" href="#"><i class="sj sj-magnifier"></i></a>
+                            </div>
+                            <figcaption>
+                                <span class="like"><i class="sj sj-heart"></i>128</span>
+                                <a class="sj sj-trash del J_Del" href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure>
+                            <div class="photo">
+                                <a class="photo-link" href="#">
+                                    <img class="img-responsive" src="http://placekitten.com/g/555/400">
+                                </a>
+                                <a class="photo-over" href="#"><i class="sj sj-magnifier"></i></a>
+                            </div>
+                            <figcaption>
+                                <span class="like"><i class="sj sj-heart"></i>128</span>
+                                <a class="sj sj-trash del J_Del" href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <i class="sj sj-end"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="root">
+        2015
+    </footer>
+    <!--Third-party-->
+    <script src="lib/requirejs/2.2.0/require.js"></script>
+    <script src="lib/jquery/1.12.1/jquery.js"></script>
+    <script>
+    /**
+     * 页面入口
+     */
+    require(['app/config'], function(require) {
+
+    });
+    </script>
+</body>
+
+</html>

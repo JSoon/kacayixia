@@ -56,14 +56,14 @@
 .home-tree .upper .slogan {
   margin: 30px 0;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1em;
+  font-size: 14px;
   line-height: 1;
 }
 .home-tree .upper .browse {
   display: inline-block;
   padding: 13px 88px;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1.14285714em;
+  font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 40px;
 }
@@ -84,7 +84,7 @@
 .home-tree .lower .caption {
   margin: 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.85714286em;
+  font-size: 12px;
 }
 .home-tree .lower .avatar img {
   width: 96px;
