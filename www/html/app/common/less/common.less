@@ -6,7 +6,6 @@
     font-weight: lighter;
     transition: all .3s;
     webkit-tap-highlight-color: transparent;
-    cursor: default;
 }
 
 // selection
@@ -364,6 +363,20 @@ footer.root {
 .media-meta {
     margin-top: 10px;
     color: @grey-light;
+}
+
+// modal
+.modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+.modal-backdrop {
+    background: #fff;
+    &.in {
+        opacity: .9;
+    }
 }
 
 // Magnific popup

@@ -10,7 +10,7 @@
     <meta name="keywords" content="瞬间">
     <meta name="description" content="咔擦一下，就是瞬间。">
     <!--Third-party-->
-    <link href="lib/bootstrap/3.3.6/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
     <link href="lib/nprogress/0.2.0/nprogress.css" rel="stylesheet">
     <link href="lib/magnific-popup/1.1.0/magnific-popup.css" rel="stylesheet">
     <!--Custom-->
@@ -53,7 +53,6 @@
             </ul>
         </div>
     </header>
-
     <!--main-->
     <main class="trunk">
         <div class="container">
@@ -68,10 +67,10 @@
                         <!--照片预览-->
                         <figure class="photo-preview">
                             <div class="photo">
-                                <a class="photo-link" href="http://placekitten.com/g/850/700">
-                                    <img class="img-responsive" src="http://placekitten.com/g/850/700">
+                                <a class="photo-link" href="http://placekitten.com/g/1200/900">
+                                    <img class="img-responsive" src="http://placekitten.com/g/1200/900">
                                 </a>
-                                <a class="photo-over J_PhotoPreview" href="http://placekitten.com/g/850/700" title="Place Kitten">
+                                <a class="photo-over J_PhotoPreview" href="http://placekitten.com/g/1200/900" title="Place Kitten">
                                     <i class="sj sj-magnifier"></i>
                                 </a>
                             </div>
@@ -86,9 +85,10 @@
                     <div class="col-lg-4">
                         <!--照片信息-->
                         <section class="photo-info">
-                            <h4 class="title">
-                                <i class="sj sj-info"></i>照片信息
-                            </h4>
+                            <div class="description">
+                                <h3 class="title"><i class="sj sj-info"></i>风一样的男子</h3>
+                                <p>“It was one of those March days when the sun shines hot and the wind blows cold: when it is summer in the light, and winter in... </p>
+                            </div>
                             <ul class="info">
                                 <li>
                                     <span class="k">时间</span>
@@ -121,7 +121,7 @@
                             </ul>
                             <ul class="price">
                                 <li>
-                                    <div class="dl-btn">
+                                    <div id="J_Dl480p" class="dl-btn">
                                         <span class="k">
                                             <i class="sj sj-download clear-trans"></i>
                                             标清
@@ -130,7 +130,6 @@
                                         <span class="v">免费</span>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="dl-btn">
                                         <span class="k">
@@ -189,15 +188,12 @@
                                     </div>
                                     <div class="media-body">
                                         <h5 class="media-heading"><a href="#">Judith Hernandez</a></h5>
-
                                         <div class="media-content">
                                             <p>我喜欢这张照片，你是在哪儿拍摄的？</p>
-
                                             <p class="media-meta">
                                                 2015/05/18, 11:40
                                                 <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
                                             </p>
-
                                             <div class="comment-reply row">
                                                 <div class="col-lg-9">
                                                     <div class="form-group">
@@ -224,10 +220,8 @@
                                     </div>
                                     <div class="media-body">
                                         <h5 class="media-heading"><a href="#">Keith Freeman</a></h5>
-
                                         <div class="media-content">
                                             <p>i love it dude!</p>
-
                                             <p class="media-meta">
                                                 2015/05/21, 17:33
                                                 <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
@@ -241,10 +235,8 @@
                                             </div>
                                             <div class="media-body">
                                                 <h5 class="media-heading"><a href="#">Kelly Berry</a></h5>
-
                                                 <div class="media-content">
                                                     <p>看来我们有共同的喜好：）</p>
-
                                                     <p class="media-meta">
                                                         2015/05/23, 12:16
                                                         <a class="sj sj-reply J_Reply" href="#" title="回复"></a>
@@ -261,23 +253,20 @@
             </div>
         </div>
     </main>
-
     <!--footer-->
     <footer class="root">
         2015
     </footer>
-
     <!--Third-party-->
     <script src="lib/requirejs/2.2.0/require.js"></script>
     <script src="lib/jquery/1.12.1/jquery.js"></script>
     <script>
-        /**
-         * 页面入口
-         */
-        require(['app/config'], function(require) {
-            require(['app/moments/moment']);
-        });
-
+    /**
+     * 页面入口
+     */
+    require(['app/config'], function(require) {
+        require(['app/moments/moment']);
+    });
     </script>
 </body>
 

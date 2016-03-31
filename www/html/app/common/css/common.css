@@ -4,7 +4,6 @@
   -webkit-transition: all .3s;
   transition: all .3s;
   webkit-tap-highlight-color: transparent;
-  cursor: default;
 }
 ::-moz-selection {
   color: #fff;
@@ -321,6 +320,17 @@ footer.root {
 .media-meta {
   margin-top: 10px;
   color: #bbbbbb;
+}
+.modal-content {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.modal-backdrop {
+  background: #fff;
+}
+.modal-backdrop.in {
+  opacity: .9;
 }
 .mfp-bg {
   background: #fff;

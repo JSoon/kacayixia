@@ -108,11 +108,20 @@
   margin-right: 5px;
   font-size: 14px;
 }
-.moment-details .photo-info .title {
-  margin: 0;
+.moment-details .photo-info .description {
+  border-bottom: 1px solid #eeeeee;
 }
-.moment-details .photo-info .title .sj {
+.moment-details .photo-info .description .title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.moment-details .photo-info .description .sj {
   margin-right: 5px;
+  font-size: 20px;
+}
+.moment-details .photo-info .description p {
+  margin-bottom: 15px;
+  line-height: 1.6em;
 }
 .moment-details .photo-info ul {
   list-style: none;

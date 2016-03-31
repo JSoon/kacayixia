@@ -1,10 +1,10 @@
 
 @font-face {font-family: "sj";
-  src: url('iconfont.eot?t=1459230706'); /* IE9*/
-  src: url('iconfont.eot?t=1459230706#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1459230706') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1459230706') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1459230706#sj') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1459437640'); /* IE9*/
+  src: url('iconfont.eot?t=1459437640#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1459437640') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1459437640') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1459437640#sj') format('svg'); /* iOS 4.1- */
 }
 
 .sj {
@@ -27,6 +27,7 @@
 .sj-logo:before { content: "\e600"; }
 .sj-end:before { content: "\e60d"; }
 .sj-radio-checked:before { content: "\e60e"; }
+.sj-close:before { content: "\e611"; }
 .sj-unchecked:before { content: "\e60f"; }
 .sj-checkbox-checked:before { content: "\e610"; }
 .sj-trash:before { content: "\e60c"; }
