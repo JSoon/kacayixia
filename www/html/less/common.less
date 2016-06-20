@@ -1,0 +1,396 @@
+@import "variables";
+// Tags
+// ========================================================================
+* {
+    font-family: "Lantinghei SC", "Open Sans", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-weight: lighter;
+    transition: all .3s;
+    webkit-tap-highlight-color: transparent;
+}
+
+// selection
+::selection {
+    color: @white;
+    background: fade(@black, 80);
+}
+
+html,
+body {
+    min-height: 100%;
+    color: @black;
+    background-color: #F8F9F7;
+}
+
+body {
+    padding-top: 3px;
+    // color bar
+    &:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        display: block;
+        width: 210px;
+        height: 3px;
+        margin-left: -105px;
+        overflow: hidden;
+        background: url("../img/color-bar.png") center 0 no-repeat transparent;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
+    only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 1300px),
+    only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: 1300px),
+    only screen and ( min-device-pixel-ratio: 2) and (min-width: 1300px),
+    only screen and ( min-resolution: 192dpi) and (min-width: 1300px),
+    only screen and ( min-resolution: 2dppx) and (min-width: 1300px) {
+        /* Large screen, retina, stuff to override above media query */
+        &:before {
+            background: url("../img/color-bar@2x.png") center 0 no-repeat transparent;
+        }
+    }
+}
+
+// a link
+a {
+    color: @black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        color: @grey;
+    }
+    * {
+        cursor: inherit;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: inherit;
+}
+
+// Common
+// ========================================================================
+// header
+header.crown {
+    position: relative;
+    margin-bottom: 20px;
+    .logo {
+        text-align: center;
+        a {
+            display: inline-block;
+            width: 100px;
+            height: 88px;
+            font-size: 4em;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+        .slogan {
+            margin: 0;
+            font-size: @font-sm;
+        }
+    }
+    .nav-action-l,
+    .nav-action-r {
+        position: relative;
+        margin: -100px 0;
+        padding: 0;
+        line-height: 100px;
+        list-style: none;
+        li {
+            float: left;
+        }
+    }
+    .nav-action-l {
+        float: left;
+        a {
+            color: @grey-light;
+            &:hover,
+            &:focus {
+                color: @black;
+            }
+        }
+        li {
+            margin-right: 10px;
+            &.avatar img {
+                vertical-align: middle;
+                width: 46px;
+                height: 46px;
+            }
+            &.name a {
+                color: @black;
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .nav-action-r {
+        float: right;
+        li {
+            margin-left: 10px;
+        }
+        .btn {
+            line-height: 1.5;
+        }
+    }
+}
+
+// footer
+footer.root {
+    margin: 40px 0 20px;
+    text-align: center;
+    color: @black;
+}
+
+// pagination
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+    a {
+        display: inline-block;
+        width: 66px;
+        height: 66px;
+        margin: 0 10px;
+        padding: 0;
+        line-height: 65px;
+    }
+    .sj {
+        font-size: 1.714em;
+    }
+    .sj-end {
+        color: @grey-light;
+        text-shadow: none;
+    }
+}
+
+// clear transition
+.clear-trans {
+    transition: none;
+}
+
+// Third-party
+// ========================================================================
+// Iconfont
+// ========================================================================
+.sj {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke-width: 0;
+}
+
+// Nprogress
+// ========================================================================
+#nprogress {
+    .bar {
+        height: 3px;
+        background: #111;
+    }
+    .peg {
+        box-shadow: 0 0 10px #111, 0 0 5px #111;
+    }
+    .spinner-icon {
+        border-top-color: #111;
+        border-left-color: #111;
+    }
+}
+
+// SpinKit
+// ========================================================================
+.sk-wave {
+    margin: 18px auto;
+    width: 50px;
+    height: 67px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.sk-wave .sk-rect {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+
+.sk-wave .sk-rect1 {
+    animation-delay: -1.2s;
+}
+
+.sk-wave .sk-rect2 {
+    animation-delay: -1.1s;
+}
+
+.sk-wave .sk-rect3 {
+    animation-delay: -1s;
+}
+
+.sk-wave .sk-rect4 {
+    animation-delay: -0.9s;
+}
+
+.sk-wave .sk-rect5 {
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-waveStretchDelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes sk-waveStretchDelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+// Bootstrap
+// ========================================================================
+// btn
+.btn {
+    display: inline-block;
+    padding: 1em 3em;
+    color: @black;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    &:hover,
+    &:focus {
+        color: @white;
+        border-color: fade(@black, 40);
+        background: fade(@black, 80);
+    }
+}
+
+.btn-block {
+    display: block;
+    text-align: center;
+}
+
+// form
+.form-group {
+    margin-bottom: 15px;
+    .input-text {
+        position: relative;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        border: none;
+        background: none;
+        & + .input-border {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 3px;
+            border: 1px solid @grey-light;
+            border-top: none;
+        }
+        &:focus + .input-border {
+            border-color: @black;
+        }
+    }
+    input[disabled] {
+        color: @grey;
+    }
+}
+
+.radio-inline,
+.checkbox-inline {
+    padding: 0;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-left: 30px;
+}
+
+.radio-inline {
+    .sj {
+        margin-right: 5px;
+    }
+    input {
+        left: -9999px;
+        margin: 0 !important;
+    }
+}
+
+// media
+.media {
+    border-bottom: 1px solid @grey-lightest;
+    .media {
+        border-bottom: none;
+    }
+}
+
+.media-heading {
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
+}
+
+.media-content p:first-child {
+    margin: 0;
+}
+
+.media-meta {
+    margin-top: 10px;
+    color: @grey-light;
+}
+
+// modal
+.modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+.modal-backdrop {
+    background: #fff;
+    &.in {
+        opacity: .9;
+    }
+}
+
+// Magnific popup
+// ========================================================================
+.mfp-bg {
+    background: @white;
+    opacity: .9;
+}
+
+.mfp-figure:after {
+    box-shadow: none;
+}
+
+.mfp-title,
+.mfp-close {
+    color: @black;
+}
