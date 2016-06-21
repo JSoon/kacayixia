@@ -2,10 +2,11 @@
  * webpack config
  */
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: {
-        'vendor': [
+        vendor: [
             'react',
             'react-dom',
             'redux',
@@ -14,11 +15,16 @@ module.exports = {
             'redux-logger',
             'redux-thunk'
         ],
-        'index': './html/index.js'
+        main: [
+            './html/index'
+        ]
     },
     output: {
+        // path: path.join(__dirname, 'html/dist'),
+        path: './html/dist',
+        publicPath: '/html/dist/',
         filename: '[name].js',
-        path: './html/dist'
+        chunkFilename: '[name].js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -48,7 +54,9 @@ module.exports = {
         // 'react-dom': 'ReactDOM',
         // 'redux': 'Redux',
         // 'react-redux': 'ReactRedux',
-        // 'react-router': 'ReactRouter'
+        // 'react-router': 'ReactRouter',
+        // 'redux-logger': 'reduxLogger',
+        // 'redux-thunk': 'ReduxThunk'
     },
     // add this handful of plugins that optimize the build
     // when we're in production
@@ -56,5 +64,10 @@ module.exports = {
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin()
-    ] : []
+    ] : [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            chunks: 'vendor'
+        })
+    ]
 };
