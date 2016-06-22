@@ -7,8 +7,7 @@ import routeConfig from './routes';
 
 render(
     <Provider store={store}>
-        <Router routes={routeConfig} history={hashHistory}>
-        </Router>
+        <Router routes={routeConfig} history={hashHistory} />
     </Provider>,
     document.getElementById('J_App')
 )

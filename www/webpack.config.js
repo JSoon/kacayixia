@@ -20,7 +20,6 @@ module.exports = {
         ]
     },
     output: {
-        // path: path.join(__dirname, 'html/dist'),
         path: './html/dist',
         publicPath: '/html/dist/',
         filename: '[name].js',
@@ -43,7 +42,15 @@ module.exports = {
             {
                 test: /\.less$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "style!css!less"
+                loader: 'style!css!less'
+            },
+            {
+                test: /\.png$/,
+                loader: 'url-loader',
+                query: {
+                    mimetype: 'image/png',
+                    limit: 5000
+                }
             }
         ]
     },
@@ -65,9 +72,9 @@ module.exports = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin()
     ] : [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            chunks: 'vendor'
-        })
-    ]
+            new webpack.optimize.CommonsChunkPlugin({
+                name: 'vendor',
+                chunks: 'vendor'
+            })
+        ]
 };

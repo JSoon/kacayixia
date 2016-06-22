@@ -4,7 +4,7 @@ import './Moments.less';
 class Moments extends Component {
     render() {
         return (
-            <div>
+            <div className="moments-tree">
                 Moments
             </div>
         );
