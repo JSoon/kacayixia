@@ -2,18 +2,21 @@ import constants from '../constants';
 
 const initialState = {
     isFetching: false,
-    photo: {},
-    photographer: {}
+    pageCount: 0,
+    curPage: 0,
+    prevPageUrl: '',
+    nextPageUrl: '',
+    items: []
 }
 
-const dailyPhoto = (state = initialState, action) => {
+const photos = (state = initialState, action) => {
     switch (action.type) {
-        case constants.REQUEST_DAILYPHOTO:
+        case constants.REQUEST_PHOTOS:
             return Object.assign({}, state, {
                 isFetching: true
             });
-        case constants.RECEIVE_DAILYPHOTO:
-            return Object.assign({}, state, action.json, {
+        case constants.RECEIVE_PHOTOS:
+            return Object.assign({}, state, action.photos, {
                 isFetching: false,
                 lastUpdated: action.receivedAt
             });
@@ -22,4 +25,4 @@ const dailyPhoto = (state = initialState, action) => {
     }
 };
 
-export default dailyPhoto;
+export default photos;

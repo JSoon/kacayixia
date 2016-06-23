@@ -1,19 +1,20 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
 import {fetchDailyPhoto} from '../../actions/dailyPhoto';
-import Footer from '../../components/Footer/Footer';
-import './Home.less'
+import './Home.less';
 
 class Home extends Component {
-
     componentWillMount() {
         let {dispatch} = this.props;
         dispatch(fetchDailyPhoto());
     }
 
     render() {
-        let {photo, photographer} = this.props;
+        let {
+            photo,
+            photographer
+        } = this.props;
         return (
             <div className="home-tree">
                 <img className="photo-of-today" src={photo.url} title={photo.title} alt={photo.title} />
@@ -29,7 +30,6 @@ class Home extends Component {
                     </a>
                     <h5 className="username"><a href={photographer.url}>{photographer.name}</a></h5>
                 </div>
-                <Footer />
             </div>
         );
     }

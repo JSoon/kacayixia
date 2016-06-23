@@ -1,0 +1,22 @@
+{
+    "pageCount": 1,
+    "curPage": 1,
+    "prevPageUrl": "",
+    "nextPageUrl": "",
+    "items": [
+        {
+            "id": 1,
+            "topPick": true,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/800/1000",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Randy Ortiz",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
+        }
+    ]
+}

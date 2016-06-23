@@ -1,13 +1,11 @@
 {
-    "dailyPhoto": {
-        "photo": {
-            "url": "https://drscdn.500px.org/photo/145849821/q%3D80_m%3D2000/778e5d767c7ef61d42941a666a523afb",
-            "title": "VW Shenanigans"
-        },
-        "photographer": {
-            "url": "",
-            "name": "Kimberly Castro",
-            "avatar": "containers/Home/avatar.png"
-        }
+    "photo": {
+        "url": "https://drscdn.500px.org/photo/145849821/q%3D80_m%3D2000/778e5d767c7ef61d42941a666a523afb",
+        "title": "VW Shenanigans"
+    },
+    "photographer": {
+        "url": "",
+        "name": "Kimberly Castro",
+        "avatar": "containers/Home/avatar.png"
     }
 }
