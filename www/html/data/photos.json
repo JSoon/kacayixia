@@ -17,6 +17,71 @@
                 "name": "Randy Ortiz",
                 "avatar": "https://placeimg.com/42/42/any/grayscale"
             }
+        },
+        {
+            "id": 2,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/410/312",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Dylan Murphy",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
+        },
+        {
+            "id": 3,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/410/312",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Alice Gardner",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
+        },
+        {
+            "id": 4,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/410/312",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Andrea Matthews",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
+        },
+        {
+            "id": 5,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/410/312",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Anna Reyes",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
+        },
+        {
+            "id": 6,
+            "pick": true,
+            "photo": {
+                "url": "http://placekitten.com/g/410/312",
+                "title": "Meow"
+            },
+            "photographer": {
+                "url": "",
+                "name": "Heather Richardson",
+                "avatar": "https://placeimg.com/42/42/any/grayscale"
+            }
         }
     ]
 }

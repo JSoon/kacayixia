@@ -6,7 +6,7 @@ import Photos from '../../components/Photos/Photos';
 import './Moments.less';
 
 class Moments extends Component {
-    componentWillMount() {
+    componentDidMount() {
         let {dispatch} = this.props;
         dispatch(fetchPhotos());
     }

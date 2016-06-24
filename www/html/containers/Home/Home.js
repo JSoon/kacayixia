@@ -5,7 +5,7 @@ import {fetchDailyPhoto} from '../../actions/dailyPhoto';
 import './Home.less';
 
 class Home extends Component {
-    componentWillMount() {
+    componentDidMount() {
         let {dispatch} = this.props;
         dispatch(fetchDailyPhoto());
     }
