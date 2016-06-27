@@ -18,6 +18,14 @@ const routeConfig = {
                     cb(null, require('./containers/Moments/Moments').default)
                 }, 'containers/Moments/Moments');
             }
+        },
+        {
+            path: '/moments/:id',
+            getComponent(location, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('./containers/Moment/Moment').default)
+                }, 'containers/Moment/Moment');
+            }
         }
     ]
 };

@@ -19,21 +19,28 @@ const Photos = props => {
                         photos.map((item, i) => {
                             if (item.pick) {
                                 if (item.topPick) {
-                                    return <div className="col-lg-8" key={item.id}>
-                                        <PhotoItem
-                                            topPick={item.topPick}
-                                            photo={item.photo}
-                                            photographer={item.photographer}
-                                            />
-                                    </div>
+                                    return (
+                                        <div className="col-lg-8" key={item.id}>
+                                            <PhotoItem
+                                                id={item.id}
+                                                className="top-pick"
+                                                photo={item.photo}
+                                                photographer={item.photographer}
+                                                like={item.like}
+                                                />
+                                        </div>
+                                    ); 
                                 } else {
-                                    return <div className="col-lg-4" key={item.id}>
-                                        <PhotoItem
-                                            topPick={item.topPick}
-                                            photo={item.photo}
-                                            photographer={item.photographer}
-                                            />
-                                    </div>
+                                    return (
+                                        <div className="col-lg-4" key={item.id}>
+                                            <PhotoItem
+                                                id={item.id}
+                                                photo={item.photo}
+                                                photographer={item.photographer}
+                                                like={item.like}
+                                                />
+                                        </div>
+                                    );
                                 }
                             }
                         })
@@ -43,13 +50,16 @@ const Photos = props => {
                     {
                         photos.map((item, i) => {
                             if (!item.pick) {
-                                return <div className="col-lg-4" key={item.id}>
-                                    <PhotoItem
-                                        topPick={item.topPick}
-                                        photo={item.photo}
-                                        photographer={item.photographer}
-                                        />
-                                </div>
+                                return (
+                                    <div className="col-lg-4" key={item.id}>
+                                        <PhotoItem
+                                            id={item.id}
+                                            photo={item.photo}
+                                            photographer={item.photographer}
+                                            like={item.like}
+                                            />
+                                    </div>
+                                );
                             }
                         })
                     }

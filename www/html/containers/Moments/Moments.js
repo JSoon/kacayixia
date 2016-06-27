@@ -1,6 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router';
 import {fetchPhotos} from '../../actions/photos';
 import Photos from '../../components/Photos/Photos';
 import './Moments.less';
@@ -23,10 +22,6 @@ class Moments extends Component {
         );
     }
 }
-
-Moments.propTypes = {
-
-};
 
 function mapStateToProps(state) {
     let {
