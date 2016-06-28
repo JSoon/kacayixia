@@ -1,8 +1,7 @@
 @import "../../less/variables";
 // moments
 // ========================================================================
-.moments-list figure,
-.moment-details figure.photo-preview {
+.moments-list figure, .moment-details figure.photo-preview {
     margin: 0 0 20px;
     .photo {
         position: relative;
@@ -27,8 +26,7 @@
                 font-size: 2.571em;
             }
         }
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             .photo-over {
                 opacity: 1;
                 background-color: fade(@white, 35);
@@ -158,10 +156,10 @@
                 display: inline-block;
                 height: 50px;
                 line-height: 48px;
+                text-align: center;
                 border: 1px solid #ddd;
             }
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 cursor: pointer;
                 span {
                     color: @white;
@@ -174,14 +172,12 @@
                 margin-right: 5px;
             }
             .k {
-                padding-left: 2.5em;
-                padding-right: 2em;
+                width: 75%;
                 border-right: none;
                 border-radius: 40px 0 0 40px;
             }
             .v {
-                padding-left: 2em;
-                padding-right: 2.5em;
+                width: 25%;
                 color: @white;
                 border-color: fade(@black, 80);
                 background: fade(@black, 80);

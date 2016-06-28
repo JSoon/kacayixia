@@ -17,7 +17,8 @@ class Moment extends Component {
                 id: json.id,
                 photo: json.photo,
                 photographer: json.photographer,
-                like: json.like
+                like: json.like,
+                downloads: json.downloads
             });
         }).fail((err) => console.log(err));
     }

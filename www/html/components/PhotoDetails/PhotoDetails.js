@@ -1,13 +1,15 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import PhotoItem from '../PhotoItem/PhotoItem';
+import Comments from '../Comments/Comments';
 
 const PhotoDetails = props => {
     let {
         id,
         photo,
         photographer,
-        like
+        like,
+        downloads
     } = props;
 
     return (
@@ -28,93 +30,72 @@ const PhotoDetails = props => {
                             photographer={photographer}
                             like={like}
                             />
-                        {/*<figure className="photo-preview">
-                            <div className="photo">
-                                <a className="photo-link" href="http://placekitten.com/g/1200/900">
-                                    <img className="img-responsive" src="http://placekitten.com/g/1200/900"/>
-                                </a>
-                                <a className="photo-over J_PhotoPreview" href="http://placekitten.com/g/1200/900" title="Place Kitten">
-                                    <i className="sj sj-magnifier"></i>
-                                </a>
-                            </div>
-                            <figcaption>
-                                <a className="avatar" href="#">
-                                    <img src="http://placekitten.com/g/40/40"/>Randy Ortiz
-                                </a>
-                                <a className="like J_Like" href="#"><i className="sj sj-heart"></i></a>
-                            </figcaption>
-                        </figure>*/}
                     </div>
                     <div className="col-lg-4">
                         {/*照片信息*/}
                         <section className="photo-info">
                             <div className="description">
-                                <h3 className="title"><i className="sj sj-info"></i>风一样的男子</h3>
-                                <p>“It was one of those March days when the sun shines hot and the wind blows cold: when it is summer in the light, and winter in... </p>
+                                <h3 className="title"><i className="sj sj-info"></i>{photo.title}</h3>
+                                <p>{photo.descr}</p>
                             </div>
                             <ul className="info">
                                 <li>
-                                    <span className="k">时间</span>
-                                    <span className="v">2015/05/07 14: 30</span>
+                                    <span className="k">上传</span>
+                                    <span className="v">{photo.upload}</span>
+                                </li>
+                                <li>
+                                    <span className="k">拍摄</span>
+                                    <span className="v">{photo.shoot}</span>
                                 </li>
                                 <li>
                                     <span className="k">相机</span>
-                                    <span className="v">佳能5D</span>
+                                    <span className="v">{photo.camera.name}</span>
                                 </li>
                                 <li>
                                     <span className="k">镜头</span>
-                                    <span className="v">DT 18-135mm F3.5-5.6 SAM</span>
+                                    <span className="v">{photo.camera.lens}</span>
                                 </li>
                                 <li>
                                     <span className="k">ISO</span>
-                                    <span className="v">200</span>
+                                    <span className="v">{photo.camera.iso}</span>
                                 </li>
                                 <li>
                                     <span className="k">光圈</span>
-                                    <span className="v">f/4.0</span>
+                                    <span className="v">{photo.camera.aperture}</span>
                                 </li>
                                 <li>
                                     <span className="k">焦距</span>
-                                    <span className="v">18mm</span>
+                                    <span className="v">{photo.camera.focus}</span>
                                 </li>
                                 <li>
                                     <span className="k">曝光</span>
-                                    <span className="v">1/60s</span>
+                                    <span className="v">{photo.camera.exposure}</span>
                                 </li>
                             </ul>
                             <ul className="price">
-                                <li>
-                                    <div id="J_Dl480p" className="dl-btn">
-                                        <span className="k">
-                                            <i className="sj sj-download clear-trans"></i>
-                                            标清
-                                            <em>1200x800px 5mb</em>
-                                        </span>
-                                        <span className="v">免费</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="dl-btn">
-                                        <span className="k">
-                                            <i className="sj sj-download clear-trans"></i>
-                                            高清
-                                            <em>1200x800px 5mb</em>
-                                        </span>
-                                        <span className="v">5元</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="dl-btn">
-                                        <span className="k">
-                                            <i className="sj sj-download clear-trans"></i>
-                                            超清
-                                            <em>1200x800px 5mb</em>
-                                        </span>
-                                        <span className="v">15元</span>
-                                    </div>
-                                </li>
+                                {
+                                    downloads.map((dl, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <div className="dl-btn clearfix">
+                                                    <span className="k">
+                                                        <i className="sj sj-download clear-trans"></i>
+                                                        {dl.name}
+                                                        <em>{dl.resolution} {dl.size}</em>
+                                                    </span>
+                                                    <span className="v">{dl.price}</span>
+                                                </div>
+                                            </li>
+                                        );
+                                    })
+                                }
                             </ul>
                         </section>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-8">
+                        <Comments />
                     </div>
                 </div>
             </div>
