@@ -9,7 +9,8 @@ const PhotoDetails = props => {
         photo,
         photographer,
         like,
-        downloads
+        downloads,
+        comments
     } = props;
 
     return (
@@ -29,6 +30,7 @@ const PhotoDetails = props => {
                             photo={photo}
                             photographer={photographer}
                             like={like}
+                            onLikeClick={props.onLikeClick}
                             />
                     </div>
                     <div className="col-lg-4">
@@ -95,7 +97,10 @@ const PhotoDetails = props => {
                 </div>
                 <div className="row">
                     <div className="col-lg-8">
-                        <Comments />
+                        <Comments
+                            comments={comments}
+                            onCommentClick={props.onCommentClick}
+                            />
                     </div>
                 </div>
             </div>

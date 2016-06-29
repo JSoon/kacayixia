@@ -16,28 +16,34 @@ const Photos = props => {
                 {/*editor-picks*/}
                 <div className="row editor-picks">
                     {
-                        photos.map((item, i) => {
+                        photos.map((item, index) => {
                             if (item.pick) {
                                 if (item.topPick) {
                                     return (
-                                        <div className="col-lg-8" key={item.id}>
+                                        <div className="col-lg-8" key={index}>
                                             <PhotoItem
                                                 id={item.id}
                                                 className="top-pick"
                                                 photo={item.photo}
                                                 photographer={item.photographer}
                                                 like={item.like}
+                                                onLikeClick={
+                                                    (e) => props.onLikeClick(e, item.id)
+                                                }
                                                 />
                                         </div>
-                                    ); 
+                                    );
                                 } else {
                                     return (
-                                        <div className="col-lg-4" key={item.id}>
+                                        <div className="col-lg-4" key={index}>
                                             <PhotoItem
                                                 id={item.id}
                                                 photo={item.photo}
                                                 photographer={item.photographer}
                                                 like={item.like}
+                                                onLikeClick={
+                                                    (e) => props.onLikeClick(e, item.id)
+                                                }
                                                 />
                                         </div>
                                     );
@@ -48,15 +54,18 @@ const Photos = props => {
                 </div>
                 <div className="row">
                     {
-                        photos.map((item, i) => {
+                        photos.map((item, index) => {
                             if (!item.pick) {
                                 return (
-                                    <div className="col-lg-4" key={item.id}>
+                                    <div className="col-lg-4" key={index}>
                                         <PhotoItem
                                             id={item.id}
                                             photo={item.photo}
                                             photographer={item.photographer}
                                             like={item.like}
+                                            onLikeClick={
+                                                (e) => props.onLikeClick(e, item.id)
+                                            }
                                             />
                                     </div>
                                 );
@@ -81,8 +90,8 @@ Photos.propTypes = {
     pageCount: PropTypes.number.isRequired,
     curPage: PropTypes.number.isRequired,
     prevPageUrl: PropTypes.string.isRequired,
-    nextPageUrl: PropTypes.string.isRequired,
-    photos: PropTypes.arrayOf(PropTypes.object)
+    nextPageUrl: PropTypes.string.isRequired/*,
+    photos: PropTypes.arrayOf(PropTypes.object)*/
 };
 
 export default Photos;

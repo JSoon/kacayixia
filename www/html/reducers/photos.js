@@ -20,6 +20,16 @@ const photos = (state = initialState, action) => {
                 isFetching: false,
                 lastUpdated: action.receivedAt
             });
+        case constants.LIKE_PHOTO:
+            let photos = state.items.slice();
+            photos.map((item, index) => {
+                if (action.id === item.id) {
+                    item.like = item.like ? false : true;
+                }
+            });
+            return Object.assign({}, state, {
+                items: photos
+            });
         default:
             return state;
     }

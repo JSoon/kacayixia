@@ -23,8 +23,25 @@ function fetchPhotos() {
     }
 }
 
+function likePhoto(id) {
+    return {
+        type: constants.LIKE_PHOTO,
+        id: id
+    }
+}
+
+function dislikePhoto(id) {
+    return {
+        type: constants.DISLIKE_PHOTO,
+        id: id
+    }
+}
+
 export {
 requestPhotos,
 receivePhotos,
-fetchPhotos
+fetchPhotos,
+
+likePhoto,
+dislikePhoto
 }

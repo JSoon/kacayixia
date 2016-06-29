@@ -43,7 +43,40 @@
             "price": "15元"
         }
     ],
-    "comments": {
-        
-    }
+    "comments": [
+        {
+            "user": {
+                "id": 1,
+                "name": "Judith Hernandez",
+                "avatar": "http://placekitten.com/g/40/40",
+                "url": ""
+            },
+            "text": "我喜欢这张照片，你是在哪儿拍摄的？",
+            "time": "2015/05/18, 11:40",
+            "replies": []
+        },
+        {
+            "user": {
+                "id": 2,
+                "name": "Keith Freeman",
+                "avatar": "http://placekitten.com/g/40/40",
+                "url": ""
+            },
+            "text": "I love it dude!",
+            "time": "2015/05/21, 17:33",
+            "replies": [
+                {
+                    "user": {
+                        "id": 3,
+                        "name": "Kelly Berry",
+                        "avatar": "http://placekitten.com/g/40/40",
+                        "url": ""
+                    },
+                    "text": "看来我们有共同的喜好：）",
+                    "time": "2015/05/23, 12:16",
+                    "replies": []
+                }
+            ]
+        }
+    ]
 }
