@@ -24,6 +24,8 @@ class Moment extends Component {
                 id: id
             }
         }).done((json) => {
+            // storeState 用于存放主要数据
+            // 将单张照片详情置于 storeState 外单独处理
             that.setState({
                 id: json.id,
                 photo: json.photo,
@@ -35,25 +37,23 @@ class Moment extends Component {
         }).fail((err) => console.log(err));
     }
 
-    onCommentClick(e) {
+    // 发表评论
+    onCommentClick(e, value) {
         e.preventDefault();
-        console.log(this.state);
+        console.log(value);
     }
 
-    onLikeClick(e) {
-        console.log(this.state);
+    // 照片点赞
+    onLikeClick(e, id) {
         e.preventDefault();
-        let heart = $(e.target);
-        // 若未点赞，则加赞
-        if (heart.hasClass('sj-heart-o')) {
-            heart.removeClass('sj-heart-o');
-            heart.addClass('sj-heart');
-        }
-        // 若已点赞，则取消赞
-        else {
-            heart.removeClass('sj-heart');
-            heart.addClass('sj-heart-o');
-        }
+        let that = this;
+        setTimeout(function () {
+            // console.log(that); // bind to Moment
+            // console.log(this); // bind to Window
+            that.setState({
+                like: !that.state.like
+            });
+        }, 500);
     }
 
     render() {

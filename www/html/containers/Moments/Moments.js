@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
     fetchPhotos,
-    likePhoto,
-    dislikePhoto
+    fetchLikePhoto
 } from '../../actions/photos';
 import Photos from '../../components/Photos/Photos';
 import './Moments.less';
@@ -24,10 +23,11 @@ class Moments extends Component {
         dispatch(fetchPhotos());
     }
 
-    onLikeClick(e, id) {
+    // 照片点赞
+    onLikeClick(e, id, index) {
         e.preventDefault();
         let {dispatch} = this.props;
-        dispatch(likePhoto(id));
+        dispatch(fetchLikePhoto(id, index));
     }
 
     render() {

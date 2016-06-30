@@ -28,7 +28,7 @@ const Photos = props => {
                                                 photographer={item.photographer}
                                                 like={item.like}
                                                 onLikeClick={
-                                                    (e) => props.onLikeClick(e, item.id)
+                                                    (e) => props.onLikeClick(e, item.id, index)
                                                 }
                                                 />
                                         </div>
@@ -42,7 +42,7 @@ const Photos = props => {
                                                 photographer={item.photographer}
                                                 like={item.like}
                                                 onLikeClick={
-                                                    (e) => props.onLikeClick(e, item.id)
+                                                    (e) => props.onLikeClick(e, item.id, index)
                                                 }
                                                 />
                                         </div>
@@ -64,7 +64,7 @@ const Photos = props => {
                                             photographer={item.photographer}
                                             like={item.like}
                                             onLikeClick={
-                                                (e) => props.onLikeClick(e, item.id)
+                                                (e) => props.onLikeClick(e, item.id, index)
                                             }
                                             />
                                     </div>

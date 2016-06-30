@@ -1,5 +1,6 @@
 import constants from '../constants';
 
+// 获取照片列表
 function requestPhotos() {
     return {
         type: constants.REQUEST_PHOTOS
@@ -23,17 +24,27 @@ function fetchPhotos() {
     }
 }
 
-function likePhoto(id) {
+// 照片点赞
+function requestLikePhoto(index) {
     return {
-        type: constants.LIKE_PHOTO,
-        id: id
+        type: constants.REQUEST_LIKEPHOTO,
+        index
     }
 }
 
-function dislikePhoto(id) {
+function receiveLikePhoto(index) {
     return {
-        type: constants.DISLIKE_PHOTO,
-        id: id
+        type: constants.RECEIVE_LIKEPHOTO,
+        index
+    }
+}
+
+function fetchLikePhoto(id, index) {
+    return (dispatch, getState) => {
+        dispatch(requestLikePhoto(index));
+        return setTimeout(function () {
+            dispatch(receiveLikePhoto(index));
+        }, 500);
     }
 }
 
@@ -42,6 +53,7 @@ requestPhotos,
 receivePhotos,
 fetchPhotos,
 
-likePhoto,
-dislikePhoto
+requestLikePhoto,
+receiveLikePhoto,
+fetchLikePhoto
 }

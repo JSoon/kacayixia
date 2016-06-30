@@ -1,4 +1,5 @@
 import constants from '../constants';
+import Update from 'react-addons-update'; // Deep copy
 
 const initialState = {
     isFetching: false,
@@ -10,6 +11,8 @@ const initialState = {
 }
 
 const photos = (state = initialState, action) => {
+    let index = action.index; // 点赞照片索引号
+
     switch (action.type) {
         case constants.REQUEST_PHOTOS:
             return Object.assign({}, state, {
@@ -20,13 +23,14 @@ const photos = (state = initialState, action) => {
                 isFetching: false,
                 lastUpdated: action.receivedAt
             });
-        case constants.LIKE_PHOTO:
-            let photos = state.items.slice();
-            photos.map((item, index) => {
-                if (action.id === item.id) {
-                    item.like = item.like ? false : true;
-                }
-            });
+        case constants.REQUEST_LIKEPHOTO:
+            return state;
+        case constants.RECEIVE_LIKEPHOTO:
+            let newItems = {};
+            newItems[index] = {
+                like: { $set: !state.items[index].like }
+            };
+            let photos = Update(state.items, newItems);
             return Object.assign({}, state, {
                 items: photos
             });

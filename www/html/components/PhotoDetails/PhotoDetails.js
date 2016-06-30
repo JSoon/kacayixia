@@ -30,7 +30,11 @@ const PhotoDetails = props => {
                             photo={photo}
                             photographer={photographer}
                             like={like}
-                            onLikeClick={props.onLikeClick}
+                            onLikeClick={
+                                (e) => {
+                                    props.onLikeClick(e, id);
+                                }
+                            }
                             />
                     </div>
                     <div className="col-lg-4">
