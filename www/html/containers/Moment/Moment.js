@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PhotoDetails from '../../components/PhotoDetails/PhotoDetails';
+import Update from 'react-addons-update';
 import '../Moments/Moments.less';
 
 class Moment extends Component {
@@ -12,7 +13,8 @@ class Moment extends Component {
         // (except when using ES6 class syntax).
         // https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html
         this.onLikeClick = this.onLikeClick.bind(this);
-        this.onCommentClick = this.onCommentClick.bind(this);
+        this.onCommentSubmit = this.onCommentSubmit.bind(this);
+        this.onReplyClick = this.onReplyClick.bind(this);
     }
 
     componentDidMount() {
@@ -37,12 +39,6 @@ class Moment extends Component {
         }).fail((err) => console.log(err));
     }
 
-    // 发表评论
-    onCommentClick(e, value) {
-        e.preventDefault();
-        console.log(value);
-    }
-
     // 照片点赞
     onLikeClick(e, id) {
         e.preventDefault();
@@ -56,6 +52,42 @@ class Moment extends Component {
         }, 500);
     }
 
+    // 发表评论
+    onCommentSubmit(e, input) {
+        e.preventDefault();
+        let value = input.value;
+        // post comment
+        if (value.trim() === '') {
+            return;
+        }
+        var newComments = Update(this.state.comments, {
+            $push: [
+                {
+                    "user": {
+                        "id": 5,
+                        "name": "JSoon",
+                        "avatar": "http://placekitten.com/g/40/40",
+                        "url": ""
+                    },
+                    "text": value,
+                    "time": "2016/07/01, 15:11",
+                    "replies": []
+                }
+            ]
+        });
+        this.setState({
+            comments: newComments
+        });
+        input.value = '';
+    }
+
+    // 点击回复
+    onReplyClick(e, replyForm) {
+        e.preventDefault();
+        console.log(replyForm);
+        $(replyForm).show();
+    }
+
     render() {
         return (
             <div className="moments-tree">
@@ -65,7 +97,8 @@ class Moment extends Component {
                         <PhotoDetails
                             { ...this.state }
                             onLikeClick={this.onLikeClick}
-                            onCommentClick={this.onCommentClick}
+                            onCommentSubmit={this.onCommentSubmit}
+                            onReplyClick={this.onReplyClick}
                             />
                     }
                 </main>

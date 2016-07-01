@@ -103,7 +103,8 @@ const PhotoDetails = props => {
                     <div className="col-lg-8">
                         <Comments
                             comments={comments}
-                            onCommentClick={props.onCommentClick}
+                            onCommentSubmit={props.onCommentSubmit}
+                            onReplyClick={props.onReplyClick}
                             />
                     </div>
                 </div>

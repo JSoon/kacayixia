@@ -26,8 +26,8 @@ class Comments extends Component {
                         <div className="form-group">
                             <a className="btn btn-block" href="#" onClick={
                                 (e) => {
-                                    let value = this.refs.commentInput.value;
-                                    this.props.onCommentClick(e, value);
+                                    let input = this.refs.commentInput;
+                                    this.props.onCommentSubmit(e, input);
                                 }
                             }>发表评论</a>
                         </div>
@@ -50,14 +50,21 @@ class Comments extends Component {
                                             <p>{comment.text}</p>
                                             <p className="media-meta">
                                                 {comment.time}
-                                                <a className="sj sj-reply J_Reply" href="#" title="回复"></a>
+                                                <a className="sj sj-reply" href="#" title="回复"
+                                                    onClick={
+                                                        (e) => {
+                                                            let replyForm = this.refs["replyForm_" + index];
+                                                            this.props.onReplyClick(e, replyForm);
+                                                        }
+                                                    }>
+                                                </a>
                                             </p>
                                         </div>
                                         {
                                             comment.replies.length !== 0 &&
-                                            comment.replies.map((reply, index) => {
+                                            comment.replies.map((reply, replyIndex) => {
                                                 return (
-                                                    <div className="media" key={index}>
+                                                    <div className="media" key={replyIndex}>
                                                         <div className="media-left">
                                                             <a href="#">
                                                                 <img className="media-object" src={reply.user.avatar} alt="avatar"/>
@@ -69,7 +76,16 @@ class Comments extends Component {
                                                                 <p>{reply.text}</p>
                                                                 <p className="media-meta">
                                                                     {reply.time}
-                                                                    <a className="sj sj-reply J_Reply" href="#" title="回复"></a>
+                                                                    <a className="sj sj-reply" href="#" title="回复"
+                                                                        onClick={
+                                                                            (e) => {
+                                                                                let replyOthersForm = this.refs['replyOthersForm_' + index];
+                                                                                let replyOthersInput = this.refs['replyOthersInput_' + index];
+                                                                                replyOthersInput.placeholder = '回复 ' + reply.user.name;
+                                                                                this.props.onReplyClick(e, replyOthersForm);
+                                                                            }
+                                                                        }>
+                                                                    </a>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -77,6 +93,46 @@ class Comments extends Component {
                                                 )
                                             })
                                         }
+                                        <div ref={"replyOthersForm_" + index} className="comment-reply row">
+                                            <div className="col-lg-9">
+                                                <div className="form-group">
+                                                    <div className="input-text">
+                                                        <input ref={"replyOthersInput_" + index} type="text" placeholder=""/>
+                                                        <i className="input-border"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3">
+                                                <div className="form-group">
+                                                    <a className="btn btn-block" href="#"
+                                                        onClick={
+                                                            (e) => {
+
+                                                            }
+                                                        }>回复</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ref={"replyForm_" + index} className="comment-reply row">
+                                        <div className="col-lg-9">
+                                            <div className="form-group">
+                                                <div className="input-text">
+                                                    <input type="text" placeholder={"回复 " + comment.user.name}/>
+                                                    <i className="input-border"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <div className="form-group">
+                                                <a className="btn btn-block" href="#"
+                                                    onClick={
+                                                        (e) => {
+
+                                                        }
+                                                    }>回复</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                             )
