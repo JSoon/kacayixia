@@ -105,6 +105,7 @@ const PhotoDetails = props => {
                             comments={comments}
                             onCommentSubmit={props.onCommentSubmit}
                             onReplyClick={props.onReplyClick}
+                            onReplySubmit={props.onReplySubmit}
                             />
                     </div>
                 </div>

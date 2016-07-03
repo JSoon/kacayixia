@@ -34,7 +34,8 @@ class Moment extends Component {
                 photographer: json.photographer,
                 like: json.like,
                 downloads: json.downloads,
-                comments: json.comments
+                comments: json.comments,
+
             });
         }).fail((err) => console.log(err));
     }
@@ -82,10 +83,23 @@ class Moment extends Component {
     }
 
     // 点击回复
-    onReplyClick(e, replyForm) {
+    onReplyClick(e, refs, form) {
         e.preventDefault();
-        console.log(replyForm);
-        $(replyForm).show();
+        for (let r in refs) {
+            if (/comment-reply/.test(refs[r].className)) {
+                // 隐藏所有评论输入框
+                refs[r].style.display = 'none';
+            }
+        }
+        // 显示当前评论输入框
+        form.style.display = 'block';
+    }
+
+    // 提交回复
+    onReplySubmit(e, input) {
+        e.preventDefault();
+        console.log(input.value);
+        input.value = '';
     }
 
     render() {
@@ -99,6 +113,7 @@ class Moment extends Component {
                             onLikeClick={this.onLikeClick}
                             onCommentSubmit={this.onCommentSubmit}
                             onReplyClick={this.onReplyClick}
+                            onReplySubmit={this.onReplySubmit}
                             />
                     }
                 </main>
