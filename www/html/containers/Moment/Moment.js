@@ -15,6 +15,7 @@ class Moment extends Component {
         this.onLikeClick = this.onLikeClick.bind(this);
         this.onCommentSubmit = this.onCommentSubmit.bind(this);
         this.onReplyClick = this.onReplyClick.bind(this);
+        this.onReplySubmit = this.onReplySubmit.bind(this);
     }
 
     componentDidMount() {
@@ -78,12 +79,13 @@ class Moment extends Component {
         });
         this.setState({
             comments: newComments
+        }, function () {
+            input.value = '';
         });
-        input.value = '';
     }
 
     // 点击回复
-    onReplyClick(e, refs, form) {
+    onReplyClick(e, refs, form, input) {
         e.preventDefault();
         for (let r in refs) {
             if (/comment-reply/.test(refs[r].className)) {
@@ -91,15 +93,48 @@ class Moment extends Component {
                 refs[r].style.display = 'none';
             }
         }
-        // 显示当前评论输入框
+        // 显示当前评论输入框，并获取焦点
         form.style.display = 'block';
+        input.focus(); // IE9+
     }
 
     // 提交回复
-    onReplySubmit(e, input) {
+    onReplySubmit(e, input, index) {
         e.preventDefault();
-        console.log(input.value);
-        input.value = '';
+        let value = input.value;
+        let replier = input.placeholder.slice(3);
+        // post comment
+        if (value.trim() === '') {
+            return;
+        }
+        let newComments = Update(this.state.comments, {
+            $set: this.state.comments
+        });
+        let newReplies = Update(this.state.comments[index].replies, {
+            $push: [
+                {
+                    "user": {
+                        "id": 6,
+                        "name": "Strak",
+                        "avatar": "http://placekitten.com/g/40/40",
+                        "url": ""
+                    },
+                    "atUser": {
+                        "id": 7,
+                        "name": replier,
+                        "url": ""
+                    },
+                    "text": value,
+                    "time": "2016/07/04, 10:25"
+                }
+            ]
+        });
+        newComments[index].replies = newReplies;
+        this.setState({
+            comments: newComments
+        }, function () {
+            input.value = '';
+        });
     }
 
     render() {

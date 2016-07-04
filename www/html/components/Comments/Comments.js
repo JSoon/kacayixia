@@ -57,14 +57,7 @@ class Comments extends Component {
                                                             let replyForm = refs["replyForm_" + index];
                                                             let replyInput = refs['replyInput_' + index];
                                                             replyInput.placeholder = '回复 ' + comment.user.name;
-                                                            // for (let r in refs) {
-                                                            //     if (/comment-reply/.test(refs[r].className)) {
-                                                            //         // 隐藏所有评论输入框
-                                                            //         refs[r].style.display = 'none';
-                                                            //     }
-                                                            // }
-                                                            // replyForm.style.display = 'block';
-                                                            this.props.onReplyClick(e, refs, replyForm);
+                                                            this.props.onReplyClick(e, refs, replyForm, replyInput);
                                                         }
                                                     }>
                                                 </a>
@@ -83,7 +76,18 @@ class Comments extends Component {
                                                         <div className="media-body">
                                                             <h5 className="media-heading"><a href="#">{reply.user.name}</a></h5>
                                                             <div className="media-content">
-                                                                <p>{reply.text}</p>
+                                                                <p>
+                                                                    {
+                                                                        reply.atUser &&
+                                                                        reply.atUser.name !== comment.user.name &&
+                                                                        reply.atUser.name !== reply.user.name &&
+                                                                        [
+                                                                            '回复 ',
+                                                                            <a key={replyIndex} href={reply.atUser.url}>{reply.atUser.name}: </a>
+                                                                        ]
+                                                                    }
+                                                                    {reply.text}
+                                                                </p>
                                                                 <p className="media-meta">
                                                                     {reply.time}
                                                                     <a className="sj sj-reply" href="#" title="回复"
@@ -100,7 +104,7 @@ class Comments extends Component {
                                                                                 //     }
                                                                                 // }
                                                                                 // replyOthersForm.style.display = 'block';
-                                                                                this.props.onReplyClick(e, refs, replyOthersForm);
+                                                                                this.props.onReplyClick(e, refs, replyOthersForm, replyOthersInput);
                                                                             }
                                                                         }>
                                                                     </a>
@@ -126,7 +130,7 @@ class Comments extends Component {
                                                     <a className="btn btn-block" href="#"
                                                         onClick={
                                                             (e) => {
-                                                                this.props.onReplySubmit(e, this.refs['replyOthersInput_' + index]);
+                                                                this.props.onReplySubmit(e, this.refs['replyOthersInput_' + index], index);
                                                             }
                                                         }>回复</a>
                                                 </div>
@@ -148,7 +152,7 @@ class Comments extends Component {
                                                 <a className="btn btn-block" href="#"
                                                     onClick={
                                                         (e) => {
-                                                            this.props.onReplySubmit(e, this.refs['replyInput_' + index]);
+                                                            this.props.onReplySubmit(e, this.refs['replyInput_' + index], index);
                                                         }
                                                     }>回复</a>
                                             </div>
