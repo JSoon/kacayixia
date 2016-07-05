@@ -20,7 +20,17 @@ class Moments extends Component {
 
     componentDidMount() {
         let {dispatch} = this.props;
-        dispatch(fetchPhotos());
+        // dispatch(fetchPhotos());
+    }
+
+    componentWillReceiveProps(nextProps) {
+        let {dispatch} = this.props;
+        let newPage = nextProps.location.query.p;
+        console.log(nextProps);
+        // setTimeout(function () {
+        //     dispatch(fetchPhotos(newPage));
+
+        // }, 2000);
     }
 
     // 照片点赞

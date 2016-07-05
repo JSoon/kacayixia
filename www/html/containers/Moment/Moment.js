@@ -3,10 +3,12 @@ import {connect} from 'react-redux';
 import PhotoDetails from '../../components/PhotoDetails/PhotoDetails';
 import Update from 'react-addons-update';
 import '../Moments/Moments.less';
+import 'magnific-popup/dist/magnific-popup.css';
 
 class Moment extends Component {
     constructor(props) {
         super(props);
+        this.state = {};
         // When creating callbacks in JavaScript, you usually need to explicitly bind a method to
         // its instance such that the value of this is correct.
         // With React, every method is automatically bound to its component instance
@@ -18,7 +20,12 @@ class Moment extends Component {
         this.onReplySubmit = this.onReplySubmit.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+        console.log('hehe');
+    }
+
     componentDidMount() {
+        // 获取照片详情
         let that = this;
         let id = that.props.params.id;
         $.ajax({
@@ -33,10 +40,22 @@ class Moment extends Component {
                 id: json.id,
                 photo: json.photo,
                 photographer: json.photographer,
+                preview: json.preview,
                 like: json.like,
                 downloads: json.downloads,
                 comments: json.comments,
 
+            }, function () {
+                // 照片预览
+                $('.J_PhotoPreview').magnificPopup({
+                    type: 'image',
+                    closeBtnInside: false,
+                    closeOnContentClick: true,
+                    mainClass: 'mfp-img-mobile',
+                    image: {
+                        verticalFit: true
+                    }
+                });
             });
         }).fail((err) => console.log(err));
     }

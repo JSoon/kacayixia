@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router';
 import PhotoItem from '../../components/PhotoItem/PhotoItem';
 
 const Photos = props => {
@@ -78,9 +79,16 @@ const Photos = props => {
                 <a className="prev btn" href="#" title="上一页">
                     <i className="sj sj-arrow-l clear-trans"></i>
                 </a>
-                <a className="next btn" href="#" title="下一页">
+                <Link className="next btn" to={
+                    {
+                        pathname: '/moments',
+                        query: {
+                            p: 2
+                        }
+                    }
+                } title="下一页">
                     <i className="sj sj-arrow-r clear-trans"></i>
-                </a>
+                </Link>
             </div>
         </div>
     );
@@ -90,8 +98,8 @@ Photos.propTypes = {
     pageCount: PropTypes.number.isRequired,
     curPage: PropTypes.number.isRequired,
     prevPageUrl: PropTypes.string.isRequired,
-    nextPageUrl: PropTypes.string.isRequired/*,
-    photos: PropTypes.arrayOf(PropTypes.object)*/
+    nextPageUrl: PropTypes.string.isRequired,
+    photos: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Photos;

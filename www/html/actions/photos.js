@@ -15,10 +15,15 @@ function receivePhotos(json) {
     }
 }
 
-function fetchPhotos() {
+function fetchPhotos(p = 1) {
     return dispatch => {
         dispatch(requestPhotos());
-        return $.ajax('data/photos.json')
+        return $.ajax({
+            url: 'data/photos.json',
+            data: {
+                page: p
+            }
+        })
             .done((json) => dispatch(receivePhotos(json)))
             .fail((err) => console.log(err))
     }

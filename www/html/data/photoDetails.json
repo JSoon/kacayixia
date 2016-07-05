@@ -3,6 +3,7 @@
     "topPick": true,
     "pick": true,
     "like": true,
+    "preview": true,
     "photo": {
         "url": "http://placekitten.com/g/1200/900",
         "title": "风一样的男子",

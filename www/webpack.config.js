@@ -15,6 +15,9 @@ module.exports = {
             'redux-logger',
             'redux-thunk'
         ],
+        plugins: [
+            'magnific-popup'
+        ],
         main: [
             './html/index'
         ]
@@ -40,8 +43,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.less$/,
-                exclude: /(node_modules|bower_components)/,
+                test: /\.css|less$/,
                 loader: 'style!css!less'
             },
             {
@@ -64,6 +66,8 @@ module.exports = {
         // 'react-router': 'ReactRouter',
         // 'redux-logger': 'reduxLogger',
         // 'redux-thunk': 'ReduxThunk'
+        'jquery': 'jQuery',
+        '$': '$',
     },
     // add this handful of plugins that optimize the build
     // when we're in production
@@ -73,8 +77,8 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin()
     ] : [
             new webpack.optimize.CommonsChunkPlugin({
-                name: 'vendor',
-                chunks: 'vendor'
+                name: ['vendor', 'plugins'],
+                chunks: ['vendor', 'plugins']
             })
         ]
 };

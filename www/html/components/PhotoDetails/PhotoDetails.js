@@ -9,6 +9,7 @@ const PhotoDetails = props => {
         photo,
         photographer,
         like,
+        preview,
         downloads,
         comments
     } = props;
@@ -30,6 +31,7 @@ const PhotoDetails = props => {
                             photo={photo}
                             photographer={photographer}
                             like={like}
+                            preview={preview}
                             onLikeClick={
                                 (e) => {
                                     props.onLikeClick(e, id);
