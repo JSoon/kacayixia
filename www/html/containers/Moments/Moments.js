@@ -4,6 +4,7 @@ import {
     fetchPhotos,
     fetchLikePhoto
 } from '../../actions/photos';
+import Update from 'react-addons-update';
 import Photos from '../../components/Photos/Photos';
 import './Moments.less';
 
@@ -14,23 +15,39 @@ class Moments extends Component {
         // its instance such that the value of this is correct.
         // With React, every method is automatically bound to its component instance
         // (except when using ES6 class syntax).
-        // https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html
+        // Reference: https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html
         this.onLikeClick = this.onLikeClick.bind(this);
     }
 
     componentDidMount() {
-        let {dispatch} = this.props;
-        // dispatch(fetchPhotos());
+        let {
+            dispatch,
+            routerLocation
+        } = this.props;
+        let page = routerLocation.query.p;
+        this.fetchPhotos = dispatch(fetchPhotos(page));
+        console.log(this.fetchPhotos);
     }
 
     componentWillReceiveProps(nextProps) {
-        let {dispatch} = this.props;
-        let newPage = nextProps.location.query.p;
-        console.log(nextProps);
-        // setTimeout(function () {
-        //     dispatch(fetchPhotos(newPage));
+        let {
+            dispatch,
+            routerLocation
+        } = this.props;
+        // 因为 router 会改变 component 的 props，所以破坏了 react 原生态中的周期函数行为
+        // 导致 componentWillReceiveProps 在 initial render 阶段被触发
+        // 故而这里需要从 storeState 中取出实质改变后的 routerLocation 来进行判断
+        // 避免出现无限循环的 dispatch
+        // Reference: https://github.com/reactjs/redux/issues/227
+        if (routerLocation.pathname === nextProps.routerLocation.pathname &&
+            routerLocation.query !== nextProps.routerLocation.query) {
+            let newPage = nextProps.routerLocation.query.p;
+            dispatch(fetchPhotos(newPage));
+        }
+    }
 
-        // }, 2000);
+    componentWillUnmount() {
+        this.fetchPhotos.abort();
     }
 
     // 照片点赞
@@ -62,12 +79,16 @@ function mapStateToProps(state) {
         nextPageUrl,
         items
     } = state.photos;
+    let {
+        routerLocation
+    } = state;
     return {
         pageCount,
         curPage,
         prevPageUrl,
         nextPageUrl,
-        photos: items
+        photos: items,
+        routerLocation
     }
 }
 

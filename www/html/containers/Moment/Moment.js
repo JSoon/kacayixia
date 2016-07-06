@@ -8,7 +8,6 @@ import 'magnific-popup/dist/magnific-popup.css';
 class Moment extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
         // When creating callbacks in JavaScript, you usually need to explicitly bind a method to
         // its instance such that the value of this is correct.
         // With React, every method is automatically bound to its component instance
@@ -18,10 +17,6 @@ class Moment extends Component {
         this.onCommentSubmit = this.onCommentSubmit.bind(this);
         this.onReplyClick = this.onReplyClick.bind(this);
         this.onReplySubmit = this.onReplySubmit.bind(this);
-    }
-
-    componentWillReceiveProps(nextProps) {
-        console.log('hehe');
     }
 
     componentDidMount() {
@@ -43,8 +38,7 @@ class Moment extends Component {
                 preview: json.preview,
                 like: json.like,
                 downloads: json.downloads,
-                comments: json.comments,
-
+                comments: json.comments
             }, function () {
                 // 照片预览
                 $('.J_PhotoPreview').magnificPopup({

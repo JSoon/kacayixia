@@ -11,7 +11,7 @@ const Header = props => {
                 </div>
                 <ul className="nav-action-l">
                     <li><a href="#">登录</a></li>
-                    <li><a href="#">注册</a></li>
+                    <li><Link to="/sign-up">注册</Link></li>
                     {/* <li className="avatar">
                             <a href="#"><img src="app/global/me.png" alt="avatar"/></a>
                         </li>

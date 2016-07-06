@@ -32,14 +32,14 @@ function fetchPhotos(p = 1) {
 // 照片点赞
 function requestLikePhoto(index) {
     return {
-        type: constants.REQUEST_LIKEPHOTO,
+        type: constants.REQUEST_LIKE_PHOTO,
         index
     }
 }
 
 function receiveLikePhoto(index) {
     return {
-        type: constants.RECEIVE_LIKEPHOTO,
+        type: constants.RECEIVE_LIKE_PHOTO,
         index
     }
 }

@@ -23,9 +23,9 @@ const photos = (state = initialState, action) => {
                 isFetching: false,
                 lastUpdated: action.receivedAt
             });
-        case constants.REQUEST_LIKEPHOTO:
+        case constants.REQUEST_LIKE_PHOTO:
             return state;
-        case constants.RECEIVE_LIKEPHOTO:
+        case constants.RECEIVE_LIKE_PHOTO:
             let newItems = {};
             newItems[index] = {
                 like: { $set: !state.items[index].like }

@@ -2,13 +2,13 @@ import constants from '../constants';
 
 function requestDailyPhoto() {
     return {
-        type: constants.REQUEST_DAILYPHOTO
+        type: constants.REQUEST_DAILY_PHOTO
     }
 }
 
 function receiveDailyPhoto(json) {
     return {
-        type: constants.RECEIVE_DAILYPHOTO,
+        type: constants.RECEIVE_DAILY_PHOTO,
         json: json,
         receivedAt: Date.now()
     }

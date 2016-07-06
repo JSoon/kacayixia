@@ -76,9 +76,16 @@ const Photos = props => {
                 </div>
             </div>
             <div className="pagination">
-                <a className="prev btn" href="#" title="上一页">
+                <Link className="prev btn" to={
+                    {
+                        pathname: '/moments',
+                        query: {
+                            p: 1
+                        }
+                    }
+                } title="上一页">
                     <i className="sj sj-arrow-l clear-trans"></i>
-                </a>
+                </Link>
                 <Link className="next btn" to={
                     {
                         pathname: '/moments',
