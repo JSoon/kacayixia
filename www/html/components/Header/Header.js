@@ -10,15 +10,19 @@ const Header = props => {
                     <h6 className="slogan">一瞬间，便是永恒。</h6>
                 </div>
                 <ul className="nav-action-l">
-                    <li><a href="#">登录</a></li>
+                    <li><Link to="/sign-in">登录</Link></li>
                     <li><Link to="/sign-up">注册</Link></li>
-                    {/* <li className="avatar">
+                    {
+                        /*
+                        <li className="avatar">
                             <a href="#"><img src="app/global/me.png" alt="avatar"/></a>
                         </li>
                         <li className="name">
                             <a href="#">Sharon Guerrero</a>
                         </li>
-                        <li className="sign-out"><a href="#">退出</a></li> */}
+                        <li className="sign-out"><a href="#">退出</a></li>
+                        */
+                    }
                 </ul>
                 <ul className="nav-action-r">
                     <li>

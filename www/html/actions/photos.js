@@ -1,9 +1,10 @@
 import constants from '../constants';
 
 // 获取照片列表
-function requestPhotos() {
+function requestPhotos(p) {
     return {
-        type: constants.REQUEST_PHOTOS
+        type: constants.REQUEST_PHOTOS,
+        page: p
     }
 }
 
@@ -17,7 +18,7 @@ function receivePhotos(json) {
 
 function fetchPhotos(p = 1) {
     return dispatch => {
-        dispatch(requestPhotos());
+        dispatch(requestPhotos(p));
         return $.ajax({
             url: 'data/photos.json',
             data: {

@@ -24,9 +24,8 @@ class Moments extends Component {
             dispatch,
             routerLocation
         } = this.props;
-        let page = routerLocation.query.p;
-        this.fetchPhotos = dispatch(fetchPhotos(page));
-        console.log(this.fetchPhotos);
+        let page = parseInt(routerLocation.query.p);
+        this.fetchPhotos = dispatch(fetchPhotos(page)); // return a promise
     }
 
     componentWillReceiveProps(nextProps) {
@@ -41,7 +40,7 @@ class Moments extends Component {
         // Reference: https://github.com/reactjs/redux/issues/227
         if (routerLocation.pathname === nextProps.routerLocation.pathname &&
             routerLocation.query !== nextProps.routerLocation.query) {
-            let newPage = nextProps.routerLocation.query.p;
+            let newPage = parseInt(nextProps.routerLocation.query.p);
             dispatch(fetchPhotos(newPage));
         }
     }

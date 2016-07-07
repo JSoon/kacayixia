@@ -20,6 +20,14 @@ const routeConfig = {
             }
         },
         {
+            path: '/sign-in',
+            getComponent(location, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('./containers/Sign/SignIn').default)
+                }, 'containers/Sign/SignIn');
+            }
+        },
+        {
             path: '/moments',
             getComponent(location, cb) {
                 require.ensure([], (require) => {

@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 import {fetchDailyPhoto} from '../../actions/dailyPhoto';
@@ -34,18 +34,6 @@ class Home extends Component {
         );
     }
 }
-
-Home.propTypes = {
-    photo: PropTypes.shape({
-        url: PropTypes.string,
-        title: PropTypes.string
-    }).isRequired,
-    photographer: PropTypes.shape({
-        url: PropTypes.string,
-        name: PropTypes.string,
-        avatar: PropTypes.string
-    }).isRequired
-};
 
 function mapStateToProps(state) {
     let {
