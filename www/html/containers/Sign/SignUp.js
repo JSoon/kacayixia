@@ -9,11 +9,12 @@ import './sign.less';
 class SignUp extends Component {
     constructor(props) {
         super(props);
-        this.onSubmitClick = this.onSubmitClick.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     // 提交注册
-    onSubmitClick() {
+    onFormSubmit(e) {
+        e.preventDefault();
         let {router} = this.props;
         alert('注册成功！')
         router.push('/sign-in');
@@ -28,7 +29,7 @@ class SignUp extends Component {
                             title={'注册'}
                             subTitle={'只需花费您1分钟的时间，即可上传专属您的瞬间。'}
                             />
-                        <form className="row">
+                        <form className="row" onSubmit={this.onFormSubmit}>
                             <div className="col-lg-4 col-lg-offset-4">
                                 <div className="form-group">
                                     <div className="avatar-upload-default">
@@ -42,8 +43,8 @@ class SignUp extends Component {
                                 <Input type={'password'} placeholder={'确认密码'}/>
                                 <div className="form-group">
                                     <Button
+                                        type={'submit'}
                                         text={'注 册'}
-                                        onClick={this.onSubmitClick}
                                         />
                                 </div>
                             </div>

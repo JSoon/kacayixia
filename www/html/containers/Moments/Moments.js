@@ -26,6 +26,7 @@ class Moments extends Component {
         } = this.props;
         let page = parseInt(routerLocation.query.p);
         this.fetchPhotos = dispatch(fetchPhotos(page)); // return a promise
+        console.log(this.fetchPhotos);
     }
 
     componentWillReceiveProps(nextProps) {

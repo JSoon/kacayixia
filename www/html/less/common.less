@@ -14,8 +14,7 @@
     background: fade(@black, 80);
 }
 
-html,
-body {
+html, body {
     min-height: 100%;
     color: @black;
     background-color: #F8F9F7;
@@ -37,12 +36,7 @@ body {
         overflow: hidden;
         background: url("../img/color-bar.png") center 0 no-repeat transparent;
     }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
-    only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 1300px),
-    only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: 1300px),
-    only screen and ( min-device-pixel-ratio: 2) and (min-width: 1300px),
-    only screen and ( min-resolution: 192dpi) and (min-width: 1300px),
-    only screen and ( min-resolution: 2dppx) and (min-width: 1300px) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and ( min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and ( min-resolution: 192dpi) and (min-width: 1300px), only screen and ( min-resolution: 2dppx) and (min-width: 1300px) {
         /* Large screen, retina, stuff to override above media query */
         &:before {
             background: url("../img/color-bar@2x.png") center 0 no-repeat transparent;
@@ -55,8 +49,7 @@ a {
     color: @black;
     text-decoration: none;
     cursor: pointer;
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
         color: @grey;
     }
     * {
@@ -64,18 +57,7 @@ a {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: inherit;
 }
 
@@ -92,8 +74,7 @@ header.crown {
             width: 100px;
             height: 88px;
             font-size: 4em;
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 text-decoration: none;
             }
         }
@@ -102,8 +83,7 @@ header.crown {
             font-size: @font-sm;
         }
     }
-    .nav-action-l,
-    .nav-action-r {
+    .nav-action-l, .nav-action-r {
         position: relative;
         margin: -100px 0;
         padding: 0;
@@ -117,8 +97,7 @@ header.crown {
         float: left;
         a {
             color: @grey-light;
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 color: @black;
             }
         }
@@ -131,8 +110,7 @@ header.crown {
             }
             &.name a {
                 color: @black;
-                &:hover,
-                &:focus {
+                &:hover, &:focus {
                     text-decoration: underline;
                 }
             }
@@ -246,9 +224,7 @@ footer.root {
 }
 
 @-webkit-keyframes sk-waveStretchDelay {
-    0%,
-    40%,
-    100% {
+    0%, 40%, 100% {
         transform: scaleY(0.4);
     }
     20% {
@@ -257,9 +233,7 @@ footer.root {
 }
 
 @keyframes sk-waveStretchDelay {
-    0%,
-    40%,
-    100% {
+    0%, 40%, 100% {
         transform: scaleY(0.4);
     }
     20% {
@@ -276,8 +250,8 @@ footer.root {
     color: @black;
     border: 1px solid #ddd;
     border-radius: 40px;
-    &:hover,
-    &:focus {
+    background: transparent;
+    &:hover, &:focus {
         color: @white;
         border-color: fade(@black, 40);
         background: fade(@black, 80);
@@ -295,9 +269,7 @@ footer.root {
     .input-text {
         position: relative;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"] {
         display: block;
         width: 100%;
         padding: 1em;
@@ -321,13 +293,11 @@ footer.root {
     }
 }
 
-.radio-inline,
-.checkbox-inline {
+.radio-inline, .checkbox-inline {
     padding: 0;
 }
 
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
     margin-left: 30px;
 }
 
@@ -350,8 +320,7 @@ footer.root {
 }
 
 .media-heading {
-    a:hover,
-    a:focus {
+    a:hover, a:focus {
         text-decoration: underline;
     }
 }
@@ -390,7 +359,6 @@ footer.root {
     box-shadow: none;
 }
 
-.mfp-title,
-.mfp-close {
+.mfp-title, .mfp-close {
     color: @black;
 }

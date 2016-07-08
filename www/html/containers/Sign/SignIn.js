@@ -4,40 +4,29 @@ import {withRouter, Link} from 'react-router';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Form/Input';
 import Button from '../../components/Button/Button';
+import 'animate.css/animate.css';
 import './sign.less';
 
 class SignIn extends Component {
     constructor(props) {
         super(props);
-        this.onSubmitClick = this.onSubmitClick.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
-
-    // 登录
-    // var form = $('.J_SignInForm'),
-    //     loading = $('.J_SignInLoading');
-    // $('.J_Submit').on('click', function (e) {
-    //     e.preventDefault();
-    //     setTimeout(function () {
-    //         form.addClass('animated fadeOutDown');
-    //         loading.fadeIn().children('li:not(".loading")').addClass('animated fadeInUp');
-    //     }, 500);
-    // });
-
-
     // 提交登录
-    onSubmitClick() {
-        // let {router} = this.props;
-        // router.push('/moments');
-        console.log(this.refs.signInForm);
-        this.refs.signInForm.submit();
-        console.log('onSubmitClick');
-    }
-
     onFormSubmit(e) {
-        console.log('onFormSubmit');
         e.preventDefault();
+        let {
+            signInForm,
+            signInLoading
+        } = this.refs;
+        let {router} = this.props;
+        // do sign in stuffs
+        $(signInForm).addClass('animated fadeOutDown');
+        $(signInLoading).fadeIn().children('li:not(".loading")').addClass('animated fadeInUp');
+        setTimeout(function () {
+            router.push('/moments');
+        }, 2000);
     }
 
     render() {
@@ -57,14 +46,14 @@ class SignIn extends Component {
                                         <Input type={'password'} placeholder={'密码'}/>
                                         <div className="form-group">
                                             <Button
+                                                type={'submit'}
                                                 text={'登 录'}
-                                                onClick={this.onSubmitClick}
                                                 />
                                         </div>
                                     </div>
                                 </div>
                             </form>
-                            <ul className="sign-in-loading J_SignInLoading">
+                            <ul className="sign-in-loading" ref="signInLoading">
                                 <li className="avatar">
                                     <img src="app/sign/img/avatar.png" alt="avatar"/>
                                 </li>

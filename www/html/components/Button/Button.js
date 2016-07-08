@@ -1,6 +1,16 @@
 import React, {PropTypes} from 'react';
 
 const Button = props => {
+    if (props.type === 'submit') {
+        return (
+            <button
+                type="submit"
+                className="btn btn-block">
+                {props.text}
+            </button>
+        );
+    }
+
     return (
         <a
             className="btn btn-block"
