@@ -26,7 +26,6 @@ function fetchPhotos(p = 1) {
             }
         })
             .done((json) => dispatch(receivePhotos(json)))
-            .fail((err) => console.log(err))
     }
 }
 

@@ -19,7 +19,6 @@ function fetchDailyPhoto() {
         dispatch(requestDailyPhoto());
         return $.ajax('data/dailyPhoto.json')
             .done((json) => dispatch(receiveDailyPhoto(json)))
-            .fail((err) => console.log(err))
     }
 }
 

@@ -51,7 +51,7 @@ class Moment extends Component {
                     }
                 });
             });
-        }).fail((err) => console.log(err));
+        });
     }
 
     // 照片点赞
