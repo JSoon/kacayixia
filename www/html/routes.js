@@ -12,22 +12,12 @@ const routeConfig = {
     },
     childRoutes: [
         {
-            path: '/my',
+            path: '/profile',
             getComponent(location, cb) {
                 require.ensure([], (require) => {
-                    cb(null, require('./containers/My/My').default)
-                }, 'containers/My/My');
-            },
-            childRoutes: [
-                {
-                    path: '/profile',
-                    getComponent(location, cb) {
-                        require.ensure([], (require) => {
-                            cb(null, require('./components/Profile/Profile').default)
-                        }, 'components/Profile/Profile');
-                    }
-                }
-            ]
+                    cb(null, require('./containers/My/Profile').default)
+                }, 'containers/My/Profile');
+            }
         },
         {
             path: '/sign-up',

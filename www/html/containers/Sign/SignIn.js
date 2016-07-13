@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Link} from 'react-router';
+import {fetchUser} from '../../actions/user';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Form/Input';
 import Button from '../../components/Button/Button';
@@ -20,12 +21,22 @@ class SignIn extends Component {
             signInForm,
             signInLoading
         } = this.refs;
-        let {router} = this.props;
+        let {
+            dispatch,
+            router
+        } = this.props;
         // do sign in stuffs
         $(signInForm).addClass('animated fadeOutDown');
         $(signInLoading).fadeIn().children('li:not(".loading")').addClass('animated fadeInUp');
+        // 模拟登录
         setTimeout(function () {
-            router.push('/moments');
+            let dtd = dispatch(fetchUser({
+                name: '',
+                pwd: ''
+            }));
+            $.when(dtd).done(function () {
+                router.push('/moments');
+            });
         }, 2000);
     }
 

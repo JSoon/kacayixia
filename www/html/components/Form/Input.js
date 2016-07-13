@@ -9,7 +9,11 @@ const Input = props => {
     return (
         <div className="form-group">
             <div className="input-text">
-                <input type={type} placeholder={placeholder}/>
+                <input
+                    type={type}
+                    placeholder={placeholder}
+                    {...props}
+                    />
                 <i className="input-border"></i>
             </div>
         </div>

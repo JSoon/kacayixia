@@ -8,6 +8,7 @@ import 'magnific-popup/dist/magnific-popup.css';
 class Moment extends Component {
     constructor(props) {
         super(props);
+        this.state = null;
         // When creating callbacks in JavaScript, you usually need to explicitly bind a method to
         // its instance such that the value of this is correct.
         // With React, every method is automatically bound to its component instance
@@ -155,7 +156,7 @@ class Moment extends Component {
             <div className="moments-tree">
                 <main className="trunk">
                     {
-                        !$.isEmptyObject(this.state) &&
+                        this.state &&
                         <PhotoDetails
                             { ...this.state }
                             onLikeClick={this.onLikeClick}

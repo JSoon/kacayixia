@@ -3,12 +3,14 @@ import dailyPhoto from './dailyPhoto';
 import photos from './photos';
 import routerLocation from './routerLocation';
 import errorMessage from './errorMessage';
+import user from './user';
 
 const rootReducers = combineReducers({
     dailyPhoto,
     photos,
     routerLocation,
-    errorMessage
+    errorMessage,
+    user
 });
 
 export default rootReducers;

@@ -24,8 +24,7 @@ function fetchPhotos(p = 1) {
             data: {
                 page: p
             }
-        })
-            .done((json) => dispatch(receivePhotos(json)))
+        }).done((json) => dispatch(receivePhotos(json)))
     }
 }
 
