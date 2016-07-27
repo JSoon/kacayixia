@@ -13,21 +13,18 @@ class App extends Component {
 
     onLogoutClick(e) {
         e.preventDefault();
-        let {dispatch} = this.props;
-        let uid = localStorage.getItem('uid');
-        dispatch(fetchLogout(uid));
+        let {dispatch, user} = this.props;
+        dispatch(fetchLogout(user.id));
     }
 
     render() {
         let props = this.props;
-        let uid = localStorage.getItem('uid');
 
         return (
             <div>
                 {
                     props.location.pathname !== '/' &&
                     <Header
-                        uid={uid}
                         onLogoutClick={this.onLogoutClick}
                         />
                 }

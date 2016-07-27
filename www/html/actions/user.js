@@ -24,6 +24,7 @@ function fetchUser(user) {
             }
         }).done((json) => {
             localStorage.setItem('uid', json.id);
+            localStorage.setItem('uemail', json.email);
             localStorage.setItem('unick', json.name);
             localStorage.setItem('uavatar', json.avatar);
             dispatch(receiveUser(json));
@@ -49,6 +50,7 @@ function fetchLogout(user) {
         dispatch(requestLogout(user));
         // sending logout request
         localStorage.removeItem('uid');
+        localStorage.removeItem('uemail');
         localStorage.removeItem('unick');
         localStorage.removeItem('uavatar');
         dispatch(receiveLogout());

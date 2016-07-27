@@ -8,10 +8,21 @@ import rootReducer from './reducers/reducers';
 
 const loggerMiddleware = createLogger();
 
+// 初始化时判断用户登录状态
+let user = null;
+if (localStorage.getItem('uid')) {
+    user = {
+        "id": localStorage.getItem('uid'),
+        "name": localStorage.getItem('unick'),
+        "email": localStorage.getItem('uemail'),
+        "avatar": localStorage.getItem('uavatar')
+    }
+}
+
 const store = createStore(
     rootReducer,
     {
-        localStorage: 'hehe'
+        user: user
     },
     compose(
         applyMiddleware(

@@ -20,7 +20,7 @@ $(document).ajaxError((event, jqxhr) => {
 });
 
 // 初始化从 localStorage 中读取缓存数据
-store.dispatch(initStateFromLocalStorage());
+// store.dispatch(initStateFromLocalStorage());
 
 render(
     <Provider store={store}>
