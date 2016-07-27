@@ -9,7 +9,14 @@ import './sign.less';
 class SignUp extends Component {
     constructor(props) {
         super(props);
+        this.onAvatarClick = this.onAvatarClick.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
+    }
+
+    // 上传头像
+    onAvatarClick(e) {
+        e.preventDefault();
+        $.bs.popup.confirm({});
     }
 
     // 提交注册
@@ -34,7 +41,7 @@ class SignUp extends Component {
                                 <div className="form-group">
                                     <div className="avatar-upload-default">
                                         <i className="sj sj-joke-face"></i>
-                                        <a className="upload-link" href="#">点击<br/>上传头像</a>
+                                        <a className="upload-link" href="#" onClick={this.onAvatarClick}>点击<br/>上传头像</a>
                                     </div>
                                 </div>
                                 <Input type={'text'} placeholder={'用户名（昵称）'}/>

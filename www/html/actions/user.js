@@ -23,6 +23,7 @@ function fetchUser(user) {
                 pwd: user.pwd
             }
         }).done((json) => {
+            localStorage.setItem('uid', json.id);
             localStorage.setItem('unick', json.name);
             localStorage.setItem('uavatar', json.avatar);
             dispatch(receiveUser(json));
@@ -30,8 +31,36 @@ function fetchUser(user) {
     }
 }
 
+function requestLogout(user) {
+    return {
+        type: constants.REQUEST_LOGOUT,
+        user
+    }
+}
+
+function receiveLogout() {
+    return {
+        type: constants.RECEIVE_LOGOUT
+    }
+}
+
+function fetchLogout(user) {
+    return dispatch => {
+        dispatch(requestLogout(user));
+        // sending logout request
+        localStorage.removeItem('uid');
+        localStorage.removeItem('unick');
+        localStorage.removeItem('uavatar');
+        dispatch(receiveLogout());
+    }
+}
+
+
 export {
 requestUser,
 receiveUser,
-fetchUser
+fetchUser,
+requestLogout,
+receiveLogout,
+fetchLogout
 }

@@ -46,7 +46,9 @@ class Moments extends Component {
     }
 
     componentWillUnmount() {
-        this.fetchPhotos.abort();
+        if (this.fetchPhotos) {
+            this.fetchPhotos.abort();
+        }
     }
 
     // 照片点赞

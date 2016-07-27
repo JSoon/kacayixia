@@ -16,11 +16,10 @@ module.exports = {
             'redux-thunk'
         ],
         plugins: [
-            'magnific-popup'
+            'magnific-popup',
+            'bootstrap-popup'
         ],
-        main: [
-            './html/index'
-        ]
+        app: './html/index'
     },
     output: {
         path: './html/dist',
@@ -68,6 +67,7 @@ module.exports = {
         // 'redux-thunk': 'ReduxThunk'
         'jquery': 'jQuery',
         '$': '$',
+        'bootstrap': '$'
     },
     // add this handful of plugins that optimize the build
     // when we're in production
@@ -77,8 +77,10 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin()
     ] : [
             new webpack.optimize.CommonsChunkPlugin({
-                name: ['vendor', 'plugins'],
-                chunks: ['vendor', 'plugins']
+                name: 'vendor',
+                filename: 'vendor.js',
+                chunks: ['vendor', 'app'],
+                minChunks: Infinity
             })
         ]
 };

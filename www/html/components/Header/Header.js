@@ -16,12 +16,12 @@ const Header = props => {
                     unick && uavatar ?
                         <ul className="nav-action-l">
                             <li className="avatar">
-                                <a href="#"><img src="containers/My/avatar.png" alt="avatar"/></a>
+                                <Link to="/profile"><img src={uavatar} alt={unick}/></Link>
                             </li>
                             <li className="name">
-                                <a href="#">Sharon Guerrero</a>
+                                <Link to="/profile">{unick}</Link>
                             </li>
-                            <li className="sign-out"><a href="#">退出</a></li>
+                            <li className="sign-out"><a href="#" onClick={props.onLogoutClick}>退出</a></li>
                         </ul>
                         :
                         <ul className="nav-action-l">

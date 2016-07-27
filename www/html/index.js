@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import store from './store';
 import {Router, hashHistory} from 'react-router';
 import routeConfig from './routes';
+import {initStateFromLocalStorage} from './actions/localStorage';
 import {routerLocationDidUpdate} from './actions/routerLocation';
 import {ajaxErrorMessage} from './actions/errorMessage';
 
@@ -18,9 +19,12 @@ $(document).ajaxError((event, jqxhr) => {
     store.dispatch(ajaxErrorMessage(jqxhr));
 });
 
+// 初始化从 localStorage 中读取缓存数据
+store.dispatch(initStateFromLocalStorage());
+
 render(
     <Provider store={store}>
         <Router routes={routeConfig} history={hashHistory} />
     </Provider>,
     document.getElementById('J_App')
-)
+);
