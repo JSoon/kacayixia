@@ -16,7 +16,10 @@ class SignUp extends Component {
     // 上传头像
     onAvatarClick(e) {
         e.preventDefault();
-        $.bs.popup.confirm({});
+        $.bs.popup.confirm({
+            title: '上传头像',
+            info: 'avatar'
+        });
     }
 
     // 提交注册
