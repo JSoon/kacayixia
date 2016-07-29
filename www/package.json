@@ -33,6 +33,7 @@
   "dependencies": {
     "animate.css": "^3.5.1",
     "compression": "^1.6.2",
+    "cropper": "^2.3.2",
     "es6-promise": "^3.2.1",
     "express": "^4.13.4",
     "history": "^2.1.1",

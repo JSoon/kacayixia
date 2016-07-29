@@ -4,11 +4,16 @@ import {withRouter, Link} from 'react-router';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Form/Input';
 import Button from '../../components/Button/Button';
+import AvatarCropper from '../../components/AvatarCropper/AvatarCropper';
+import 'cropper/dist/cropper.css';
 import './sign.less';
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            cropperDisplay: false
+        };
         this.onAvatarClick = this.onAvatarClick.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
@@ -16,9 +21,25 @@ class SignUp extends Component {
     // 上传头像
     onAvatarClick(e) {
         e.preventDefault();
-        $.bs.popup.confirm({
+        $.bs.popup.custom({
             title: '上传头像',
-            info: 'avatar'
+            dom: AvatarCropper
+        }, function (dialogE) {
+            $(dialogE).find('img').cropper({
+                viewMode: 1,
+                dragMode: 'move',
+                aspectRatio: 1,
+                preview: '.img-preview',
+                crop: function (e) {
+                    console.log(e.x);
+                    console.log(e.y);
+                    console.log(e.width);
+                    console.log(e.height);
+                    console.log(e.rotate);
+                    console.log(e.scaleX);
+                    console.log(e.scaleY);
+                }
+            });
         });
     }
 

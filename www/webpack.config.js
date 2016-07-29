@@ -17,7 +17,8 @@ module.exports = {
         ],
         plugins: [
             'magnific-popup',
-            'bootstrap-popup'
+            'bootstrap-popup',
+            'cropper'
         ],
         app: './html/index'
     },
