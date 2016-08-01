@@ -19,7 +19,7 @@ const PhotoDetails = props => {
             <div className="moment-details">
                 <div className="breadcrumb">
                     <Link to="/moments">
-                        <i className="sj sj-arrow-l clear-trans">浏览所有照片</i>
+                        <i className="sj sj-arrow-l">浏览所有照片</i>
                     </Link>
                 </div>
                 <div className="row">
@@ -87,7 +87,7 @@ const PhotoDetails = props => {
                                             <li key={index}>
                                                 <div className="dl-btn clearfix">
                                                     <span className="k">
-                                                        <i className="sj sj-download clear-trans"></i>
+                                                        <i className="sj sj-download"></i>
                                                         {dl.name}
                                                         <em>{dl.resolution} {dl.size}</em>
                                                     </span>

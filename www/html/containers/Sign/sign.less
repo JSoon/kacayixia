@@ -113,10 +113,25 @@
 // 头像裁剪/上传
 .avatar-cropper {
     max-width: 600px;
+    .img-previews {
+        margin-bottom: 10px;
+    }
+    .img-preview-wrapper {
+        text-align: center;
+        span {
+            margin-top: 5px;
+            color: @grey-light;
+            font-size: 12px;
+        }
+    }
     .img-preview {
         width: 46px;
         height: 46px;
         margin: auto;
         overflow: hidden;
+        border-radius: 50%;
+    }
+    img.origin {
+        visibility: hidden;
     }
 }

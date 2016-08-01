@@ -84,7 +84,7 @@ const Photos = props => {
                         }
                     }
                 } title="上一页">
-                    <i className="sj sj-arrow-l clear-trans"></i>
+                    <i className="sj sj-arrow-l"></i>
                 </Link>
                 <Link className="next btn" to={
                     {
@@ -94,7 +94,7 @@ const Photos = props => {
                         }
                     }
                 } title="下一页">
-                    <i className="sj sj-arrow-r clear-trans"></i>
+                    <i className="sj sj-arrow-r"></i>
                 </Link>
             </div>
         </div>

@@ -25,19 +25,25 @@ class SignUp extends Component {
             title: '上传头像',
             dom: AvatarCropper
         }, function (dialogE) {
-            $(dialogE).find('img').cropper({
+            let img = $(dialogE).find('img');
+            $(img).cropper({
+                autoCrop: false,
                 viewMode: 1,
                 dragMode: 'move',
                 aspectRatio: 1,
                 preview: '.img-preview',
                 crop: function (e) {
-                    console.log(e.x);
-                    console.log(e.y);
-                    console.log(e.width);
-                    console.log(e.height);
-                    console.log(e.rotate);
-                    console.log(e.scaleX);
-                    console.log(e.scaleY);
+                    console.log('e.x:', e.x);
+                    console.log('e.y:', e.y);
+                    console.log('e.width:', e.width);
+                    console.log('e.height:', e.height);
+                    console.log('e.rotate:', e.rotate);
+                    console.log('e.scaleX:', e.scaleX);
+                    console.log('e.scaleY:', e.scaleY);
+                },
+                built: function () {
+                    $(img).cropper('crop');
+                    $(img).show();
                 }
             });
         });
