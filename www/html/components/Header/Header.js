@@ -31,7 +31,7 @@ const Header = props => {
                 }
                 <ul className="nav-action-r">
                     <li>
-                        <a className="btn" href="my-upload.html">上传</a>
+                        <Link className="btn" to="/upload">上传</Link>
                     </li>
                     <li>
                         <a className="btn" href="#">摄影集</a>

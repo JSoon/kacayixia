@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PhotoDetails from '../../components/PhotoDetails/PhotoDetails';
 import Update from 'react-addons-update';
 import '../Moments/Moments.less';
-import 'magnific-popup/dist/magnific-popup.css';
 
 class Moment extends Component {
     constructor(props) {

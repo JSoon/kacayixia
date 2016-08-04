@@ -159,6 +159,39 @@ footer.root {
     transition: all .3s;
 }
 
+// 头像裁剪/上传
+.avatar-cropper {
+    max-width: 600px;
+    .img-previews {
+        margin-bottom: 10px;
+    }
+    .img-preview-wrapper {
+        text-align: center;
+        span {
+            margin-top: 5px;
+            color: @grey-light;
+            font-size: 12px;
+        }
+    }
+    .img-preview {
+        width: 46px;
+        height: 46px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    img.origin {
+        visibility: hidden;
+    }
+    .actions {
+        margin-top: 15px;
+        text-align: center;
+        .btn {
+            margin: 0 5px;
+        }
+    }
+}
+
 // Third-party
 // ========================================================================
 // Iconfont
@@ -242,6 +275,11 @@ footer.root {
 
 // Bootstrap
 // ========================================================================
+// breadcrumb
+.breadcrumb {
+    background: transparent;
+}
+
 // btn
 .btn {
     display: inline-block;
@@ -360,4 +398,22 @@ footer.root {
 
 .mfp-title, .mfp-close {
     color: @black;
+}
+
+// fine-uploader
+// ========================================================================
+.qq-uploader .buttons {
+    margin-bottom: 15px;
+}
+
+.qq-upload-list {
+    max-height: 380px;
+}
+
+.qq-upload-file {
+    margin: 10px 0;
+}
+
+.qq-upload-status-text {
+    margin-top: 10px;
 }

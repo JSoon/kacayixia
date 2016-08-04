@@ -26,6 +26,8 @@ class SignUp extends Component {
             dom: AvatarCropper
         }, function (dialogE) {
             let img = $(dialogE).find('img');
+            let saveBtn = $(dialogE).find('.J_Save');
+            let cancelBtn = $(dialogE).find('.J_Cancel');
             $(img).cropper({
                 autoCrop: false,
                 viewMode: 1,
@@ -45,6 +47,9 @@ class SignUp extends Component {
                     $(img).cropper('crop');
                     $(img).show();
                 }
+            });
+            cancelBtn.click(function () {
+                $(dialogE).modal('hide');
             });
         });
     }

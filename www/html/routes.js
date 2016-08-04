@@ -20,6 +20,14 @@ const routeConfig = {
             }
         },
         {
+            path: '/upload',
+            getComponent(location, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('./containers/My/Upload').default)
+                }, 'containers/My/Upload');
+            }
+        },
+        {
             path: '/sign-up',
             getComponent(location, cb) {
                 require.ensure([], (require) => {

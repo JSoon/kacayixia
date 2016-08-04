@@ -36,6 +36,7 @@
     "cropper": "^2.3.2",
     "es6-promise": "^3.2.1",
     "express": "^4.13.4",
+    "fine-uploader": "^5.10.1",
     "history": "^2.1.1",
     "if-env": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",

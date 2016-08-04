@@ -18,6 +18,7 @@ module.exports = {
         plugins: [
             'magnific-popup',
             'bootstrap-popup',
+            'fine-uploader',
             'cropper'
         ],
         app: './html/index'
@@ -47,7 +48,7 @@ module.exports = {
                 loader: 'style!css!less'
             },
             {
-                test: /\.png$/,
+                test: /\.png|gif$/,
                 loader: 'url-loader',
                 query: {
                     mimetype: 'image/png',
@@ -67,7 +68,6 @@ module.exports = {
         // 'redux-logger': 'reduxLogger',
         // 'redux-thunk': 'ReduxThunk'
         'jquery': 'jQuery',
-        '$': '$',
         'bootstrap': '$'
     },
     // add this handful of plugins that optimize the build
