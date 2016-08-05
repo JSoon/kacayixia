@@ -28,6 +28,14 @@ const routeConfig = {
             }
         },
         {
+            path: '/price',
+            getComponent(location, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('./containers/My/Price').default)
+                }, 'containers/My/Price');
+            }
+        },
+        {
             path: '/sign-up',
             getComponent(location, cb) {
                 require.ensure([], (require) => {

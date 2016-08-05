@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Button from '../../components/Button/Button';
 import template from '../../components/PhotoUploader/template';
@@ -6,9 +7,11 @@ import './my.less';
 
 class Upload extends Component {
     componentDidMount() {
+        let { router } = this.props;
+
         // 创建 uploader 实例
         let uploader = new qq.FineUploader({
-            debug: true, // show logs in console panel
+            // debug: true, // show logs in console panel
             element: document.getElementById('J_FineUploader'),
             // template: 'qq-template', // defaults to qq-template
             template: $(template).get(0),
@@ -33,6 +36,19 @@ class Upload extends Component {
             },
             text: {
                 failUpload: '上传失败'
+            },
+            callbacks: {
+                onComplete: function (id, name, response, xhr) {
+                    // console.log('id:', id);
+                    // console.log('name:', name);
+                    // console.log('response:', response);
+                    // console.log('xhr:', xhr);
+                },
+                onAllComplete: function (succeeded, failed) {
+                    // console.log('succeeded:', succeeded);
+                    // console.log('failed:', failed);
+                    router.push('/price');
+                }
             }
         });
         // 手动触发上传
@@ -61,4 +77,4 @@ class Upload extends Component {
     }
 }
 
-export default Upload;
+export default withRouter(Upload);
