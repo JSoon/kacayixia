@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Button from '../../components/Button/Button';
-import Radio from '../../components/Form/Radio'
+import RadioGroup from '../../components/Form/RadioGroup'
 import './my.less';
 
 class Price extends Component {
@@ -26,21 +26,29 @@ class Price extends Component {
                                                 <dl>
                                                     <dt>标清，1200x800 px，5MB</dt>
                                                     <dd>
-                                                        <Radio
-                                                            checked
-                                                            name="p480"
-                                                            value=""
-                                                            text="免费"
-                                                            />
-                                                        <Radio
-                                                            name="p480"
-                                                            value=""
-                                                            text="5元"
-                                                            />
-                                                        <Radio
-                                                            name="p480"
-                                                            value=""
-                                                            text="10元"
+                                                        <RadioGroup
+                                                            radios={
+                                                                [
+                                                                    {
+                                                                        checked: true,
+                                                                        name: "p480",
+                                                                        value: "",
+                                                                        text: "免费"
+                                                                    },
+                                                                    {
+                                                                        checked: false,
+                                                                        name: "p480",
+                                                                        value: "",
+                                                                        text: "5元"
+                                                                    },
+                                                                    {
+                                                                        checked: false,
+                                                                        name: "p480",
+                                                                        value: "",
+                                                                        text: "10元"
+                                                                    }
+                                                                ]
+                                                            }
                                                             />
                                                     </dd>
                                                     <dt>高清，2500x1600 px，10MB</dt>
