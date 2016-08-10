@@ -34,7 +34,7 @@ const Header = props => {
                         <Link className="btn" to="/upload">上传</Link>
                     </li>
                     <li>
-                        <a className="btn" href="#">摄影集</a>
+                        <Link className="btn" to="/album">摄影集</Link>
                     </li>
                 </ul>
             </div>

@@ -36,6 +36,14 @@ const routeConfig = {
             }
         },
         {
+            path: '/album',
+            getComponent(location, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('./containers/My/Album').default)
+                }, 'containers/My/Album');
+            }
+        },
+        {
             path: '/sign-up',
             getComponent(location, cb) {
                 require.ensure([], (require) => {

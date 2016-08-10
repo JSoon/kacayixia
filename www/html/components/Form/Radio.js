@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Update from 'react-addons-update'; // Deep copy
 
-class RadioGroup extends Component {
+class Radio extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,22 +15,31 @@ class RadioGroup extends Component {
         let input = $(that).find('input');
         let shift = $(that).find('.sj');
         input.prop('checked', true);
-        // let radios = this.state.radios.slice();
-        console.log(this.state.radios);
-        let newRadios = Update(this.state.radios, {
-            $push: []
-        });
-        newRadios.map(function (radio) {
-            radio.checked = false;
-        });
-        newRadios[index].checked = true;
-        console.log(newRadios);
+
+        let checkedHandler = function (radios, length, index) {
+            let newRadios = radios;
+            for (let i = 0; i < length; i += 1) {
+                newRadios = Update(newRadios, {
+                    [i]: { checked: { $set: false } }
+                });
+            }
+            newRadios = Update(newRadios, {
+                [index]: { checked: { $set: true } }
+            });
+            return newRadios;
+        }
+
+        let newRadios = checkedHandler(this.state.radios, this.state.radios.length, index);
+
         this.setState({
             radios: newRadios
-        }, function () {
-
         });
     }
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     console.log(this.state !== nextState);
+    //     return this.state !== nextState;
+    // }
 
     render() {
         let {radios} = this.state;
@@ -63,7 +72,7 @@ class RadioGroup extends Component {
     }
 };
 
-RadioGroup.propTypes = {
+Radio.propTypes = {
     radios: PropTypes.arrayOf(PropTypes.shape({
         checked: PropTypes.bool.isRequired,
         text: PropTypes.string.isRequired,
@@ -72,4 +81,4 @@ RadioGroup.propTypes = {
     }).isRequired)
 };
 
-export default RadioGroup;
+export default Radio;
